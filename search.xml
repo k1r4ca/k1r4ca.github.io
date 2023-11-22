@@ -81,7 +81,7 @@
     <content><![CDATA[<h2 id="Introductio"><a href="#Introductio" class="headerlink" title="Introductio"></a>Introductio</h2><blockquote>
 <p>勿以浮沙筑高台</p>
 </blockquote>
-<p>Vidar-Team web方向学习计划第三弹！  </p>
+<p>Vidar-Team web方向学习计划第二弹！  </p>
 <p>经历漫长的台式机以及笔记本的环境配置折磨后，<del>Kira决定尝试一下新的折磨</del>  </p>
 <p>Kira决定用实现一个像样一点的web应用作为学习成果  </p>
 <p>想法是写一个简单的基于gin框架的留言板应用后端，实现简单的CRUD和RawSQL语句使用，然后部署到云服务器的docker</p>
@@ -139,7 +139,7 @@
 <p>通过卡在这里联想到应该是docker里面没有设置代理     </p>
 <p>果然在经历异常漫长的等待后，报错应证了我的想法    </p>
 <blockquote>
-<p>RUN go mod download:<br>390.6 go: github.com&#x2F;bytedance&#x2F;<a class="link"   href="mailto:&#x73;&#111;&#110;&#105;&#x63;&#x40;&#118;&#x31;&#46;&#57;&#46;&#x31;" >&#x73;&#111;&#110;&#105;&#x63;&#x40;&#118;&#x31;&#46;&#57;&#46;&#x31; <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>: Get “<a class="link"   href="https://proxy.golang.org/github.com/bytedance/sonic/@v/v1.9.1.mod" >https://proxy.golang.org/github.com/bytedance/sonic/@v/v1.9.1.mod <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>“: dial tcp 142.251.42.241:443: i&#x2F;o timeout</p>
+<p>RUN go mod download:<br>390.6 go: github.com&#x2F;bytedance&#x2F;<a class="link"   href="mailto:&#x73;&#x6f;&#x6e;&#x69;&#99;&#64;&#118;&#x31;&#x2e;&#x39;&#x2e;&#x31;" >&#x73;&#x6f;&#x6e;&#x69;&#99;&#64;&#118;&#x31;&#x2e;&#x39;&#x2e;&#x31; <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>: Get “<a class="link"   href="https://proxy.golang.org/github.com/bytedance/sonic/@v/v1.9.1.mod" >https://proxy.golang.org/github.com/bytedance/sonic/@v/v1.9.1.mod <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>“: dial tcp 142.251.42.241:443: i&#x2F;o timeout</p>
 </blockquote>
 <p>那就把代理改了呗     </p>
 <p>但是在建构的时候怎么设置代理呢？问了问博学的G老师，G老师跟我说： </p>
