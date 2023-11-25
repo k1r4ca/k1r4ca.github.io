@@ -468,8 +468,8 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5Cimages%5Cpost%5C0x04%5Chttp%E8%AF%B7%E6%B1%82.png"
-                      alt="http记录"
+                     data-src="/images/post/0x04/http.png"
+                      alt="http"
                 ></p>
 <p>可以看到通过几个接口来获取数据，原理其实也挺简单的</p>
 <p>后端向前端发的数据大概是这样：</p>
@@ -486,7 +486,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/%5Cimages%5Cpost%5C0x04%5Cflag.png"
+                     data-src="/images/post/0x04/flag.png"
                       alt="flag_committee"
                 ></p>
 <p>其实感觉也不算很难，没什么弯弯绕绕的，不过毕竟是第一次自己写python脚本，也是解的第一道算是有点难度的ctf题，收藏价值大于一切啦~</p>
