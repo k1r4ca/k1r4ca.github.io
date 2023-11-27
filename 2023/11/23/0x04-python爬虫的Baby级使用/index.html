@@ -28,7 +28,7 @@
 <meta property="og:image" content="https://k1r4ca.github.io/images/post/0x04/http.png">
 <meta property="og:image" content="https://k1r4ca.github.io/images/post/0x04/flag.png">
 <meta property="article:published_time" content="2023-11-23T02:20:04.000Z">
-<meta property="article:modified_time" content="2023-11-25T11:03:25.525Z">
+<meta property="article:modified_time" content="2023-11-26T03:55:35.463Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Vidar-web学习路线">
 <meta property="article:tag" content="python爬虫">
@@ -412,8 +412,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2023-11-25 19:03:25</span>
-            <span class="mobile">2023-11-25 19:03:25</span>
+            <span class="desktop">2023-11-26 11:55:35</span>
+            <span class="mobile">2023-11-26 11:55:35</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -664,7 +664,7 @@
 <hr>
 <h2 id="Baby级实践"><a href="#Baby级实践" class="headerlink" title="Baby级实践"></a>Baby级实践</h2><p>好耶！是新章节！其实就是Friend提供的一个程序（笑，和一道题目罢了</p>
 <h3 id="对K1r4Ca‘s-Blog宝具"><a href="#对K1r4Ca‘s-Blog宝具" class="headerlink" title="对K1r4Ca‘s Blog宝具"></a>对K1r4Ca‘s Blog宝具</h3><blockquote>
-<p>本宝具由RUSL Ec4o锻造，可对K1r4Ca’s Blog造成特攻伤害！</p>
+<p>本宝具由RUSL Ec3o锻造，可对K1r4Ca’s Blog造成特攻伤害！</p>
 </blockquote>
 <div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fetch_headlines</span>(<span class="params">url, headers</span>):</span><br><span class="line">    response = requests.get(url, headers=headers)</span><br><span class="line">    <span class="keyword">if</span> response.status_code != <span class="number">200</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;网络连接错误&quot;</span>)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">    soup = BeautifulSoup(response.text, <span class="string">&#x27;lxml&#x27;</span>)</span><br><span class="line">    h3_tags = soup.find_all(<span class="string">&#x27;h3&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 逐一提取&lt;h3&gt;标签中的文本内容</span></span><br><span class="line">    <span class="keyword">for</span> tag <span class="keyword">in</span> h3_tags:</span><br><span class="line">        h3_content = tag.get_text(strip=<span class="literal">True</span>)</span><br><span class="line">        <span class="built_in">print</span>(h3_content)</span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;https://k1r4ca.github.io/&quot;</span></span><br><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fetch_headlines(url, headers)</span><br></pre></td></tr></table></figure></div>
 
@@ -744,7 +744,7 @@
         
             <li>
                 <strong>更新于
-                    :</strong> 2023-11-25 19:03:25
+                    :</strong> 2023-11-26 11:55:35
             </li>
         
         <li>
@@ -788,6 +788,21 @@
 
         
             <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+                
+                    <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="prev"
+                        rel="prev"
+                        href="/2023/11/27/%E5%86%99%E5%9C%A8vidar%E7%AC%AC%E4%B8%80%E6%AC%A1%E9%9D%A2%E8%AF%95%E4%B9%8B%E5%90%8E/"
+                        >
+                            <span class="left arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">写在Vidar第一次面试之后</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
                 
                 
                     <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">

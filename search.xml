@@ -139,7 +139,7 @@
 <p>通过卡在这里联想到应该是docker里面没有设置代理     </p>
 <p>果然在经历异常漫长的等待后，报错应证了我的想法    </p>
 <blockquote>
-<p>RUN go mod download:<br>390.6 go: github.com&#x2F;bytedance&#x2F;<a class="link"   href="mailto:&#x73;&#x6f;&#x6e;&#x69;&#99;&#64;&#118;&#x31;&#x2e;&#x39;&#x2e;&#x31;" >&#x73;&#x6f;&#x6e;&#x69;&#99;&#64;&#118;&#x31;&#x2e;&#x39;&#x2e;&#x31; <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>: Get “<a class="link"   href="https://proxy.golang.org/github.com/bytedance/sonic/@v/v1.9.1.mod" >https://proxy.golang.org/github.com/bytedance/sonic/@v/v1.9.1.mod <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>“: dial tcp 142.251.42.241:443: i&#x2F;o timeout</p>
+<p>RUN go mod download:<br>390.6 go: github.com&#x2F;bytedance&#x2F;<a class="link"   href="mailto:&#x73;&#111;&#110;&#105;&#x63;&#x40;&#x76;&#49;&#x2e;&#x39;&#46;&#x31;" >&#x73;&#111;&#110;&#105;&#x63;&#x40;&#x76;&#49;&#x2e;&#x39;&#46;&#x31; <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>: Get “<a class="link"   href="https://proxy.golang.org/github.com/bytedance/sonic/@v/v1.9.1.mod" >https://proxy.golang.org/github.com/bytedance/sonic/@v/v1.9.1.mod <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>“: dial tcp 142.251.42.241:443: i&#x2F;o timeout</p>
 </blockquote>
 <p>那就把代理改了呗     </p>
 <p>但是在建构的时候怎么设置代理呢？问了问博学的G老师，G老师跟我说： </p>
@@ -180,24 +180,6 @@
         <tag>个人云</tag>
         <tag>gin框架</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2023/11/15/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-]]></content>
   </entry>
   <entry>
     <title>0x03 个人Blog搭建</title>
@@ -451,7 +433,7 @@
 <hr>
 <h2 id="Baby级实践"><a href="#Baby级实践" class="headerlink" title="Baby级实践"></a>Baby级实践</h2><p>好耶！是新章节！其实就是Friend提供的一个程序（笑，和一道题目罢了</p>
 <h3 id="对K1r4Ca‘s-Blog宝具"><a href="#对K1r4Ca‘s-Blog宝具" class="headerlink" title="对K1r4Ca‘s Blog宝具"></a>对K1r4Ca‘s Blog宝具</h3><blockquote>
-<p>本宝具由RUSL Ec4o锻造，可对K1r4Ca’s Blog造成特攻伤害！</p>
+<p>本宝具由RUSL Ec3o锻造，可对K1r4Ca’s Blog造成特攻伤害！</p>
 </blockquote>
 <div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fetch_headlines</span>(<span class="params">url, headers</span>):</span><br><span class="line">    response = requests.get(url, headers=headers)</span><br><span class="line">    <span class="keyword">if</span> response.status_code != <span class="number">200</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;网络连接错误&quot;</span>)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">    soup = BeautifulSoup(response.text, <span class="string">&#x27;lxml&#x27;</span>)</span><br><span class="line">    h3_tags = soup.find_all(<span class="string">&#x27;h3&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 逐一提取&lt;h3&gt;标签中的文本内容</span></span><br><span class="line">    <span class="keyword">for</span> tag <span class="keyword">in</span> h3_tags:</span><br><span class="line">        h3_content = tag.get_text(strip=<span class="literal">True</span>)</span><br><span class="line">        <span class="built_in">print</span>(h3_content)</span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;https://k1r4ca.github.io/&quot;</span></span><br><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fetch_headlines(url, headers)</span><br></pre></td></tr></table></figure></div>
 
@@ -526,6 +508,66 @@
         <tag>Vidar-web学习路线</tag>
         <tag>python爬虫</tag>
         <tag>hackergame 2023</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2023/11/15/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>写在Vidar第一次面试之后</title>
+    <url>/2023/11/27/%E5%86%99%E5%9C%A8vidar%E7%AC%AC%E4%B8%80%E6%AC%A1%E9%9D%A2%E8%AF%95%E4%B9%8B%E5%90%8E/</url>
+    <content><![CDATA[<h2 id="写在开头"><a href="#写在开头" class="headerlink" title="写在开头"></a>写在开头</h2><blockquote>
+<p>是写给自己的，但不知道此时此刻是谁在看……</p>
+</blockquote>
+<p>在距离面试已经过去快30个小时的现在，感觉应该写点总结性的东西。首先是不能白白浪费这次机会，比较里面提到的很多东西我觉得还是应该好好想想；还有就是以此为节点能赶紧摆脱浑浑噩噩的状态，和大半个月了的生病状态做个告别吧。</p>
+<h2 id="关于面试"><a href="#关于面试" class="headerlink" title="关于面试"></a>关于面试</h2><p>其实走进协会看到ek1ng哥就感觉要上强度了 <del>然后果然面试就变成了ek1ng和学长们的小课堂</del></p>
+<p>不得不说收获很多东西，也认识到自己确实是很多很多东西不会，甚至是不了解的 <del>这还要说啊喂！</del></p>
+<p>整体确实是按照学习路线来的，但是感觉自己太过拘束在学习路线本身，忘记真的去做到<code>勿以浮沙筑高台</code>这句话了。<del>我是沙雕思密达</del> 所以决定趁脑子里多多少少还有一点东西留着的时候记录一下，也好给之后的学习做个参考。当然要学的东西还有很多很多很多很多很多，绝对不是仅仅只有这些好么，Kira。</p>
+<ul>
+<li>工作环境，得把笔记本刷成<code>Linux</code>了感觉，感觉还是应该好好搭个环境，把很多方面的任务从台式迁移到笔记本上，毕竟感觉这台轻薄本还是能撑得住的。另外记得要装修一下<code>shell</code>嗯。不知道上什么系统，感觉真的有时间折腾还是原生的<code>arch</code></li>
+<li>语言，首先是学学<code>java</code>，要多对比一下不同语言之间的差异、了解一下语言的特性  <em>感觉这个确实挺重要的</em>，然后多试试各种框架然后找一个专精可能会比较好？</li>
+<li><code>git</code>，学一下协作方面的功能和实现，感觉主要是对<code>merge</code>这个命令的了解不够</li>
+<li><code>docker</code>，加深一下了解，比如镜像和容器的区别，个人感觉还有容器网络之类的实现</li>
+<li>数据库，可以多尝试一下不同的种类，同时对比一下不同数据库的区别以及实现原理，不能忘了<code>NoSQL</code>方向</li>
+<li>HTTP，感觉看完了书很多东西还是没记住，找个空理一下请求头请求体的内容、握手的意义、整体结构什么的……</li>
+<li>net，就感觉还是什么都不懂，计网重新开始一下吧，毕竟那个<code>all in boom</code>还是想玩一玩</li>
+<li>web开发，一个是前端知识要学起来，语言学习和页面编写，以及控制台的功能使用（调试之类的）；还有一个是多去了解一下各种web服务器软件（<code>Apache</code>、<code>Nginx</code>、<code>Tomcat</code>…），差异对比、实现方式之类的？</li>
+<li>web安全，多刷点CTF题，复现CVE，看看代码审计里面的<code>java安全漫谈</code>，<code>Hack the box</code>？ </li>
+<li><em>ek1ng给的三个CVE是<code>jeecgboot freemaker ssti</code>、<code>activemq 61616 rce</code>、<code>jumpserver cve-2023-42820 伪随机数账号接管</code></em></li>
+</ul>
+<h2 id="随便说说？"><a href="#随便说说？" class="headerlink" title="随便说说？"></a>随便说说？</h2><p>其实说对结果完全不在意肯定是假话，但是确实也挺能接受的，毕竟是半吊子AK的Hgame-mini web，感觉不论是Ec3o还是Mysid师傅都比我厉害很多（笑。当然我也希望这是暂时的，至少在某些方面是暂时的……</p>
+<p>回头想想其实主要问题除了能力水平，还有精力和规划上。自己通信专业的学习路线和web这块重叠感觉不能说完全没有只能说基本不沾。再加上自己其实没有花特别多时间或者仔细规划过转专业卷绩点这方面的事，确实也被很多东西分散了时间。原来被说对大学的新鲜感还会觉得自己能conquer这些工作，但实际上之前这段时间确实感受到无法多开。即使有天赋的人大多数时候也会选择专注吧，更别提我这种没什么天赋的（</p>
+<p>认真考虑后决定好好整理一下自己的生活。其实有的时候搞不懂自己如何评价哪个环境更适合自己，但是不得不承认，可能我在踏入协会的那一刻就已经在对比中做出了选择。可能和一直以来的经历有关，很多时候会很追求一种归属感。在印象里二教608的感觉更像是公司，各自在做着自己的工作。协会就给我一种很复杂的感觉。可能性格使然会更喜欢这种复杂的感觉。Who knows.可能对我来说前者会更有压迫感吧，又或者说是给不了我想要的某些东西。</p>
+<p>所以权衡以后艰难地推掉了RM那边的招新任务。个人很讨厌影响别人；我自己怎么样都好，但是影响到别人对我的良心很不好，负罪感很重。所以和组队快两周的队友提了这事，相比在后面做不好影响到他进组，还是趁现在合作还没开始就说清楚会更好吧。所幸还有嵌入式的同学没组上队，不然我肯定会选择好好做掉小车控制方面的工作的……同时也推掉了学长服务器运维的学习，留下了陪我的可能就只有那套本来想用来练练zfs文件系统和Ubuntu服务器的小主机了（</p>
+<p>接下来的事应该就只有卷卷卷卷卷绩点，看看能不能转计算机，或者卓越网安这样；还有就是很重要的web方面的继续学学学学学学了，没通过这次机会就Hgame好好表现啦~ 我会杀回来的！</p>
+<p>做出选择之后就应该用努力去填上差距，虽然这或许是我一直以来做的最差的东西了吧。</p>
+<p>沉淀（</p>
+<blockquote>
+<p>哦不对，最重要的是这周末的期中考捏 &#x3D;_&#x3D;&#96;</p>
+<p>不管是谁，看到这都请在今后保持开心吧~</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Kira的碎碎念</category>
+        <category>2023</category>
+      </categories>
+      <tags>
+        <tag>阶段性总结</tag>
       </tags>
   </entry>
 </search>
