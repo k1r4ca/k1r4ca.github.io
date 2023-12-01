@@ -1,6 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>0x02 基于docker的BabyWeb后端上云</title>
+    <url>/2023/11/21/0x02-%E5%9F%BA%E4%BA%8Edocker%E7%9A%84BabyWeb%E5%90%8E%E7%AB%AF%E4%B8%8A%E4%BA%91/</url>
+    <content><![CDATA[<h2 id="Introductio"><a href="#Introductio" class="headerlink" title="Introductio"></a>Introductio</h2><blockquote>
+<p>勿以浮沙筑高台</p>
+</blockquote>
+<p>Vidar-Team web方向学习计划第二弹！  </p>
+<p>经历漫长的台式机以及笔记本的环境配置折磨后，<del>Kira决定尝试一下新的折磨</del>  </p>
+<p>Kira决定用实现一个像样一点的web应用作为学习成果  </p>
+<p>想法是写一个简单的基于gin框架的留言板应用后端，实现简单的CRUD和RawSQL语句使用，然后部署到云服务器的docker</p>
+<br>
+
+
+
+<h2 id="后端程序"><a href="#后端程序" class="headerlink" title="后端程序"></a>后端程序</h2><blockquote>
+<p>写的很烂，面向gpt老师编程，求轻喷1551</p>
+</blockquote>
+<p>就简单贴一下部分代码吧，以下是创建留言表和添加留言的部分</p>
+<div class="highlight-container" data-rel="Go"><figure class="iseeu highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 创建留言表</span></span><br><span class="line"><span class="comment">// 基于RAW SQL语句 如果不存在messages表就新建</span></span><br><span class="line"><span class="comment">// 设置了id为自增主键，content存放留言内容</span></span><br><span class="line"><span class="comment">// time是格式为sql TIMESTAMP的记录创建/更新时间</span></span><br><span class="line"><span class="comment">// is_active为留言是否有效（sqlite不支持bool故使用int进行模拟）（想象中失效显示时会涂黑）</span></span><br><span class="line">_, err = db.Exec(<span class="string">&quot;CREATE TABLE IF NOT EXISTS messages (id INTEGER PRIMARY KEY AUTOINCREMENT, content TEXT, time TIMESTAMP DEFAULT CURRENT_TIMESTAMP, is_active INTEGER)&quot;</span>)</span><br><span class="line"><span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">	log.Fatal(err)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加留言</span></span><br><span class="line">r.POST(<span class="string">&quot;/messages&quot;</span>, <span class="function"><span class="keyword">func</span><span class="params">(c *gin.Context)</span></span> &#123;</span><br><span class="line">	<span class="comment">// 利用新建的struct对传输过来的数据进行转化，content设置为必须</span></span><br><span class="line">       <span class="comment">// 记得做杭助二面任务的时候ek1ng说过这样可以提高安全性</span></span><br><span class="line">       <span class="keyword">var</span> json <span class="keyword">struct</span> &#123;</span><br><span class="line">		Content <span class="type">string</span> <span class="string">`json:&quot;content&quot; binding:&quot;required&quot;`</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> err := c.ShouldBindJSON(&amp;json); err != <span class="literal">nil</span> &#123;</span><br><span class="line">		c.JSON(http.StatusBadRequest, gin.H&#123;<span class="string">&quot;error&quot;</span>: err.Error()&#125;)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//新增记录并将is_active置1</span></span><br><span class="line">	result, err := db.Exec(<span class="string">&quot;INSERT INTO messages (content,is_active) VALUES (?,1)&quot;</span>, json.Content)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		c.JSON(http.StatusInternalServerError, gin.H&#123;<span class="string">&quot;error&quot;</span>: err.Error()&#125;)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 因为新增记录在末尾，所以这样应该不会产生id不匹配问题</span></span><br><span class="line">	id, _ := result.LastInsertId()</span><br><span class="line">	c.JSON(http.StatusOK, gin.H&#123;<span class="string">&quot;id&quot;</span>: id, <span class="string">&quot;content&quot;</span>: json.Content&#125;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<br>
+
+
+
+<h2 id="本地docker部署试验"><a href="#本地docker部署试验" class="headerlink" title="本地docker部署试验"></a>本地docker部署试验</h2><p>先找了某智能写了dockerfile和docker-compose.yml，但是实际上在go中使用sqlite数据库在go mod download后内部会自动生成，并不需要在docker-compose中起一个数据库depend_on设置连接。同时尝试了分步构建container以减小存储占用，未遂，在构建完毕后会自动exit，感觉是构建指令有点问题，没完全起来。所以删改了一下，还是使用了单步构建的方式  </p>
+<blockquote>
+<p>前面的分步构建，以后再来探索吧！</p>
+</blockquote>
+<p>浅浅贴一下指令</p>
+<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3&#x27;</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">app:</span></span><br><span class="line">    <span class="attr">build:</span></span><br><span class="line">      <span class="attr">context:</span> <span class="string">.</span></span><br><span class="line">      <span class="attr">dockerfile:</span> <span class="string">Dockerfile</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;10070:10070&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Dockerfile"><figure class="iseeu highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 基于官方的Golang镜像构建</span></span><br><span class="line"><span class="keyword">FROM</span> golang:<span class="number">1.21</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置工作目录</span></span><br><span class="line"><span class="keyword">WORKDIR</span><span class="language-bash"> /app</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 将当前目录下的所有文件拷贝到工作目录</span></span><br><span class="line"><span class="keyword">COPY</span><span class="language-bash"> . .</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载依赖并构建应用</span></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> go mod download</span></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> go build -o main .</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 暴露端口</span></span><br><span class="line"><span class="keyword">EXPOSE</span> <span class="number">10070</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 启动应用</span></span><br><span class="line"><span class="keyword">CMD</span><span class="language-bash"> [<span class="string">&quot;./main&quot;</span>]</span></span><br></pre></td></tr></table></figure></div>
+
+<p>写好文件就管理员power shell启动，然后<code>docker-compose up -d</code>或者<code>docker-compose up --build</code>一下就好啦！</p>
+<p>其实这里还有一点小问题，一会儿说</p>
+<br>
+
+
+
+<h2 id="部署到云服务器"><a href="#部署到云服务器" class="headerlink" title="部署到云服务器"></a>部署到云服务器</h2><p>首先是推送到git仓库     </p>
+<p>先在GitHub上创建一个public仓库，然后复制仓库的url    </p>
+<p>上一步做完就直接在power shell里执行了，要注意在对应的项目根目录下     </p>
+<p>先<code>git init</code>   </p>
+<p>再<code>git remote add origin https://github.com/k1r4ca/MessageBoard.git</code>与仓库建立连接     </p>
+<p>然后用<code>git add . </code>将所有文件放入缓存区    </p>
+<blockquote>
+<p>这里有个提醒 warning: in the working copy of ‘go.mod’, LF will be replaced by CRLF the next time Git touches it</p>
+<p>查了一下是因为不同系统下LF和CRLF两种不同的换行符，一般貌似不太会有影响</p>
+<p>这里没有做处理，后面也没出现什么问题（大概</p>
+</blockquote>
+<p>之后是<code>git commit -m &quot;Initial commit&quot;</code>创建commit    </p>
+<p>最后执行<code>git push -u origin main</code>进行推送，但是<del>果然</del>出了问题    </p>
+<blockquote>
+<p>error: src refspec main does not match any<br>error: failed to push some refs to ‘<a class="link"   href="https://github.com/k1r4ca/MessageBoard.git" >https://github.com/k1r4ca/MessageBoard.git <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>‘</p>
+<p>查了一下报错是因为分支不对应？</p>
+</blockquote>
+<p>用<code> git branch -M main</code>处理一下分支，然后再push就成功了     </p>
+<p>然后terminus，启动！    </p>
+<p>我是选择在&#x2F;usr&#x2F;local下创建了GitHub目录然后用chmod指令将权限改成777，感觉可能不太对，但是就先这样了（     </p>
+<p><code>git clone</code>一下然后就是<code>docker-compose up -d</code>了      </p>
+<p>但是<del>不出所料</del>又出幺蛾子了，一直卡在<code>RUN go mod download</code>了     </p>
+<p>通过卡在这里联想到应该是docker里面没有设置代理     </p>
+<p>果然在经历异常漫长的等待后，报错应证了我的想法    </p>
+<blockquote>
+<p>RUN go mod download:<br>390.6 go: github.com&#x2F;bytedance&#x2F;<a class="link"   href="mailto:&#115;&#111;&#110;&#x69;&#99;&#64;&#x76;&#49;&#46;&#57;&#46;&#x31;" >&#115;&#111;&#110;&#x69;&#99;&#64;&#x76;&#49;&#46;&#57;&#46;&#x31; <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>: Get “<a class="link"   href="https://proxy.golang.org/github.com/bytedance/sonic/@v/v1.9.1.mod" >https://proxy.golang.org/github.com/bytedance/sonic/@v/v1.9.1.mod <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>“: dial tcp 142.251.42.241:443: i&#x2F;o timeout</p>
+</blockquote>
+<p>那就把代理改了呗     </p>
+<p>但是在建构的时候怎么设置代理呢？问了问博学的G老师，G老师跟我说： </p>
+<blockquote>
+<p>救赎之道，就在dockerfile中  </p>
+</blockquote>
+<p>大师我悟了！刚刚说的小问题就是这个     </p>
+<p><code>ENV GOPROXY=https://goproxy.cn</code> 在<code>FROM</code>下面添加一条这个就好了  </p>
+<p>重新up up ，建构成功，用<code>sudo docker ps -a</code>查看了一下状态，没什么大问题，端口映射也完成了   </p>
+<p>但是为什么访问公网IP对应端口、对应路径还是没有连接的状态呢？？？</p>
+<p>想到应该是防火墙的问题，查了一下防火墙规则设置的指令</p>
+<p><code>iptables -A INPUT -p tcp --dport 10070 -j ACCEPT</code> 开放了对应端口    </p>
+<p>很好，还是没用    </p>
+<p>本来想去看看公网IP还有什么设置的，在腾讯云控制台想起来可以配置防火墙规则  </p>
+<p>点开一下发现没有设置10070端口开放的规则，自定义添加一下</p>
+<p>然后就 <del>愉快地</del> 成功了！<del>看来安全方面做的很好啊，马！</del></p>
+<br>
+
+
+
+<h2 id="Ending"><a href="#Ending" class="headerlink" title="Ending"></a>Ending</h2><blockquote>
+<p>一切要有始有终</p>
+</blockquote>
+<p>简单部署了一下后端，作为小白没敢用MySQL这样部署上更复杂一点的数据库，有尝试过docker部署MySQL，但是鉴于RoboMaster那边龙哥数据库用了PostgreSQL<code>post-gress-Q-L</code> 并且以后有迁移到docker的想法，感觉还是要多试（）试（）   </p>
+<p>感觉还是想多了解了解net方面的内容，现在感觉好多东西都是炫酷魔法，还是多懂点好 （想加入DN11）    </p>
+<p>要继续学习啊Kira桑~  </p>
+<blockquote>
+<p>学吧，学无止境（哭  </p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>开发</category>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>Vidar-web学习路线</tag>
+        <tag>docker</tag>
+        <tag>个人云</tag>
+        <tag>gin框架</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>0x01 Git的基本使用</title>
     <url>/2023/11/20/0x01-Git%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<blockquote>
@@ -73,112 +179,6 @@
       </categories>
       <tags>
         <tag>Vidar-web学习路线</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>0x02 基于docker的BabyWeb后端上云</title>
-    <url>/2023/11/21/0x02-%E5%9F%BA%E4%BA%8Edocker%E7%9A%84BabyWeb%E5%90%8E%E7%AB%AF%E4%B8%8A%E4%BA%91/</url>
-    <content><![CDATA[<h2 id="Introductio"><a href="#Introductio" class="headerlink" title="Introductio"></a>Introductio</h2><blockquote>
-<p>勿以浮沙筑高台</p>
-</blockquote>
-<p>Vidar-Team web方向学习计划第二弹！  </p>
-<p>经历漫长的台式机以及笔记本的环境配置折磨后，<del>Kira决定尝试一下新的折磨</del>  </p>
-<p>Kira决定用实现一个像样一点的web应用作为学习成果  </p>
-<p>想法是写一个简单的基于gin框架的留言板应用后端，实现简单的CRUD和RawSQL语句使用，然后部署到云服务器的docker</p>
-<br>
-
-
-
-<h2 id="后端程序"><a href="#后端程序" class="headerlink" title="后端程序"></a>后端程序</h2><blockquote>
-<p>写的很烂，面向gpt老师编程，求轻喷1551</p>
-</blockquote>
-<p>就简单贴一下部分代码吧，以下是创建留言表和添加留言的部分</p>
-<div class="highlight-container" data-rel="Go"><figure class="iseeu highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 创建留言表</span></span><br><span class="line"><span class="comment">// 基于RAW SQL语句 如果不存在messages表就新建</span></span><br><span class="line"><span class="comment">// 设置了id为自增主键，content存放留言内容</span></span><br><span class="line"><span class="comment">// time是格式为sql TIMESTAMP的记录创建/更新时间</span></span><br><span class="line"><span class="comment">// is_active为留言是否有效（sqlite不支持bool故使用int进行模拟）（想象中失效显示时会涂黑）</span></span><br><span class="line">_, err = db.Exec(<span class="string">&quot;CREATE TABLE IF NOT EXISTS messages (id INTEGER PRIMARY KEY AUTOINCREMENT, content TEXT, time TIMESTAMP DEFAULT CURRENT_TIMESTAMP, is_active INTEGER)&quot;</span>)</span><br><span class="line"><span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">	log.Fatal(err)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加留言</span></span><br><span class="line">r.POST(<span class="string">&quot;/messages&quot;</span>, <span class="function"><span class="keyword">func</span><span class="params">(c *gin.Context)</span></span> &#123;</span><br><span class="line">	<span class="comment">// 利用新建的struct对传输过来的数据进行转化，content设置为必须</span></span><br><span class="line">       <span class="comment">// 记得做杭助二面任务的时候ek1ng说过这样可以提高安全性</span></span><br><span class="line">       <span class="keyword">var</span> json <span class="keyword">struct</span> &#123;</span><br><span class="line">		Content <span class="type">string</span> <span class="string">`json:&quot;content&quot; binding:&quot;required&quot;`</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> err := c.ShouldBindJSON(&amp;json); err != <span class="literal">nil</span> &#123;</span><br><span class="line">		c.JSON(http.StatusBadRequest, gin.H&#123;<span class="string">&quot;error&quot;</span>: err.Error()&#125;)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//新增记录并将is_active置1</span></span><br><span class="line">	result, err := db.Exec(<span class="string">&quot;INSERT INTO messages (content,is_active) VALUES (?,1)&quot;</span>, json.Content)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		c.JSON(http.StatusInternalServerError, gin.H&#123;<span class="string">&quot;error&quot;</span>: err.Error()&#125;)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 因为新增记录在末尾，所以这样应该不会产生id不匹配问题</span></span><br><span class="line">	id, _ := result.LastInsertId()</span><br><span class="line">	c.JSON(http.StatusOK, gin.H&#123;<span class="string">&quot;id&quot;</span>: id, <span class="string">&quot;content&quot;</span>: json.Content&#125;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
-
-<br>
-
-
-
-<h2 id="本地docker部署试验"><a href="#本地docker部署试验" class="headerlink" title="本地docker部署试验"></a>本地docker部署试验</h2><p>先找了某智能写了dockerfile和docker-compose.yml，但是实际上在go中使用sqlite数据库在go mod download后内部会自动生成，并不需要在docker-compose中起一个数据库depend_on设置连接。同时尝试了分步构建container以减小存储占用，未遂，在构建完毕后会自动exit，感觉是构建指令有点问题，没完全起来。所以删改了一下，还是使用了单步构建的方式  </p>
-<blockquote>
-<p>前面的分步构建，以后再来探索吧！</p>
-</blockquote>
-<p>浅浅贴一下指令</p>
-<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3&#x27;</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">app:</span></span><br><span class="line">    <span class="attr">build:</span></span><br><span class="line">      <span class="attr">context:</span> <span class="string">.</span></span><br><span class="line">      <span class="attr">dockerfile:</span> <span class="string">Dockerfile</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;10070:10070&quot;</span></span><br></pre></td></tr></table></figure></div>
-
-<div class="highlight-container" data-rel="Dockerfile"><figure class="iseeu highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 基于官方的Golang镜像构建</span></span><br><span class="line"><span class="keyword">FROM</span> golang:<span class="number">1.21</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置工作目录</span></span><br><span class="line"><span class="keyword">WORKDIR</span><span class="language-bash"> /app</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 将当前目录下的所有文件拷贝到工作目录</span></span><br><span class="line"><span class="keyword">COPY</span><span class="language-bash"> . .</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载依赖并构建应用</span></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> go mod download</span></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> go build -o main .</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 暴露端口</span></span><br><span class="line"><span class="keyword">EXPOSE</span> <span class="number">10070</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 启动应用</span></span><br><span class="line"><span class="keyword">CMD</span><span class="language-bash"> [<span class="string">&quot;./main&quot;</span>]</span></span><br></pre></td></tr></table></figure></div>
-
-<p>写好文件就管理员power shell启动，然后<code>docker-compose up -d</code>或者<code>docker-compose up --build</code>一下就好啦！</p>
-<p>其实这里还有一点小问题，一会儿说</p>
-<br>
-
-
-
-<h2 id="部署到云服务器"><a href="#部署到云服务器" class="headerlink" title="部署到云服务器"></a>部署到云服务器</h2><p>首先是推送到git仓库     </p>
-<p>先在GitHub上创建一个public仓库，然后复制仓库的url    </p>
-<p>上一步做完就直接在power shell里执行了，要注意在对应的项目根目录下     </p>
-<p>先<code>git init</code>   </p>
-<p>再<code>git remote add origin https://github.com/k1r4ca/MessageBoard.git</code>与仓库建立连接     </p>
-<p>然后用<code>git add . </code>将所有文件放入缓存区    </p>
-<blockquote>
-<p>这里有个提醒 warning: in the working copy of ‘go.mod’, LF will be replaced by CRLF the next time Git touches it</p>
-<p>查了一下是因为不同系统下LF和CRLF两种不同的换行符，一般貌似不太会有影响</p>
-<p>这里没有做处理，后面也没出现什么问题（大概</p>
-</blockquote>
-<p>之后是<code>git commit -m &quot;Initial commit&quot;</code>创建commit    </p>
-<p>最后执行<code>git push -u origin main</code>进行推送，但是<del>果然</del>出了问题    </p>
-<blockquote>
-<p>error: src refspec main does not match any<br>error: failed to push some refs to ‘<a class="link"   href="https://github.com/k1r4ca/MessageBoard.git" >https://github.com/k1r4ca/MessageBoard.git <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>‘</p>
-<p>查了一下报错是因为分支不对应？</p>
-</blockquote>
-<p>用<code> git branch -M main</code>处理一下分支，然后再push就成功了     </p>
-<p>然后terminus，启动！    </p>
-<p>我是选择在&#x2F;usr&#x2F;local下创建了GitHub目录然后用chmod指令将权限改成777，感觉可能不太对，但是就先这样了（     </p>
-<p><code>git clone</code>一下然后就是<code>docker-compose up -d</code>了      </p>
-<p>但是<del>不出所料</del>又出幺蛾子了，一直卡在<code>RUN go mod download</code>了     </p>
-<p>通过卡在这里联想到应该是docker里面没有设置代理     </p>
-<p>果然在经历异常漫长的等待后，报错应证了我的想法    </p>
-<blockquote>
-<p>RUN go mod download:<br>390.6 go: github.com&#x2F;bytedance&#x2F;<a class="link"   href="mailto:&#x73;&#111;&#110;&#105;&#x63;&#x40;&#x76;&#49;&#x2e;&#x39;&#46;&#x31;" >&#x73;&#111;&#110;&#105;&#x63;&#x40;&#x76;&#49;&#x2e;&#x39;&#46;&#x31; <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>: Get “<a class="link"   href="https://proxy.golang.org/github.com/bytedance/sonic/@v/v1.9.1.mod" >https://proxy.golang.org/github.com/bytedance/sonic/@v/v1.9.1.mod <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>“: dial tcp 142.251.42.241:443: i&#x2F;o timeout</p>
-</blockquote>
-<p>那就把代理改了呗     </p>
-<p>但是在建构的时候怎么设置代理呢？问了问博学的G老师，G老师跟我说： </p>
-<blockquote>
-<p>救赎之道，就在dockerfile中  </p>
-</blockquote>
-<p>大师我悟了！刚刚说的小问题就是这个     </p>
-<p><code>ENV GOPROXY=https://goproxy.cn</code> 在<code>FROM</code>下面添加一条这个就好了  </p>
-<p>重新up up ，建构成功，用<code>sudo docker ps -a</code>查看了一下状态，没什么大问题，端口映射也完成了   </p>
-<p>但是为什么访问公网IP对应端口、对应路径还是没有连接的状态呢？？？</p>
-<p>想到应该是防火墙的问题，查了一下防火墙规则设置的指令</p>
-<p><code>iptables -A INPUT -p tcp --dport 10070 -j ACCEPT</code> 开放了对应端口    </p>
-<p>很好，还是没用    </p>
-<p>本来想去看看公网IP还有什么设置的，在腾讯云控制台想起来可以配置防火墙规则  </p>
-<p>点开一下发现没有设置10070端口开放的规则，自定义添加一下</p>
-<p>然后就 <del>愉快地</del> 成功了！<del>看来安全方面做的很好啊，马！</del></p>
-<br>
-
-
-
-<h2 id="Ending"><a href="#Ending" class="headerlink" title="Ending"></a>Ending</h2><blockquote>
-<p>一切要有始有终</p>
-</blockquote>
-<p>简单部署了一下后端，作为小白没敢用MySQL这样部署上更复杂一点的数据库，有尝试过docker部署MySQL，但是鉴于RoboMaster那边龙哥数据库用了PostgreSQL<code>post-gress-Q-L</code> 并且以后有迁移到docker的想法，感觉还是要多试（）试（）   </p>
-<p>感觉还是想多了解了解net方面的内容，现在感觉好多东西都是炫酷魔法，还是多懂点好 （想加入DN11）    </p>
-<p>要继续学习啊Kira桑~  </p>
-<blockquote>
-<p>学吧，学无止境（哭  </p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>开发</category>
-        <category>web</category>
-      </categories>
-      <tags>
-        <tag>Vidar-web学习路线</tag>
-        <tag>docker</tag>
-        <tag>个人云</tag>
-        <tag>gin框架</tag>
       </tags>
   </entry>
   <entry>
@@ -260,9 +260,82 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/2023/11/15/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>0x05 GithubPage域名绑定</title>
+    <url>/2023/11/23/0x05-GithubPage%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A/</url>
+    <content><![CDATA[<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><blockquote>
+<p>勿以浮沙筑高台</p>
+</blockquote>
+<p>距离期中考试仅剩一天！</p>
+<p>这两天Nacl在搭他的blog，想到自己的blog还没个正式点的域名，之前一直通不过实名验证审核，于是这次就买了国外域名绑在Github Page上 <em>如你所见现在是<a href="k1r4ca.top">k1r4ca.top</a></em></p>
+<p>整体流程比想象中顺利很多，昨天睡前搞好的，中午休息时间简单记录一下~</p>
+<h2 id="域名购买"><a href="#域名购买" class="headerlink" title="域名购买"></a>域名购买</h2><p>简单找了一下推荐什么的，然后选择了<a class="link"   href="https://www.namesilo.com/" >NameSilo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>，也没什么特别原因，感觉价格能接受就直接下单了，花了$1.88（￥13.48）（7.17089的汇率，唉），感觉上是不贵的，当然部分原因是<code>.top</code>实在不是什么好域就是……</p>
+<p>官网点进去，注册个账号，域名一搜，然后购物车一加，check out就好了</p>
+<p>个人信息貌似是for Tax？</p>
+<p>购买之后右上角头像-<code>My Account</code>进入Home Page，再点击<code>Domain Manager</code>-<code>刚刚购买的域名</code> 就能进行管理了</p>
+<blockquote>
+<p>不得不吐槽一下，从之前的页面点进这个域名管理，UI让我觉得自己时光穿梭了……</p>
+</blockquote>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/post/0x05/DomainConsole.png"
+                      alt="DomainConsole"
+                ></p>
+<p>然后要添加DNS记录，以保证域名进行正确解析  <em>这里就简单记录一下设置过程，之后会专门学一下</em></p>
+<p>点击<code>DNS Records</code>右侧的<code>Update</code>，因为我这里设置连接到的是<code>Github Page</code>，所以在下面的<code>DNS Templates</code>区域直接找到提供的<code>Github</code>模板，点击<code>Apply Template</code>-<code>Accept</code>就行，此操作会写下四条<code>A记录</code>，用于连接到Github的服务器，然后再在上面<code>Existing Resource Records</code>区域找到默认设置的<code>CNAME记录</code>，点<code>Edit</code>图标将其<code>Address/Value</code>值修改为<code>*YourGithubID*.github.io</code>，保存后域名服务商部分设置就完成了</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/post/0x05/DomainSetting.png"
+                      alt="DomainConsole"
+                ></p>
+<p>然后还要在Github上配置一下，进入blog仓库的设置页面，<code>Pages</code>-<code>Custom domain</code>里填上刚刚设置好的域名，等待连接检查完毕，最后勾选上<code>Enforce HTTPS</code> <del>防止你的小伙伴儿觉得你的页面有安全风险</del> 设置就完成辣</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/post/0x05/GithubSetting.png"
+                      alt="DomainConsole"
+                ></p>
+<blockquote>
+<p>如NameSilo所述，记录是周期性更新的，这导致域名服务端设置生效会有十五分钟左右的延迟，在这期间GitHub上的<code>DNS check</code>还是会报错，等待更新完毕就好了</p>
+</blockquote>
+<h2 id="Ending"><a href="#Ending" class="headerlink" title="Ending"></a>Ending</h2><blockquote>
+<p>一切都要有始有终</p>
+</blockquote>
+<p>过程不太复杂，总算是有个正经域名了！一直担心domain设置那边会出问题，毕竟记录方面的知识计网速通了就忘完了……之后补之后补……</p>
+<p>唉，重新进入数学模式了<del>要复习不完了</del>救命~</p>
+]]></content>
+      <categories>
+        <category>开发</category>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>Blog装修</tag>
+        <tag>DNS记录</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>0x04 python爬虫的Baby级使用</title>
     <url>/2023/11/23/0x04-python%E7%88%AC%E8%99%AB%E7%9A%84Baby%E7%BA%A7%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<h2 id="Introductio"><a href="#Introductio" class="headerlink" title="Introductio"></a>Introductio</h2><blockquote>
+    <content><![CDATA[<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><blockquote>
 <p>勿以浮沙筑高台</p>
 </blockquote>
 <p>Vidar-Team web方向学习计划第四弹！</p>
@@ -509,24 +582,6 @@
         <tag>python爬虫</tag>
         <tag>hackergame 2023</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2023/11/15/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-]]></content>
   </entry>
   <entry>
     <title>写在Vidar第一次面试之后</title>
